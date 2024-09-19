@@ -20,65 +20,84 @@ export const ProfilePage = () => {
       <div>
         <p className="text-lg">User</p>
         <div className="flex space-x-2 items-center">
-        <p className="text-sm">0x4729...6517</p>
-        <CopyIcon size={14}/>
+          <p className="text-sm">0x4729...6517</p>
+          <CopyIcon size={14} />
         </div>
-       <Button size={'sm'} variant={'outline'} className="rounded-3xl h-8 mt-2">
-        Edit profile
-       </Button>
+        <Button size={"sm"} variant={"outline"} className="rounded-3xl h-8 mt-2 text-black">
+          Edit profile
+        </Button>
 
-       <p className="mt-4">No bio available</p>
+        <p className="mt-4">No bio available</p>
 
-       <p className="my-8">Drifting on terrains since <span>September 18th 2024</span> </p>
+        <div className="flex items-center space-x-1">
+          <img src="/public/icons/car.svg" className="h-6 w-6" />
+          <p className="my-8">
+            Riding the terrains since <span className="text-gray-400">September 18th 2024</span>{" "}
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-3">
-      <Card>
-        <CardContent className="flex items-center space-x-4">
-        {/* Icon here */}
-        <div className="flex-col">
-            <p>Streak</p>
-            <p>0 days</p>
-        </div>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent className="flex items-center space-x-4">
-        {/* Icon here */}
-        <div className="flex-col">
-            <p>Modules Completed</p>
-            <p>0 </p>
-        </div>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent className="flex items-center space-x-4">
-        {/* Icon here */}
-        <div className="flex-col">
-            <p>User Level</p>
-            <p>Drifter</p>
-        </div>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent className="flex items-center space-x-4">
-        {/* Icon here */}
-        <div className="flex-col">
-            <p>Knowledge Score</p>
-            <p>56</p>
-        </div>
-        </CardContent>
-      </Card>
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-3 ">
+        <Card className="bg-transparent text-white">
+          <CardContent className="flex items-center space-x-4 mt-4">
+            {/* Icon here */}
+            <div className="">
+              <img src="/public/icons/Bolt.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+            </div>
+            <div className="flex-col">
+              <p className="text-sm text-gray-400">Streak</p>
+              <p>0 days</p>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-transparent text-white">
+          <CardContent className="flex items-center space-x-4 mt-4">
+            {/* Icon here */}
+            <div className="">
+              <img src="/public/icons/file.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+            </div>
+            <div className="flex-col">
+              <p className="text-sm text-gray-400">Modules Completed</p>
+              <p>0 </p>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-transparent text-white">
+          <CardContent className="flex items-center space-x-4 mt-4">
+            {/* Icon here */}
+            <div className="">
+              <img src="/public/icons/Student.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+            </div>
+            <div className="flex-col">
+              <p className="text-sm text-gray-400">User Level</p>
+              <p>Drifter</p>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-transparent text-white">
+          <CardContent className="flex items-center space-x-4 mt-4">
+            {/* Icon here */}
+            <div className="">
+              <img src="/public/icons/Brain.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+            </div>
+            <div className="flex-col">
+              <p className="text-sm text-gray-400">Knowledge Score</p>
+              <p>56</p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
-      <div>
-        <p>Badges</p>
-        <Card>
-            <CardContent className="flex flex-col gap-2 items-center justify-center">
-                <p>Start riding through the modules</p>
-                <p>Learn everything you need to thrive onchain!</p>
-                <Button size={'sm'} className="bg-yellow-400 text-black rounded-full ">Start learning</Button>
-            </CardContent>
+      <div className="font-medium">
+        <p className="mb-1 font-medium text-lg">Badges</p>
+        <Card className="bg-transparent text-white">
+          <CardContent className="flex flex-col gap-2 items-center justify-center py-20">
+            <p className="font-semibold text-lg">Start riding through the modules</p>
+            <p className="font-normal text-sm">Learn everything you need to thrive onchain!</p>
+            <Button size={"sm"} className="bg-yellow-400 text-black rounded-full font-semibold ">
+              Start learning
+            </Button>
+          </CardContent>
         </Card>
       </div>
     </div>

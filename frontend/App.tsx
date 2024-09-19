@@ -44,9 +44,9 @@ function App() {
             {/* <Menu/>
             <Garage/>
             <LeaderBoard/> */}
-            {/* <GaragePage/> */}
-            {/* <LeaderboardPage/> */}
-            <ProfilePage/>
+            <GaragePage/>
+           
+           
             <Footer/>
           </div>
         )}

@@ -3,20 +3,16 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start mt-12">
         <div>
-          <p className="text-yellow-400 font-semibold text-xl">TurboGo</p>
-         
+          <p className="text-yellow-300 font-semibold text-lg">TurboGo</p>
         </div>
-        <p>Have any feedback? Dm Emeka or Wisdom on X </p>
+        <p className="text-base ">Have any feedback? Dm  <span className="underline text-yellow-50">Emeka</span> or <span className="underline text-yellow-50">Wisdom</span>  on X </p>
         <div className="flex space-x-3 items-center">
-          <img src="/public/icons/Twitter X.svg" />
+          <img src="/public/icons/Twitter X.svg" className="bg-white rounded-sm" />
           <img src="/public/icons/Discord Icon.svg" />
         </div>
       </div>
-
-      
-
     </>
   );
 };
