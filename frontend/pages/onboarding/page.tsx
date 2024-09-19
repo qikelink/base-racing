@@ -1,6 +1,6 @@
 import { UserAnalysis } from "@/components/onboarding/user-analysis";
 
-export const Onboarding = () => {
+export const OnboardingPage = () => {
   return (
     <div>
       <UserAnalysis />

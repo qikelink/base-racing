@@ -14,6 +14,9 @@ import { UserAnalysis } from "./components/onboarding/user-analysis";
 import { Menu } from "./components/races/menu";
 import { Garage } from "./components/races/garage";
 import { LeaderBoard } from "./components/races/leaderboard";
+import { GaragePage } from "./pages/garage/page";
+import { LeaderboardPage } from "./pages/leaderboard/page";
+import { ProfilePage } from "./pages/profile/page";
 
 function App() {
   const { connected } = useWallet();
@@ -33,15 +36,19 @@ function App() {
             </CardContent>
           </Card>
         ) : (
-          <CardHeader>
+          <div className="w-full p-5">
             {/* <CardTitle>To get started Connect a wallet</CardTitle> */}
             {/* <HeroSection/>
             <Features/>
             <Footer/> */}
-            <Menu/>
+            {/* <Menu/>
             <Garage/>
-            <LeaderBoard/>
-          </CardHeader>
+            <LeaderBoard/> */}
+            {/* <GaragePage/> */}
+            {/* <LeaderboardPage/> */}
+            <ProfilePage/>
+            <Footer/>
+          </div>
         )}
       </div>
     </>
