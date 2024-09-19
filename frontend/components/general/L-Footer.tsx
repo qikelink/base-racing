@@ -3,7 +3,7 @@ import React from "react";
 export const LFooter = () => {
   return (
     <>
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start mt-6">
         <div>
           <p className="text-yellow-400 font-semibold text-xl">TurboGo</p>
           <p className="text-sm w-48 lg:w-96">
@@ -12,13 +12,11 @@ export const LFooter = () => {
           </p>
         </div>
         <div className="flex space-x-3 items-center">
-          <img src="/public/icons/Twitter X.svg" />
-          <img src="/public/icons/Discord Icon.svg" />
+          <img src="/public/icons/Twitter X.svg" className="bg-white rounded-sm w-6 h-6 mr-4" />
         </div>
       </div>
 
       {/* Todo: add image here */}
-
     </>
   );
 };

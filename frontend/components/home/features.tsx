@@ -4,11 +4,11 @@ import { Button } from "../ui/button";
 
 export const Features = () => {
   return (
-    <div className="">
-      <p className="text-center text-2xl font-semibold">
+    <div className=" bg-black p-6 ">
+      <p className="text-center text-3xl font-semibold w-2/4 mx-auto mt-6">
         Making onchain onboarding feel less esoteric, simplier and fun
       </p>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3 mt-6">
         <Card>
           <CardHeader>
             <CardTitle>Ride the Asphalt of knowledge</CardTitle>
@@ -64,12 +64,12 @@ export const Features = () => {
         </Card>
       </div>
 
-      <Card>
+      <Card className="mt-16 py-6 mb-6">
         <CardContent className="flex flex-col gap-3 items-center">
-          <p className="text-xl font-semibold">
+          <p className="text-5xl font-bold">
             It's to <span className="text-yellow-400">Revv</span> onchain{" "}
           </p>
-          <p>Unlock the possiblities of Aptos</p>
+          <p className="font-semibold">Unlock the possiblities of Aptos</p>
           <Button size={"lg"} className="bg-yellow-400 rounded-full ">
             Launch App
           </Button>

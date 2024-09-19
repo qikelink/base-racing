@@ -17,6 +17,7 @@ import { LeaderBoard } from "./components/races/leaderboard";
 import { GaragePage } from "./pages/garage/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
 import { ProfilePage } from "./pages/profile/page";
+import { LFooter } from "./components/general/L-Footer";
 
 function App() {
   const { connected } = useWallet();
@@ -38,16 +39,9 @@ function App() {
         ) : (
           <div className="w-full p-5 lg:px-32">
             {/* <CardTitle>To get started Connect a wallet</CardTitle> */}
-            {/* <HeroSection/>
-            <Features/>
-            <Footer/> */}
-            <Menu/>
-            <Garage/>
-            <LeaderBoard/>
-           
-           
-           
-            <Footer/>
+            <HeroSection />
+            <Features />
+            <LFooter />
           </div>
         )}
       </div>
