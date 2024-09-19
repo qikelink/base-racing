@@ -7,8 +7,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "@/App.tsx";
 // Internal components
 import { Toaster } from "@/components/ui/toaster.tsx";
-import { WalletProvider } from "@/components/WalletProvider.tsx";
-import { WrongNetworkAlert } from "@/components/WrongNetworkAlert";
+import { WalletProvider } from "@/components/general/WalletProvider.tsx";
+import { WrongNetworkAlert } from "@/components/general/WrongNetworkAlert";
 
 const queryClient = new QueryClient();
 

@@ -1,12 +1,19 @@
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 // Internal Components
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Header } from "@/components/Header";
-import { WalletDetails } from "@/components/WalletDetails";
-import { NetworkInfo } from "@/components/NetworkInfo";
-import { AccountInfo } from "@/components/AccountInfo";
-import { TransferAPT } from "@/components/TransferAPT";
-import { MessageBoard } from "@/components/MessageBoard";
+import { Header } from "@/components/general/Header";
+import { WalletDetails } from "@/components/general/WalletDetails";
+import { NetworkInfo } from "@/components/general/NetworkInfo";
+import { AccountInfo } from "@/components/general/AccountInfo";
+import { TransferAPT } from "@/components/general/TransferAPT";
+import { MessageBoard } from "@/components/general/MessageBoard";
+import { HeroSection } from "./components/home/hero-section";
+import { Features } from "./components/home/features";
+import { Footer } from "./components/general/Footer";
+import { UserAnalysis } from "./components/onboarding/user-analysis";
+import { Menu } from "./components/races/menu";
+import { Garage } from "./components/races/garage";
+import { LeaderBoard } from "./components/races/leaderboard";
 
 function App() {
   const { connected } = useWallet();
@@ -27,7 +34,13 @@ function App() {
           </Card>
         ) : (
           <CardHeader>
-            <CardTitle>To get started Connect a wallet</CardTitle>
+            {/* <CardTitle>To get started Connect a wallet</CardTitle> */}
+            {/* <HeroSection/>
+            <Features/>
+            <Footer/> */}
+            <Menu/>
+            <Garage/>
+            <LeaderBoard/>
           </CardHeader>
         )}
       </div>
