@@ -64,13 +64,13 @@ export const Features = () => {
         </Card>
       </div>
 
-      <Card className="mt-16 py-6 mb-6">
+      <Card className="mt-16 py-6 mb-6 bg-gradient-to-b from-yellow-400 to-white">
         <CardContent className="flex flex-col gap-3 items-center">
           <p className="text-5xl font-bold">
-            It's to <span className="text-yellow-400">Revv</span> onchain{" "}
+            It's to <span className="">Revv</span> onchain{" "}
           </p>
-          <p className="font-semibold">Unlock the possiblities of Aptos</p>
-          <Button size={"lg"} className="bg-yellow-400 rounded-full ">
+          <p className="font-semibold">Unlock the possibilities of Aptos</p>
+          <Button size={"lg"} className=" rounded-full">
             Launch App
           </Button>
         </CardContent>
