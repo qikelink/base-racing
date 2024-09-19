@@ -36,7 +36,7 @@ function App() {
             </CardContent>
           </Card>
         ) : (
-          <div className="w-full p-5">
+          <div className="w-full p-5 lg:px-32">
             {/* <CardTitle>To get started Connect a wallet</CardTitle> */}
             {/* <HeroSection/>
             <Features/>
