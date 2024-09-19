@@ -26,16 +26,20 @@ export const GaragePage = () => {
 
       {/* Chat Area */}
       <div className="flex flex-col w-full my-4 flex-grow h-[70%] overflow-y-auto">
-        <div className="flex justify-end w-full mb-2">
-          <div className="flex space-x-2 bg-yellow-200 p-2 rounded-lg shadow">
+        <div className="flex justify-end w-full mb-3">
+          <div className="flex items-start space-x-2 bg-yellow-200 p-2 rounded-lg shadow">
             {/* Person Icon here */}
-            <p>Hello, I have a question</p>
+            <img src="/public/icons/profile.svg" className="h-6 w-6" />
+            <p className="text-black">
+              Hello, I have a question!
+            </p>
           </div>
         </div>
-        <div className="flex justify-start w-full mb-2">
-          <div className="flex space-x-2 bg-primary p-2 rounded-lg shadow text-white">
+        <div className="flex justify-start w-full mb-3">
+          <div className="flex items-start space-x-2 bg-primary p-2 rounded-lg shadow text-white">
             {/* AI Icon here */}
-            <p>Go ahead and ask, I'm glad to help in any way</p>
+            <img src="/public/icons/AI.svg" className="h-6 w-6 bg-white rounded-sm p-[1px]" />
+            <p>Go ahead and ask, I'm glad to help in any way Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quisquam porro earum!</p>
           </div>
         </div>
       </div>
@@ -50,8 +54,11 @@ export const GaragePage = () => {
           placeholder="Type your message..."
           className="flex-1 border rounded-2xl p-2 border-gray-300 bg-transparent"
         />
-        <Button onClick={handleSend} className="ml-2 bg-yellow-200 text-black rounded-full py-2 px-5">
-          <img src="/public/icons/Race.svg" className="h-6 w-6"/>
+        <Button
+          onClick={handleSend}
+          className="ml-2 bg-yellow-200 hover:bg-yellow-100 text-black rounded-full py-2 px-5"
+        >
+          <img src="/public/icons/Race.svg" className="h-6 w-6" />
           <p> Dive In</p>
         </Button>
       </div>

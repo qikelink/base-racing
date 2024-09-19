@@ -13,7 +13,7 @@ export function Header() {
 
         <div className="flex gap-3 items-center flex-wrap">
           <div className="flex space-x-1 items-center">
-          <img src="/public/icons/car.svg" className="h-10 w-10" />
+          <img src="/public/icons/car.svg" className="h-9 w-9" />
             <p className="text-sm">10 Turbos</p>
           </div>
           <Button>

@@ -41,10 +41,10 @@ function App() {
             {/* <HeroSection/>
             <Features/>
             <Footer/> */}
-            {/* <Menu/>
+            <Menu/>
             <Garage/>
-            <LeaderBoard/> */}
-            <GaragePage/>
+            <LeaderBoard/>
+           
            
            
             <Footer/>
