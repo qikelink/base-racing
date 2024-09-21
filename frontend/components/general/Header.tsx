@@ -1,4 +1,3 @@
-import { Car, CarIcon, FlameIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { WalletSelector } from "./WalletSelector";
 

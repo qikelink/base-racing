@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 
@@ -67,7 +67,7 @@ export const Features = () => {
       <Card className="mt-16 py-6 mb-6 bg-gradient-to-b from-yellow-400 to-white">
         <CardContent className="flex flex-col gap-3 items-center">
           <p className="text-5xl font-bold">
-            It's to <span className="">Revv</span> onchain{" "}
+            It's time to <span className="">Revv</span> onchain{" "}
           </p>
           <p className="font-semibold">Unlock the possibilities of Aptos</p>
           <Button size={"lg"} className=" rounded-full">

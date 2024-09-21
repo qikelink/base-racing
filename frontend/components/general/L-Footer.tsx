@@ -1,9 +1,9 @@
-import React from "react";
 
-export const LFooter = () => {
+
+export function LFooter () {
   return (
     <>
-      <div className="flex justify-between items-start mt-6">
+      <div className="flex justify-between items-start my-6 px-12 ">
         <div>
           <p className="text-yellow-400 font-semibold text-xl">TurboGo</p>
           <p className="text-sm w-48 lg:w-96">

@@ -1,9 +1,9 @@
-import React from "react";
+
 
 export const Footer = () => {
   return (
     <>
-      <div className="flex justify-between items-start mt-12">
+      <div className="flex justify-between items-start my-12 px-12">
         <div>
           <p className="text-yellow-300 font-semibold text-lg">TurboGo</p>
         </div>
