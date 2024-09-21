@@ -3,7 +3,7 @@
 export function LFooter () {
   return (
     <>
-      <div className="flex justify-between items-start my-6 px-12 ">
+      <div className="flex justify-between items-start my-6 px-20 ">
         <div>
           <p className="text-yellow-400 font-semibold text-xl">TurboGo</p>
           <p className="text-sm w-48 lg:w-96">
