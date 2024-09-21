@@ -18,7 +18,7 @@ export const Legend = () => {
         </div>
 
         <div className="space-y-1">
-          <div className="rounded-full border-4 border-gray-800 h-24 w-24 flex justify-center items-center">
+          <div className="rounded-full border-[6px] border-gray-600 h-24 w-24 flex justify-center items-center">
             <p>0%</p>
           </div>
 

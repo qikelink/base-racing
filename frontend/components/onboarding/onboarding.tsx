@@ -1,6 +1,6 @@
 import React from "react";
 import { Progress } from "@/components/ui/progress";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "../ui/button";
 
 const questions = [
@@ -39,7 +39,7 @@ const questions = [
   },
 ];
 
-export const UserAnalysis = () => {
+export const Onboarding = () => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const [selectedOption, setSelectedOption] = React.useState<number | null>(null); // Allow number or null
   const progress = ((currentStep + 1) / questions.length) * 100;

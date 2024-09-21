@@ -5,10 +5,11 @@ import { LeaderboardPage } from "./pages/leaderboard/page";
 import { ProfilePage } from "./pages/profile/page";
 import Layout from "./layout";
 import { ModulesPage } from "./pages/modules/page";
-import { RookieModule } from "./pages/(modules)/rookie.tsx/page";
-import { ChampionModule } from "./pages/(modules)/champion.tsx/page";
-import { CompetitorModule } from "./pages/(modules)/competitor.tsx/page";
-import { LegendModule } from "./pages/(modules)/legend.tsx/page";
+import { RookieModule } from "./pages/(modules)/rookie/page";
+import { ChampionModule } from "./pages/(modules)/champion/page";
+import { CompetitorModule } from "./pages/(modules)/competitor/page";
+import { LegendModule } from "./pages/(modules)/legend/page";
+import { LevelPage } from "./pages/(modules)/level/page";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/champion" element={<ChampionModule />} />
           <Route path="/competitor" element={<CompetitorModule />} />
           <Route path="/legend" element={<LegendModule />} />
+          <Route path="/level" element={<LevelPage />} />
         </Routes>
       </Layout>
     </Router>

@@ -1,9 +1,9 @@
-import { UserAnalysis } from "@/components/onboarding/user-analysis";
+import { Onboarding } from "@/components/onboarding/onboarding";
 
 export const OnboardingPage = () => {
   return (
     <div>
-      <UserAnalysis />
+      <Onboarding />
     </div>
   );
 };
