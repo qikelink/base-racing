@@ -1,7 +1,21 @@
-
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader } from "../ui/card";
 
 export const Menu = () => {
+  const navigate = useNavigate();
+
+  const handleRookie = () => {
+    navigate("/rookie");
+  };
+  const handleCompetitor = () => {
+    navigate("/competitor");
+  };
+  const handleChampion = () => {
+    navigate("/champion");
+  };
+  const handleLegend = () => {
+    navigate("/legend");
+  };
   return (
     <>
       <div className="flex justify-between items-center mx-auto px-4 mt-6">
@@ -27,7 +41,7 @@ export const Menu = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <Card className="bg-transparent text-white">
+          <Card onClick={handleRookie} className="bg-transparent text-white cursor-pointer">
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">ROOKIE</p>
               <p>Aptos Colombia</p>
@@ -40,7 +54,7 @@ export const Menu = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-transparent text-white">
+          <Card onClick={handleCompetitor} className="bg-transparent text-white cursor-pointer">
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">COMPETITOR</p>
               <p>Arena de Madrid</p>
@@ -51,7 +65,7 @@ export const Menu = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-transparent text-white">
+          <Card onClick={handleChampion} className="bg-transparent text-white cursor-pointer">
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">CHAMPION</p>
               <p>Times Square, Manhattan</p>
@@ -62,7 +76,7 @@ export const Menu = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-transparent text-white">
+          <Card onClick={handleLegend} className="bg-transparent text-white cursor-pointer">
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">LEGEND</p>
               <p>Thailand Beaches</p>

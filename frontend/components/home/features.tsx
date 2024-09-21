@@ -1,8 +1,15 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const Features = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/modules");
+  };
+  
   return (
     <div className=" bg-black p-6 ">
       <p className="text-center text-3xl font-semibold w-2/4 mx-auto mt-6">
@@ -70,7 +77,7 @@ export const Features = () => {
             It's time to <span className="">Revv</span> onchain{" "}
           </p>
           <p className="font-semibold">Unlock the possibilities of Aptos</p>
-          <Button size={"lg"} className=" rounded-full">
+          <Button onClick={handleGetStarted} size={"lg"} className=" rounded-full">
             Launch App
           </Button>
         </CardContent>
