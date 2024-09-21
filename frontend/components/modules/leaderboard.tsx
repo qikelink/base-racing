@@ -1,13 +1,21 @@
-import React from "react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 export const LeaderBoard = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/leaderboard");
+  };
+
+
   return (
     <div className="mt-6">
       <div className="flex justify-between items-center">
         <p className="text-gray-400">RECENT LEARNERS</p>
-        <div className="flex items-center space-x-2">
+        <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
           <p className="text-yellow-300">LEADERBOARD</p>
           <img src="/public/icons/front.svg" className="bg-yellow-300 " />
         </div>

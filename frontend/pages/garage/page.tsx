@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const GaragePage = () => {
+  const navigate = useNavigate();
+  
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
@@ -11,9 +14,16 @@ export const GaragePage = () => {
     setMessage(""); // Clear input after sending
   };
 
+  
+
+  const handleNavigate = () => {
+    navigate(-1);
+  };
+
+
   return (
     <div className=" h-[88vh]">
-      <div className="flex items-center space-x-2">
+      <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
         <img src="/public/icons/back.svg" className="w-6 h-6 bg-white" />
         <p> Quick Stop</p>
         <img src="/public/icons/racing-car.svg" className="w-12 h-12" />
