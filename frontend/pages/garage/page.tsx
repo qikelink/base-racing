@@ -5,21 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 export const GaragePage = () => {
   const navigate = useNavigate();
-  
+
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
-    // Logic to send the message goes here
     console.log("Message sent:", message);
-    setMessage(""); // Clear input after sending
+    setMessage("");
   };
-
-  
 
   const handleNavigate = () => {
     navigate(-1);
   };
-
 
   return (
     <div className=" h-[88vh]">
@@ -40,16 +36,17 @@ export const GaragePage = () => {
           <div className="flex items-start space-x-2 bg-yellow-200 p-2 rounded-lg shadow">
             {/* Person Icon here */}
             <img src="/public/icons/profile.svg" className="h-6 w-6" />
-            <p className="text-black">
-              Hello, I have a question!
-            </p>
+            <p className="text-black">Hello, I have a question!</p>
           </div>
         </div>
         <div className="flex justify-start w-full mb-3">
           <div className="flex items-start space-x-2 bg-primary p-2 rounded-lg shadow text-white">
             {/* AI Icon here */}
             <img src="/public/icons/AI.svg" className="h-6 w-6 bg-white rounded-sm p-[1px]" />
-            <p>Go ahead and ask, I'm glad to help in any way Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quisquam porro earum!</p>
+            <p>
+              Go ahead and ask, I'm glad to help in any way Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Adipisci quisquam porro earum!
+            </p>
           </div>
         </div>
       </div>
