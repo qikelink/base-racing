@@ -1,38 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { getGroqChatCompletion } from "@/utils/groq";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type Message = {
-  sender: 'user' | 'ai'; 
+  sender: 'user' | 'ai';
   content: string;
 };
 
 export const GaragePage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState<Message[]>([]); 
+  const [messages, setMessages] = useState<Message[]>([]);
+  const hasInitialMessageProcessed = useRef(false);
+
+  useEffect(() => {
+    const initialMessage = location.state?.message || "";
+    if (initialMessage && !hasInitialMessageProcessed.current) {
+      handleInitialMessage(initialMessage);
+      hasInitialMessageProcessed.current = true; 
+    }
+  }, [location.state]);
+
+  const handleInitialMessage = async (msg: string) => {
+    setMessages((prev) => [...prev, { sender: 'user', content: msg }]);
+    
+    // Get the AI response for the initial message
+    const response = await getGroqChatCompletion(msg);
+    const aiMessage = response.choices[0]?.message?.content || "No response received.";
+    
+    setMessages((prev) => [...prev, { sender: 'ai', content: aiMessage }]);
+  };
 
   const handleSend = async () => {
-    if (!message.trim()) return; 
+    if (!message.trim()) return;
 
-    // Update chat with the user's message
-    setMessages((prev) => [
-      ...prev,
-      { sender: 'user', content: message },
-    ]);
-
- 
+    setMessages((prev) => [...prev, { sender: 'user', content: message }]);
+    
+    // Get the AI response for the current message
     const response = await getGroqChatCompletion(message);
     const aiMessage = response.choices[0]?.message?.content || "No response received.";
-
- 
-    setMessages((prev) => [
-      ...prev,
-      { sender: 'ai', content: aiMessage },
-    ]);
-
+    
+    setMessages((prev) => [...prev, { sender: 'ai', content: aiMessage }]);
     setMessage("");
   };
 
