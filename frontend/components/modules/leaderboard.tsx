@@ -10,7 +10,7 @@ export const LeaderBoard = () => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-10">
       <div className="flex justify-between items-center">
         <p className="text-gray-400">RECENT LEARNERS</p>
         <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
@@ -23,7 +23,7 @@ export const LeaderBoard = () => {
       <div className="overflow-hidden h-64 relative">
         <div className="absolute inset-0 animate-scroll">
           {/* Repeat the items for continuous scrolling */}
-          {[...Array(20)].map((_, index) => (
+          {[...Array(40)].map((_, index) => (
             <div key={index}>
               <div className="flex justify-between items-center px-3 py-2">
                 <div className="flex flex-col gap-1">
