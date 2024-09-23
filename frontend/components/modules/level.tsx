@@ -16,8 +16,9 @@ const questions = [
     type: "scale",
   },
   {
-    question: "Aptos uses a unique programming language called Move for smart contracts. This enables safer and more efficient contract development.",
-    type: "text", 
+    question:
+      "Aptos uses a unique programming language called Move for smart contracts. This enables safer and more efficient contract development.",
+    type: "text",
   },
   {
     question: "Which of the following is true about Aptos?",
@@ -31,7 +32,7 @@ const questions = [
   },
   {
     question: "Here’s an overview of the Aptos ecosystem:",
-    type: "image", 
+    type: "image",
     imageUrl: "/public/icons/madrid.jpeg",
   },
   {
@@ -54,7 +55,7 @@ export const Level = () => {
   };
 
   const currentQuestion = questions[currentStep];
-  
+
   const radius = 50;
   const strokeWidth = 6;
   const normalizedRadius = radius - strokeWidth * 0.5;
@@ -63,7 +64,7 @@ export const Level = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mt-6">
         <div className="space-y-2 w-96">
           <p className="font-semibold text-2xl">Getting Started with Aptos</p>
           <p className="text-base text-gray-400">
@@ -75,36 +76,38 @@ export const Level = () => {
           </Button>
         </div>
 
-        <div className="relative h-24 w-24">
-          <svg height={radius * 2} width={radius * 2}>
-            <circle
-              stroke="gray"
-              fill="transparent"
-              strokeWidth={strokeWidth}
-              r={normalizedRadius}
-              cx={radius}
-              cy={radius}
-            />
-            <circle
-              stroke="yellow"
-              fill="transparent"
-              strokeWidth={strokeWidth}
-              strokeDasharray={circumference}
-              strokeDashoffset={offset}
-              r={normalizedRadius}
-              cx={radius}
-              cy={radius}
-              style={{ transition: 'stroke-dashoffset 0.5s ease-in-out' }}
-            />
-          </svg>
-          <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-white">
-            {Math.round(progress)}%
-          </p>
-        </div>
+        <div className="space-y-3">
+          <div className="relative h-24 w-24">
+            <svg height={radius * 2} width={radius * 2}>
+              <circle
+                stroke="gray"
+                fill="transparent"
+                strokeWidth={strokeWidth}
+                r={normalizedRadius}
+                cx={radius}
+                cy={radius}
+              />
+              <circle
+                stroke="yellow"
+                fill="transparent"
+                strokeWidth={strokeWidth}
+                strokeDasharray={circumference}
+                strokeDashoffset={offset}
+                r={normalizedRadius}
+                cx={radius}
+                cy={radius}
+                style={{ transition: "stroke-dashoffset 0.5s ease-in-out" }}
+              />
+            </svg>
+            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-white">
+              {Math.round(progress)}%
+            </p>
+          </div>
 
-        <div className="space-y-1">
-          <p className="font-semibold">Level Progress</p>
-          <p className="text-base text-gray-400">We're calculating your level progress here</p>
+          <div className="space-y-1">
+            <p className="font-semibold">Level Progress</p>
+            <p className="text-base text-gray-400">We're calculating your level progress here</p>
+          </div>
         </div>
       </div>
 
@@ -143,9 +146,7 @@ export const Level = () => {
           </div>
         )}
 
-        {currentQuestion?.type === "text" && (
-          <p className="text-sm text-gray-300">{currentQuestion.question}</p>
-        )}
+        {currentQuestion?.type === "text" && <p className="text-sm text-gray-300">{currentQuestion.question}</p>}
 
         {currentQuestion?.type === "image" && (
           <div className="flex flex-col items-center">

@@ -1,15 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { getGroqChatCompletion } from "@/utils/groq";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+type Message = {
+  sender: 'user' | 'ai'; 
+  content: string;
+};
+
 export const GaragePage = () => {
   const navigate = useNavigate();
-
   const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState<Message[]>([]); 
 
-  const handleSend = () => {
-    console.log("Message sent:", message);
+  const handleSend = async () => {
+    if (!message.trim()) return; 
+
+    // Update chat with the user's message
+    setMessages((prev) => [
+      ...prev,
+      { sender: 'user', content: message },
+    ]);
+
+ 
+    const response = await getGroqChatCompletion(message);
+    const aiMessage = response.choices[0]?.message?.content || "No response received.";
+
+ 
+    setMessages((prev) => [
+      ...prev,
+      { sender: 'ai', content: aiMessage },
+    ]);
+
     setMessage("");
   };
 
@@ -18,7 +41,7 @@ export const GaragePage = () => {
   };
 
   return (
-    <div className=" h-[88vh]">
+    <div className="h-[88vh]">
       <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
         <img src="/public/icons/back.svg" className="w-6 h-6 bg-white" />
         <p> Quick Stop</p>
@@ -26,29 +49,22 @@ export const GaragePage = () => {
       </div>
 
       <p className="mb-2">
-        Explore the web3 ecosystem and find resources that you need. Ask follow-up questions to dive deeper
+        Explore the web3 ecosystem and find resources that you need. Ask follow-up questions to dive deeper.
       </p>
       <Separator />
 
       {/* Chat Area */}
       <div className="flex flex-col w-full my-4 flex-grow h-[70%] overflow-y-auto">
-        <div className="flex justify-end w-full mb-3">
-          <div className="flex items-start space-x-2 bg-yellow-200 p-2 rounded-lg shadow">
-            {/* Person Icon here */}
-            <img src="/public/icons/profile.svg" className="h-6 w-6" />
-            <p className="text-black">Hello, I have a question!</p>
+        {messages.map((msg, index) => (
+          <div key={index} className={`flex justify-${msg.sender === 'user' ? 'end' : 'start'} w-full mb-3`}>
+            <div className={`flex items-start space-x-2 ${msg.sender === 'user' ? 'bg-yellow-200' : 'bg-primary'} p-2 rounded-lg shadow`}>
+              <img src={`/public/icons/${msg.sender === 'user' ? 'profile' : 'AI'}.svg`} className="h-6 w-6" />
+              <p className={msg.sender === 'user' ? 'text-black' : 'text-white'}>
+                {msg.content}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-start w-full mb-3">
-          <div className="flex items-start space-x-2 bg-primary p-2 rounded-lg shadow text-white">
-            {/* AI Icon here */}
-            <img src="/public/icons/AI.svg" className="h-6 w-6 bg-white rounded-sm p-[1px]" />
-            <p>
-              Go ahead and ask, I'm glad to help in any way Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Adipisci quisquam porro earum!
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Chat Input Area */}
