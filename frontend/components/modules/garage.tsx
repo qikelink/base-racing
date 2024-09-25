@@ -27,7 +27,7 @@ export const Garage = () => {
     >
       <div className="flex items-center space-x-1 justify-start ml-5">
         <CardTitle>Got a crypto question? Take a quick stop at the garage and refuel!</CardTitle>
-        <img src="/public/icons/racing-car.svg" className="h-12 w-12" />
+        <img src="/icons/racing-car.svg" className="h-12 w-12" />
       </div>
       <CardContent className="flex items-center">
         <Input

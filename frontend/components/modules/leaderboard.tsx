@@ -15,7 +15,7 @@ export const LeaderBoard = () => {
         <p className="text-gray-400">RECENT LEARNERS</p>
         <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
           <p className="text-yellow-300">LEADERBOARD</p>
-          <img src="/public/icons/front.svg" className="bg-yellow-300" />
+          <img src="/icons/front.svg" className="bg-yellow-300" />
         </div>
       </div>
 
@@ -36,7 +36,7 @@ export const LeaderBoard = () => {
                   </p>
                 </div>
                 <div className="flex space-x-2 items-center">
-                  <img src="/public/icons/car.svg" className="h-8 w-8" />
+                  <img src="/icons/car.svg" className="h-8 w-8" />
                   <p className="text-sm font-semibold">10 Turbos</p>
                 </div>
               </div>

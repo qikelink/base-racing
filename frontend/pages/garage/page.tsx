@@ -54,9 +54,9 @@ export const GaragePage = () => {
   return (
     <div className="h-[88vh]">
       <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
-        <img src="/public/icons/back.svg" className="w-6 h-6 bg-white" />
+        <img src="/icons/back.svg" className="w-6 h-6 bg-white" />
         <p> Quick Stop</p>
-        <img src="/public/icons/racing-car.svg" className="w-12 h-12" />
+        <img src="/icons/racing-car.svg" className="w-12 h-12" />
       </div>
 
       <p className="mb-2">
@@ -69,7 +69,7 @@ export const GaragePage = () => {
         {messages.map((msg, index) => (
           <div key={index} className={`flex justify-${msg.sender === 'user' ? 'end' : 'start'} w-full mb-3`}>
             <div className={`flex items-start space-x-2 ${msg.sender === 'user' ? 'bg-yellow-200' : 'bg-primary'} p-2 rounded-lg shadow`}>
-              <img src={`/public/icons/${msg.sender === 'user' ? 'profile' : 'AI'}.svg`} className="h-6 w-6" />
+              <img src={`/icons/${msg.sender === 'user' ? 'profile' : 'AI'}.svg`} className="h-6 w-6" />
               <p className={msg.sender === 'user' ? 'text-black' : 'text-white'}>
                 {msg.content}
               </p>
@@ -92,7 +92,7 @@ export const GaragePage = () => {
           onClick={handleSend}
           className="ml-2 bg-yellow-200 hover:bg-yellow-100 text-black rounded-full py-2 px-5"
         >
-          <img src="/public/icons/Race.svg" className="h-6 w-6" />
+          <img src="/icons/Race.svg" className="h-6 w-6" />
           <p> Dive In</p>
         </Button>
       </div>

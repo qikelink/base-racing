@@ -30,7 +30,7 @@ export const ProfilePage = () => {
         <p className="mt-4">No bio available</p>
 
         <div className="flex items-center space-x-1">
-          <img src="/public/icons/car.svg" className="h-6 w-6" />
+          <img src="/icons/car.svg" className="h-6 w-6" />
           <p className="my-8">
             Riding the terrains since <span className="text-gray-400">September 18th 2024</span>{" "}
           </p>
@@ -42,7 +42,7 @@ export const ProfilePage = () => {
           <CardContent className="flex items-center space-x-4 mt-4">
             {/* Icon here */}
             <div className="">
-              <img src="/public/icons/Bolt.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+              <img src="/icons/Bolt.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
             </div>
             <div className="flex-col">
               <p className="text-sm text-gray-400">Streak</p>
@@ -54,7 +54,7 @@ export const ProfilePage = () => {
           <CardContent className="flex items-center space-x-4 mt-4">
             {/* Icon here */}
             <div className="">
-              <img src="/public/icons/file.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+              <img src="/icons/file.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
             </div>
             <div className="flex-col">
               <p className="text-sm text-gray-400">Modules Completed</p>
@@ -66,7 +66,7 @@ export const ProfilePage = () => {
           <CardContent className="flex items-center space-x-4 mt-4">
             {/* Icon here */}
             <div className="">
-              <img src="/public/icons/Student.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+              <img src="/icons/Student.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
             </div>
             <div className="flex-col">
               <p className="text-sm text-gray-400">User Level</p>
@@ -78,7 +78,7 @@ export const ProfilePage = () => {
           <CardContent className="flex items-center space-x-4 mt-4">
             {/* Icon here */}
             <div className="">
-              <img src="/public/icons/Brain.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
+              <img src="/icons/Brain.svg" className="w-12 h-12 bg-white p-1 rounded-lg" />
             </div>
             <div className="flex-col">
               <p className="text-sm text-gray-400">Knowledge Score</p>

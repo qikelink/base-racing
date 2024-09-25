@@ -33,7 +33,7 @@ const questions = [
   {
     question: "Here’s an overview of the Aptos ecosystem:",
     type: "image",
-    imageUrl: "/public/icons/madrid.jpeg",
+    imageUrl: "/icons/madrid.jpeg",
   },
   {
     question: "Okay, we found your spot to start racing. Ready to dive in?",
