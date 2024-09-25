@@ -119,7 +119,7 @@ export const Rookie = () => {
     <div>
       <div onClick={handleHome} className="flex items-center space-x-2 cursor-pointer my-2">
         <img src="/icons/back.svg" className="w-6 h-6 bg-white" />
-        <p> Quick Stop</p>
+        <p> Go Back</p>
       </div>
       <div className="flex justify-between items-center">
         <div className="space-y-1 w-96">
