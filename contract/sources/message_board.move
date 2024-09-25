@@ -179,34 +179,7 @@ module message_board_addr::testing {
         borrow_global<ManagedFungibleAsset>(object::object_address(&asset))
     }
 
-    // ======================== Write functions ========================
-
-    public entry fun post_message(
-        _sender: &signer,
-        new_string_content: String,
-    ) acquires Message, BoardObjectController {
-        if (!exist_message()) {
-            let board_obj_signer = get_board_obj_signer();
-            move_to(&board_obj_signer, Message {
-                string_content: new_string_content,
-            });
-        };
-        let message = borrow_global_mut<Message>(get_board_obj_address());
-        message.string_content = new_string_content;
-    }
-
-    // ======================== Read Functions ========================
-
-    #[view]
-    public fun exist_message(): bool {
-        exists<Message>(get_board_obj_address())
-    }
-
-    #[view]
-    public fun get_message_content(): (String) acquires Message {
-        let message = borrow_global<Message>(get_board_obj_address());
-        message.string_content
-    }
+    
 
     // ======================== Helper functions ========================
 

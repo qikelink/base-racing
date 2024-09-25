@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Share2 } from "lucide-react";
+import { ArrowBigLeft, Share2 } from "lucide-react";
 import { Card, CardHeader, CardTitle } from "../ui/card";
 import { Progress } from "../ui/progress";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
+import { mintAsset } from "@/entry-functions/mint_asset";
+import { aptosClient } from "@/utils/aptosClient";
+import { useQueryClient } from "@tanstack/react-query";
+import { toast } from "../ui/use-toast";
 
 const questions = [
   {
@@ -46,13 +52,21 @@ export const Level = () => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const [selectedOption, setSelectedOption] = React.useState<number | null>(null);
   const progress = ((currentStep + 1) / questions.length) * 100;
+  const queryClient = useQueryClient();
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (selectedOption !== null || questions[currentStep].type !== "multiple") {
-      setCurrentStep(currentStep + 1);
-      setSelectedOption(null);
+      if (currentStep === questions.length - 1) {
+        // If it's the last question, call OnFinishButton functionality
+        await handleFinish();
+      } else {
+        setCurrentStep(currentStep + 1);
+        setSelectedOption(null);
+      }
     }
   };
+
+  const { account, signAndSubmitTransaction } = useWallet();
 
   const currentQuestion = questions[currentStep];
 
@@ -62,8 +76,52 @@ export const Level = () => {
   const circumference = normalizedRadius * 2 * Math.PI;
   const offset = circumference - (progress / 100) * circumference;
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/rookie");
+  };
+
+  const handleFinish = async () => {
+    if (!account) {
+      toast({
+        title: "Error",
+        description: "Please connect your wallet to finish the questionnaire.",
+      });
+      return;
+    }
+
+    try {
+      const committedTransaction = await signAndSubmitTransaction(
+        mintAsset({
+          amount: 10,
+        }),
+      );
+      const executedTransaction = await aptosClient().waitForTransaction({
+        transactionHash: committedTransaction.hash,
+      });
+      queryClient.invalidateQueries();
+      toast({
+        title: "Success",
+        description: `Questionnaire completed! Transaction succeeded, hash: ${executedTransaction.hash}`,
+      });
+      // You can add navigation or other completion logic here
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "Failed to complete the questionnaire. Please try again.",
+      });
+    }
+  };
+
   return (
     <div>
+      <div className="my-2">
+        <Button onClick={handleNavigate} className="rounded-full bg-slate-700">
+          <ArrowBigLeft />
+        </Button>
+      </div>
       <div className="flex justify-between items-center mt-6">
         <div className="space-y-2 w-96">
           <p className="font-semibold text-2xl">Getting Started with Aptos</p>
