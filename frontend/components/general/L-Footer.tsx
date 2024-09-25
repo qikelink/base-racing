@@ -12,7 +12,7 @@ export function LFooter () {
           </p>
         </div>
         <div className="flex space-x-3 items-center">
-          <img src="/public/icons/Twitter X.svg" className="bg-white rounded-sm w-6 h-6 mr-4" />
+          <img src="/icons/Twitter X.svg" className="bg-white rounded-sm w-6 h-6 mr-4" />
         </div>
       </div>
 

@@ -48,11 +48,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right ">90</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">8</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">8</p>{" "}
               </TableCell>
               <TableCell className="text-right ">
                 <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">18</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">18</p>
                 </div>
               </TableCell>
             </TableRow>
@@ -81,11 +81,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right">95</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">2</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">2</p>{" "}
               </TableCell>
               <TableCell className="text-right">
               <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">80</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">80</p>
                 </div>
               </TableCell>
             </TableRow>
@@ -100,11 +100,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right">90</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">6</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">6</p>{" "}
               </TableCell>
               <TableCell className="text-right">
               <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">40</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">40</p>
                 </div>
               </TableCell>
             </TableRow>
@@ -119,11 +119,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right">85</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
               </TableCell>
               <TableCell className="text-right">
               <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">30</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">30</p>
                 </div>
               </TableCell>
             </TableRow>
@@ -138,11 +138,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right">85</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
               </TableCell>
               <TableCell className="text-right">
               <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">45</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">45</p>
                 </div>
               </TableCell>
             </TableRow>
@@ -157,11 +157,11 @@ export const LeaderboardPage = () => {
               <TableCell className="text-right">85</TableCell>
               <TableCell className="text-right flex items-center justify-end space-x-1">
                 {" "}
-                <img src="/public/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
+                <img src="/icons/Fire.svg" className="w-6 h-6" /> <p className="mt-1">0</p>{" "}
               </TableCell>
               <TableCell className="text-right">
               <div className="flex items-center justify-end space-x-1">
-                  <img src="/public/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">100</p>
+                  <img src="/icons/car.svg" className="w-6 h-6" /> <p className="mt-1">100</p>
                 </div>
               </TableCell>
             </TableRow>

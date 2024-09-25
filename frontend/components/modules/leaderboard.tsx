@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
 import { getLeadershipBoard, MinterData } from "@/view-functions/getLeadershipBoard";
-import { ArrowRight } from "lucide-react";
 
 
 export const LeaderBoard = () => {
@@ -48,7 +47,7 @@ export const LeaderBoard = () => {
         <p className="text-gray-400">RECENT LEARNERS</p>
         <div onClick={handleNavigate} className="flex items-center space-x-2 cursor-pointer">
           <p className="text-yellow-300">LEADERBOARD</p>
-          <ArrowRight className="text-yellow-300" size={16} />
+          <img src="/icons/front.svg" className="bg-yellow-300" />
         </div>
       </div>
 

@@ -26,17 +26,17 @@ export const Menu = () => {
 
           <div className="flex justify-start items-end space-x-2">
             <p className="text-base text-gray-400">Join the coolest crypto hangout on Aptos</p>
-            <img src="/public/icons/driver2.png" className="h-16 w-16 cursor-pointer" />
+            <img src="/icons/driver2.png" className="h-16 w-16 cursor-pointer" />
           </div>
         </div>
 
-        <img src="/public/icons/driver.png" className="w-1/3" />
+        <img src="/icons/driver.png" className="w-1/3" />
       </div>
 
       <div className="space-y-2 mt-6">
         {/* Add svg icon here */}
         <div className="flex items-center space-x-2">
-          <img src="/public/icons/location.svg" className="h-6 w-6 bg-white rounded-full p-1 " />
+          <img src="/icons/location.svg" className="h-6 w-6 bg-white rounded-full p-1 " />
           <p> Racing Arenas </p>
         </div>
 
@@ -50,7 +50,7 @@ export const Menu = () => {
               </p>
             </CardHeader>
             <CardContent>
-              <img src="/public/icons/4.jpeg" className="h-[400px] w-full rounded-md" />
+              <img src="/icons/4.jpeg" className="h-[400px] w-full rounded-md" />
             </CardContent>
           </Card>
 
@@ -58,10 +58,10 @@ export const Menu = () => {
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">COMPETITOR</p>
               <p>Arena de Madrid</p>
-              <p>Explore deeper waves in the ecosystem. Catch up on DeFi, NFTs, and various aspects of it.</p>
+              <p>Explore tricky terrains in the ecosystem. Catch up on DeFi, NFTs, and various aspects of it.</p>
             </CardHeader>
             <CardContent>
-              <img src="/public/icons/2.jpeg" className="h-[400px] w-full rounded-md" />
+              <img src="/icons/2.jpeg" className="h-[400px] w-full rounded-md" />
             </CardContent>
           </Card>
 
@@ -72,7 +72,7 @@ export const Menu = () => {
               <p>Dive into advanced lessons on smart contracts and token standards in the Aptos ecosystem.</p>
             </CardHeader>
             <CardContent>
-              <img src="/public/icons/3.jpeg" className="h-[400px] w-full rounded-md" />
+              <img src="/icons/3.jpeg" className="h-[400px] w-full rounded-md" />
             </CardContent>
           </Card>
 
@@ -83,7 +83,7 @@ export const Menu = () => {
               <p>Discover the intricacies of Aptos's governance and community engagement modules.</p>
             </CardHeader>
             <CardContent>
-              <img src="/public/icons/5.jpeg" className="h-[400px] w-full rounded-md" />
+              <img src="/icons/5.jpeg" className="h-[400px] w-full rounded-md" />
             </CardContent>
           </Card>
         </div>

@@ -67,7 +67,7 @@ export function Header() {
             <p className="text-sm">{tkBalance / Math.pow(10, 8)} Turbos</p>
           </div>
           <Button>
-            <img src="/public/icons/Fire.svg" className=" h-4 w-4" /> 0
+            <img src="/icons/Fire.svg" className=" h-4 w-4" /> 0
           </Button>
           <WalletSelector />
         </div>
