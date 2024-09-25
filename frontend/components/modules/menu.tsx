@@ -58,7 +58,7 @@ export const Menu = () => {
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">COMPETITOR</p>
               <p>Arena de Madrid</p>
-              <p>Explore tricky terrains in the ecosystem. Catch up on DeFi, NFTs, and various aspects of it.</p>
+              <p>            Explore tricky terrains in the ecosystem. Catch up on deepers concepts on move; wallets, user management, smart contracts etc.</p>
             </CardHeader>
             <CardContent>
               <img src="/icons/2.jpeg" className="h-[400px] w-full rounded-md" />
