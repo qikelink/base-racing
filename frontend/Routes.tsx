@@ -10,6 +10,7 @@ import { ChampionModule } from "./pages/(modules)/champion/page";
 import { CompetitorModule } from "./pages/(modules)/competitor/page";
 import { LegendModule } from "./pages/(modules)/legend/page";
 import { LevelPage } from "./pages/(modules)/level/page";
+import { OnboardingPage } from "./pages/onboarding/page";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/garage" element={<GaragePage />} />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
           <Route path="/profile" element={<ProfilePage />} />

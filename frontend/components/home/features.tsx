@@ -7,7 +7,7 @@ export const Features = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/modules");
+    navigate("/onboarding");
   };
   
   return (

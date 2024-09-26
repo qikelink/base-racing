@@ -5,7 +5,7 @@ export const HeroSection = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/modules");
+    navigate("/onboarding");
   };
 
   return (

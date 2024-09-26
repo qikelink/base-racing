@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
@@ -10,11 +10,12 @@ import { getLeadershipBoard, MinterData } from "@/view-functions/getLeadershipBo
 
 export const LeaderBoard = () => {
   const navigate = useNavigate();
-  const { account } = useWallet();
+  const { account, connected } = useWallet();
   const [leadership, setLeadership] = useState<any>([]);
+  const defaultAddress = "0xf53f275b01aed3c98e5cea0f4a97c29b75b3e6df268bfb5f0e6c2ea37dd46a81";
 
   const { data } = useQuery({
-    queryKey: ["message-content", account?.address],
+    queryKey: ["message-content", connected ? account?.address : defaultAddress],
     refetchInterval: 10_000,
     queryFn: async () => {
       try {

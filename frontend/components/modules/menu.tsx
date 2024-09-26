@@ -1,20 +1,82 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader } from "../ui/card";
+import { getTokenBalance } from "@/view-functions/getTokenBalance";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
+import { useQuery } from "@tanstack/react-query";
+import { useState, useEffect } from "react";
+import { toast } from "../ui/use-toast";
 
 export const Menu = () => {
+  const { account } = useWallet();
   const navigate = useNavigate();
+  const [tkBalance, setTkBalance] = useState<number>(0);
+
+  const { data } = useQuery({
+    queryKey: ["apt-balance", account?.address],
+    refetchInterval: 10_000,
+    queryFn: async () => {
+      try {
+        if (!account) {
+          console.warn("Account not available");
+          return { balance: 0 };
+        }
+
+        const balance = await getTokenBalance({ accountAddress: account.address });
+        return { balance };
+      } catch (error: any) {
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: error.message,
+        });
+        return { balance: 0 };
+      }
+    },
+  });
+
+  useEffect(() => {
+    if (data) {
+      setTkBalance(data.balance);
+    }
+  }, [data]);
+
+  const turboBalance = tkBalance / Math.pow(10, 8);
 
   const handleRookie = () => {
     navigate("/rookie");
   };
   const handleCompetitor = () => {
-    navigate("/competitor");
+    if (turboBalance < 40) {
+      toast({
+        variant: "destructive",
+        title: "Complete Aptos Colombia",
+        description: "Please complete Aptos Colombia arena to unlock Arena de Madrid.",
+      });
+    } else {
+      navigate("/competitor");
+    }
   };
   const handleChampion = () => {
-    navigate("/champion");
+    if (turboBalance < 80) {
+      toast({
+        variant: "destructive",
+        title: "Complete Arena de Madrid",
+        description: "Please complete Arena de Madrid arena to unlock Times Square, Manhattan.",
+      });
+    } else {
+      navigate("/champion");
+    }
   };
   const handleLegend = () => {
-    navigate("/legend");
+    if (turboBalance < 120) {
+      toast({
+        variant: "destructive",
+        title: "Complete Times Square, Manhattan",
+        description: "Please complete Times Square, Manhattan arena to unlock Thailand Beaches.",
+      });
+    } else {
+      navigate("/legend");
+    }
   };
   return (
     <>
@@ -58,7 +120,11 @@ export const Menu = () => {
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">COMPETITOR</p>
               <p>Arena de Madrid</p>
-              <p>Explore tricky terrains in the ecosystem. Catch up on DeFi, NFTs, and various aspects of it.</p>
+              <p>
+                {" "}
+                Explore tricky terrains in the ecosystem. Catch up on deepers concepts on move; wallets, user
+                management, smart contracts etc.
+              </p>
             </CardHeader>
             <CardContent>
               <img src="/icons/2.jpeg" className="h-[400px] w-full rounded-md" />
