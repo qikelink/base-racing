@@ -8,7 +8,7 @@ import { toast } from "../ui/use-toast";
 import { useEffect, useState } from "react";
 
 export function Header() {
-   const { account } = useWallet();
+   const { account, connected } = useWallet();
   const navigate = useNavigate();
 
     const [tkBalance, setTkBalance] = useState<number>(0);
@@ -23,11 +23,12 @@ export function Header() {
     refetchInterval: 10_000,
     queryFn: async () => {
       try {
-        if (account === null) {
-          console.error("Account not available");
+        if (!account || !connected) {
+          console.error("Account not available or not connected");
+          return { balance: 0 };
         }
 
-        const balance = await getTokenBalance({ accountAddress: account!.address });
+        const balance = await getTokenBalance({ accountAddress: account.address });
 
         return {
           balance,
@@ -36,13 +37,14 @@ export function Header() {
         toast({
           variant: "destructive",
           title: "Error",
-          description: error,
+          description: error.message || "An error occurred",
         });
         return {
           balance: 0,
         };
       }
     },
+    enabled: !!account && connected, // Only run query if account and connected are true
   });
 
   useEffect(() => {
