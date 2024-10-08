@@ -13,48 +13,196 @@ import { questionsByModule } from "@/utils/questions";
 
 type Level = "level1" | "level2" | "level3" | "level4";
 type Module = "module1" | "module2";
+type QuestionType = "text" | "image" | "multiple";
 
-export const Level = () => {
-  const location = useLocation();
-  const { module, level, title, description } = location.state || {
-    module: "module1" as Module,
-    level: "level1" as Level,
-    title: "",
-    description: "",
-  };
-  
-  const [currentStep, setCurrentStep] = React.useState(0);
-  const [selectedOption, setSelectedOption] = React.useState<number | null>(null);
-  const [isAnswerChecked, setIsAnswerChecked] = React.useState(false); // New state to track if the answer is checked
+interface BaseQuestion {
+  type: QuestionType;
+  title: string;
+  content?: string;
+  explanation: string;
+}
 
-  const questions = questionsByModule[module as Module][level as Level];
-  const progress = ((currentStep + 1) / questions.length) * 100;
-  const queryClient = useQueryClient();
-  const { account, signAndSubmitTransaction } = useWallet();
-  const currentQuestion = questions[currentStep];
-  const navigate = useNavigate();
+interface TextQuestion extends BaseQuestion {
+  type: "text";
+  content: string;
+}
 
-  const handleNext = async () => {
-    if (selectedOption !== null || currentQuestion.type !== "multiple") {
-      if (currentStep === questions.length - 1) {
-        await handleFinish();
-      } else {
-        setCurrentStep(currentStep + 1);
-        setSelectedOption(null);
-        setIsAnswerChecked(false); // Reset answer check state
-      }
-    }
-  };
+interface ImageQuestion extends BaseQuestion {
+  type: "image";
+  imageUrl: string;
+  description: string;
+}
 
+interface MultipleChoiceQuestion extends BaseQuestion {
+  type: "multiple";
+  question: string;
+  options: string[];
+  correctOptionIndex: number;
+}
+
+type Question = TextQuestion | ImageQuestion | MultipleChoiceQuestion;
+
+const TextContent: React.FC<{ question: TextQuestion }> = ({ question }) => (
+  <div className="space-y-4">
+    <h3 className="text-xl font-semibold">{question.title}</h3>
+    <p className="text-base">{question.content}</p>
+    <div className="mt-4 p-4 bg-primary rounded-lg">
+      <p className="text-sm text-yellow-400 font-medium mb-2">Explanation:</p>
+      <p className="text-sm text-gray-300">{question.explanation}</p>
+    </div>
+  </div>
+);
+
+const ImageContent: React.FC<{ question: ImageQuestion }> = ({ question }) => (
+  <div className="flex flex-col space-y-4">
+    <h3 className="text-xl font-semibold">{question.title}</h3>
+    <div className="relative">
+      <img 
+        src={question.imageUrl} 
+        alt={question.title} 
+        className="w-full h-96 rounded-lg object-cover" 
+      />
+    </div>
+    <p className="text-base text-gray-300">{question.description}</p>
+    <div className="mt-4 p-4 bg-primary rounded-lg">
+      <p className="text-sm text-yellow-400 font-medium mb-2">Explanation:</p>
+      <p className="text-sm text-gray-300">{question.explanation}</p>
+    </div>
+  </div>
+);
+
+const MultipleChoice: React.FC<{ 
+  question: MultipleChoiceQuestion;
+  selectedOption: number | null;
+  setSelectedOption: (index: number) => void;
+  isAnswerChecked: boolean;
+}> = ({ question, selectedOption, setSelectedOption, isAnswerChecked }) => (
+  <div className="space-y-6">
+    <div>
+      <h3 className="text-xl font-semibold mb-2">{question.title}</h3>
+      <p className="text-lg">{question.question}</p>
+    </div>
+    
+    <div className="grid grid-cols-1 gap-3">
+      {question.options.map((option, index) => {
+        const isCorrect = index === question.correctOptionIndex;
+        const isSelected = selectedOption === index;
+        const optionClass = isAnswerChecked
+          ? isCorrect
+            ? "bg-green-100 border-green-500"
+            : isSelected
+              ? "bg-red-100 border-red-500"
+              : "bg-white"
+          : isSelected
+            ? "bg-yellow-100 border-yellow-500"
+            : "bg-white";
+
+        return (
+          <Card
+            key={index}
+            className={`cursor-pointer border-2 transition-all ${optionClass}`}
+            onClick={() => setSelectedOption(index)}
+          >
+            <CardHeader>
+              <CardTitle>{option}</CardTitle>
+            </CardHeader>
+          </Card>
+        );
+      })}
+    </div>
+
+    {isAnswerChecked && (
+      <div className="mt-4 p-4 bg-primary rounded-lg">
+        <p className="text-sm text-yellow-400 font-medium mb-2">Explanation:</p>
+        <p className="text-sm text-gray-300">{question.explanation}</p>
+      </div>
+    )}
+  </div>
+);
+
+const ProgressCircle: React.FC<{ progress: number }> = ({ progress }) => {
   const radius = 50;
   const strokeWidth = 6;
   const normalizedRadius = radius - strokeWidth * 0.5;
   const circumference = normalizedRadius * 2 * Math.PI;
   const offset = circumference - (progress / 100) * circumference;
 
-  const handleBack = () => {
-    navigate(-1);
+  return (
+    <div className="relative h-24 w-24">
+      <svg height={radius * 2} width={radius * 2}>
+        <circle
+          stroke="gray"
+          fill="transparent"
+          strokeWidth={strokeWidth}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+        />
+        <circle
+          stroke="yellow"
+          fill="transparent"
+          strokeWidth={strokeWidth}
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+          style={{ transition: "stroke-dashoffset 0.5s ease-in-out" }}
+        />
+      </svg>
+      <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-white">
+        {Math.round(progress)}%
+      </p>
+    </div>
+  );
+};
+
+export const Level = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { account, signAndSubmitTransaction } = useWallet();
+  
+  const { module, level, title, description } = location.state || {
+    module: "module1" as Module,
+    level: "level1" as Level,
+    title: "",
+    description: "",
   };
+
+  const [currentStep, setCurrentStep] = React.useState(0);
+  const [selectedOption, setSelectedOption] = React.useState<number | null>(null);
+  const [isAnswerChecked, setIsAnswerChecked] = React.useState(false);
+  const [showExplanation, setShowExplanation] = React.useState(false);
+
+  const questions = questionsByModule[module as Module][level as Level] as Question[];
+  const progress = ((currentStep + 1) / questions.length) * 100;
+  const currentQuestion = questions[currentStep];
+
+  const handleOptionSelect = (index: number) => {
+    if (!isAnswerChecked) {
+      setSelectedOption(index);
+      setIsAnswerChecked(true);
+      setShowExplanation(true);
+    }
+  };
+
+  const handleNext = async () => {
+    const canProceed = currentQuestion.type !== "multiple" || selectedOption !== null;
+    
+    if (canProceed) {
+      if (currentStep === questions.length - 1) {
+        await handleFinish();
+      } else {
+        setCurrentStep(currentStep + 1);
+        setSelectedOption(null);
+        setIsAnswerChecked(false);
+        setShowExplanation(false);
+      }
+    }
+  };
+
+  const handleBack = () => navigate(-1);
 
   const handleFinish = async () => {
     if (!account) {
@@ -70,14 +218,22 @@ export const Level = () => {
       const executedTransaction = await aptosClient().waitForTransaction({
         transactionHash: committedTransaction.hash,
       });
+      
       queryClient.invalidateQueries();
+      
       toast({
         title: "Success",
         description: `Congratulations! Race completed! Returning back to Arena, hash: ${executedTransaction.hash}`,
       });
-      navigate(
-        `${module === "module1" ? "/rookie" : module === "module2" ? "/competitor" : module === "module3" ? "/champion" : module === "module4" ? "/legend" : ""}`,
-      );
+      
+      const paths = {
+        module1: "/rookie",
+        module2: "/competitor",
+        module3: "/champion",
+        module4: "/legend",
+      };
+      
+      navigate(paths[module as keyof typeof paths]);
     } catch (error) {
       console.error(error);
       toast({
@@ -88,12 +244,33 @@ export const Level = () => {
     }
   };
 
+  const renderQuestion = () => {
+    switch (currentQuestion.type) {
+      case "text":
+        return <TextContent question={currentQuestion} />;
+      case "image":
+        return <ImageContent question={currentQuestion} />;
+      case "multiple":
+        return (
+          <MultipleChoice 
+            question={currentQuestion}
+            selectedOption={selectedOption}
+            setSelectedOption={handleOptionSelect}
+            isAnswerChecked={isAnswerChecked}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div>
       <div onClick={handleBack} className="flex items-center space-x-2 cursor-pointer my-2">
-        <img src="/icons/back.svg" className="w-6 h-6 bg-white" />
-        <p> Go Back</p>
+        <img src="/icons/back.svg" className="w-6 h-6 bg-white" alt="Back" />
+        <p>Go Back</p>
       </div>
+
       <div className="flex justify-between items-center mt-6">
         <div className="space-y-2 w-96">
           <p className="font-semibold text-2xl">{title}</p>
@@ -104,117 +281,20 @@ export const Level = () => {
         </div>
 
         <div className="space-y-3">
-          <div className="relative h-24 w-24">
-            <svg height={radius * 2} width={radius * 2}>
-              <circle
-                stroke="gray"
-                fill="transparent"
-                strokeWidth={strokeWidth}
-                r={normalizedRadius}
-                cx={radius}
-                cy={radius}
-              />
-              <circle
-                stroke="yellow"
-                fill="transparent"
-                strokeWidth={strokeWidth}
-                strokeDasharray={circumference}
-                strokeDashoffset={offset}
-                r={normalizedRadius}
-                cx={radius}
-                cy={radius}
-                style={{ transition: "stroke-dashoffset 0.5s ease-in-out" }}
-              />
-            </svg>
-            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-white">
-              {Math.round(progress)}%
-            </p>
-          </div>
-
+          <ProgressCircle progress={progress} />
           <div className="space-y-1">
             <p className="font-semibold">Level Progress</p>
-            <p className="text-base text-gray-400">We're calculating your level progress here</p>
+            <p className="text-base text-gray-400">
+              {currentStep + 1} of {questions.length} completed
+            </p>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col gap-5 mt-6">
-        <p className="mt-6 text-lg font-medium">{currentQuestion?.question}</p>
-
-        {currentQuestion?.type === "multiple" && (
-          <div className="grid grid-cols-1 gap-3">
-            {currentQuestion.options?.map((option, index) => {
-              const isCorrect = index === currentQuestion.correctOptionIndex; // Assuming the correct option index is provided
-              const isSelected = selectedOption === index;
-              const optionClass = isAnswerChecked
-                ? isCorrect
-                  ? "bg-yellow-200"
-                  : isSelected
-                    ? "bg-red-400"
-                    : "bg-white"
-                : isSelected
-                  ? "bg-yellow-100"
-                  : "bg-white";
-
-              return (
-                <Card
-                  key={index}
-                  className={`cursor-pointer ${optionClass}`}
-                  onClick={() => {
-                    setSelectedOption(index);
-                    setIsAnswerChecked(true); // Check the answer
-                  }}
-                >
-                  <CardHeader>
-                    <CardTitle>{option}</CardTitle>
-                  </CardHeader>
-                </Card>
-              );
-            })}
-          </div>
-        )}
-
-        {currentQuestion?.type === "scale" && (
-          <div className="grid grid-cols-5 gap-3">
-            {currentQuestion.options?.map((option, index) => {
-              const isCorrect = index === currentQuestion.correctOptionIndex;
-              const isSelected = selectedOption === index;
-              const optionClass = isAnswerChecked
-                ? isCorrect
-                  ? "bg-yellow-200"
-                  : isSelected
-                    ? "bg-red-400"
-                    : "bg-white"
-                : isSelected
-                  ? "bg-yellow-100"
-                  : "bg-white";
-
-              return (
-                <Card
-                  key={index}
-                  className={`cursor-pointer ${optionClass}`}
-                  onClick={() => {
-                    setSelectedOption(index);
-                    setIsAnswerChecked(true); // Check the answer
-                  }}
-                >
-                  <CardHeader>
-                    <CardTitle>{option}</CardTitle>
-                  </CardHeader>
-                </Card>
-              );
-            })}
-          </div>
-        )}
-
-        {currentQuestion?.type === "text" && <p className="text-sm text-gray-300">{currentQuestion.description}</p>}
-
-        {currentQuestion?.type === "image" && (
-          <div className="flex flex-col items-center">
-            <img src={currentQuestion.imageUrl} alt="Aptos Ecosystem" className="mb-4 h-96 w-full rounded-md" />
-            <p className="text-sm text-gray-300">{currentQuestion.description}</p>
-          </div>
-        )}
+        <div className="bg-primary p-6 rounded-lg">
+          {renderQuestion()}
+        </div>
 
         <Progress value={progress} className="h-3 w-full text-yellow-400" />
 
@@ -222,7 +302,7 @@ export const Level = () => {
           <Button
             className="w-fit rounded-full bg-yellow-500 text-lg font-medium hover:bg-yellow-400"
             onClick={handleNext}
-            disabled={currentQuestion?.type === "multiple" && selectedOption === null}
+            disabled={currentQuestion.type === "multiple" && selectedOption === null}
           >
             {currentStep === questions.length - 1 ? "Claim Reward" : "Next"}
           </Button>

@@ -65,33 +65,33 @@ export const Rookie = () => {
     {
       module: "module1",
       level: "level1",
-      title: "Getting Started with Aptos",
+      title: "Aptos Core Architecture",
       description:
-        "Learn the fundamentals of blockchain technology and explore how Aptos fits seamlessly into the broader ecosystem, laying a solid foundation for your journey.",
+        "Explore Aptos's high-throughput architecture, Move Virtual Machine, and consensus mechanism, understanding the fundamental components that make Aptos unique.",
       points: 10,
     },
     {
       module: "module1",
       level: "level2",
-      title: "Understanding Smart Contracts",
+      title: "Move Language Security Features",
       description:
-        "Discover the concept of smart contracts, their significance, and how they operate specifically on the Aptos platform, unlocking new possibilities for decentralized applications.",
+        "Master Move's advanced security features including resource types, linear logic, and ability-based access control, laying the foundation for secure smart contract development.",
       points: 10,
     },
     {
       module: "module1",
       level: "level3",
-      title: "Exploring Aptos Ecosystem",
+      title: "Smart Contract Design Patterns",
       description:
-        "Dive deeper into the various components of the Aptos ecosystem, including decentralized applications (dApps), services, and the unique features that set Aptos apart.",
+        "Learn essential smart contract design patterns including upgradeability, escrow mechanisms, and state machines, enabling the creation of robust decentralized applications.",
       points: 10,
     },
     {
       module: "module1",
       level: "level4",
-      title: "Participating in the Aptos Community",
+      title: "Advanced Protocol Optimization",
       description:
-        "Engage with the vibrant Aptos community, learn about key initiatives, and find out how to actively participate and contribute to ongoing projects and discussions.",
+        "Master advanced techniques in gas optimization, off-chain computation, and efficient data structure implementation for building high-performance protocols.",
       points: 10,
     },
   ];

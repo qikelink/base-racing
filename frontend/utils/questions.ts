@@ -1,7 +1,40 @@
 export const questionsByModule = {
   module1: {
     level1: [
-      // Introduction to Aptos and Blockchain Basics
+      // Educational Text Content
+      {
+        title: "Aptos High-Throughput Architecture",
+        content:
+          "Aptos achieves high transaction throughput while maintaining safety through its innovative Block-STM system. This system enables parallel execution of transactions by detecting and resolving conflicts automatically. Block-STM optimistically executes transactions in parallel, tracks memory usage, and validates correctness before commitment. This approach ensures both high throughput and safety, making Aptos a powerful platform for scalable decentralized applications.",
+        type: "text",
+        explanation: "Core architectural understanding is crucial for developers working with Aptos.",
+      },
+      {
+        title: "Move Virtual Machine in Aptos",
+        content:
+          "The Move Virtual Machine plays a crucial role in Aptos by executing smart contracts with strong safety guarantees. It interprets and runs Move bytecode, ensuring that resources are handled securely and that key invariants are maintained throughout contract execution. The MoveVM's design prioritizes safety, expressiveness, and performance, making it an ideal foundation for building complex decentralized applications.",
+        type: "text",
+        explanation: "Understanding the MoveVM is fundamental for Aptos developers.",
+      },
+      {
+        title: "AptosBFT Consensus Mechanism",
+        content:
+          "AptosBFT, the consensus mechanism used by Aptos, achieves high throughput through optimized leader selection and parallel voting. This mechanism allows for quick agreement on the state of the blockchain across all validators, enabling fast finality of transactions. AptosBFT balances speed and security, ensuring that the network can process a high volume of transactions without compromising on safety or decentralization.",
+        type: "text",
+        explanation: "Consensus mechanisms are a core component of blockchain technology.",
+      },
+
+      // Image Content
+      {
+        title: "Aptos Execution Architecture Diagram",
+        description:
+          "This diagram illustrates how Block-STM, parallel execution, and the Move VM interact to enable high-throughput processing while maintaining safety guarantees. Pay close attention to the data flow and validation checkpoints depicted in the image.",
+        type: "image",
+        imageUrl: "/icons/aptos-architecture-level1.png",
+        explanation: "Visual understanding of architecture aids development.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which architectural innovation differentiates Aptos from traditional Layer 1 blockchains?",
         options: [
@@ -15,16 +48,16 @@ export const questionsByModule = {
         explanation: "Understanding Aptos's core innovation is fundamental for developers.",
       },
       {
-        question: "What unique feature of Move's type system enhances blockchain asset safety?",
+        question: "What role does the Move Virtual Machine play in Aptos?",
         options: [
-          "Dynamic typing",
-          "Optional type checking",
-          "Resource-oriented programming with linear types",
-          "Implicit type conversion",
+          "Only for token transfers",
+          "Executing smart contracts with safety guarantees",
+          "Managing network consensus",
+          "Handling user interfaces",
         ],
         type: "multiple",
-        correctOptionIndex: 2,
-        explanation: "Move's type system is crucial for secure development.",
+        correctOptionIndex: 1,
+        explanation: "The MoveVM is central to Aptos's smart contract functionality.",
       },
       {
         question: "How does AptosBFT consensus mechanism achieve high throughput?",
@@ -38,48 +71,43 @@ export const questionsByModule = {
         correctOptionIndex: 1,
         explanation: "Understanding consensus is essential for blockchain developers.",
       },
-      {
-        question: "Which feature best enables scalable DeFi applications on Aptos?",
-        options: [
-          "Sequential execution",
-          "Parallel execution with automatic conflict resolution",
-          "Limited smart contract functionality",
-          "Centralized order matching",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Scalability features impact DeFi application design.",
-      },
-      {
-        question: "What role does the Move Virtual Machine play in Aptos?",
-        options: [
-          "Only for token transfers",
-          "Executing smart contracts with safety guarantees",
-          "Managing network consensus",
-          "Handling user interfaces",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Understanding the MoveVM is fundamental.",
-      },
-      {
-        question: "Explain how Aptos achieves high transaction throughput while maintaining safety:",
-        description:
-          "Block-STM enables parallel execution of transactions by detecting and resolving conflicts automatically. This system optimistically executes transactions in parallel, tracks memory usage, and validates correctness before commitment, ensuring both high throughput and safety.",
-        type: "text",
-        explanation: "Core architectural understanding is crucial.",
-      },
-      {
-        question: "Study the Aptos execution architecture diagram:",
-        description:
-          "This diagram shows how Block-STM, parallel execution, and the Move VM interact to enable high-throughput processing while maintaining safety guarantees. Pay attention to the data flow and validation checkpoints.",
-        type: "image",
-        imageUrl: "/icons/aptos-architecture-level1.png",
-        explanation: "Visual understanding of architecture aids development.",
-      },
     ],
+
     level2: [
-      // Smart Contract Development Fundamentals
+      // Educational Text Content
+      {
+        title: "Move's Resource Types and Linear Logic",
+        content:
+          "Move's type system features resource types with linear logic, a powerful feature that prevents reentrancy attacks by default. Resources in Move can only be moved, not copied or implicitly discarded, ensuring that digital assets are handled with the same care as physical assets. This system provides strong safety guarantees, making it difficult to accidentally or maliciously mishandle tokens or other valuable resources.",
+        type: "text",
+        explanation: "Move's type system is a key security feature for smart contract development.",
+      },
+      {
+        title: "Ability-Based Access Control in Move",
+        content:
+          "Move implements an ability-based access control system that enhances security through capability-based permission management. This system allows developers to define precise, fine-grained permissions for resources and functions. By explicitly declaring the abilities of custom types, developers can create more secure and intentional code, reducing the risk of unauthorized access or operations.",
+        type: "text",
+        explanation: "Understanding access control is crucial for building secure smart contracts.",
+      },
+      {
+        title: "Formal Verification in Move",
+        content:
+          "Move supports formal verification, allowing developers to mathematically prove properties of their smart contracts. This capability goes beyond traditional testing by providing rigorous, mathematical assurances about contract behavior. Formal verification can guarantee the absence of certain classes of bugs and ensure that contracts behave correctly under all possible inputs and states, significantly enhancing the security and reliability of decentralized applications.",
+        type: "text",
+        explanation: "Formal verification provides strong guarantees for critical smart contracts.",
+      },
+
+      // Image Content
+      {
+        title: "Move Resource Lifecycle Diagram",
+        description:
+          "This diagram visualizes how Move resources are created, transferred, and destroyed safely. It illustrates the key stages in a resource's lifecycle and the safety checks that occur at each stage. Understanding this lifecycle is crucial for implementing secure smart contracts in Move.",
+        type: "image",
+        imageUrl: "/icons/move-resource-lifecycle.png",
+        explanation: "Resource lifecycle understanding is fundamental for Move developers.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which Move language feature prevents reentrancy attacks by default?",
         options: [
@@ -90,7 +118,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Security features are crucial for smart contracts.",
+        explanation: "Resource types with linear logic are a key security feature in Move.",
       },
       {
         question: "How does Move's ability-based access control system enhance security?",
@@ -102,7 +130,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Access control patterns impact security.",
+        explanation: "Capability-based permission management provides fine-grained security control.",
       },
       {
         question: "What is the primary benefit of Move's formal verification capabilities?",
@@ -114,56 +142,51 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Formal verification provides strong guarantees.",
-      },
-      {
-        question: "Which pattern best handles state management in Move smart contracts?",
-        options: [
-          "Global state variables",
-          "Resource-based state with controlled access",
-          "Unrestricted state modification",
-          "No state management",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "State management patterns affect contract safety.",
-      },
-      {
-        question: "How should Move resources be structured for optimal gas efficiency?",
-        options: [
-          "Using nested resources with minimal storage",
-          "Ignoring resource organization",
-          "Maximizing storage usage",
-          "Avoiding resources entirely",
-        ],
-        type: "multiple",
-        correctOptionIndex: 0,
-        explanation: "Resource structure impacts performance.",
-      },
-      {
-        question: "Describe the key considerations when implementing fungible tokens in Move:",
-        description:
-          "Move's resource safety ensures tokens can't be duplicated or destroyed accidentally. Implementations should consider supply management, transfer restrictions, and proper event emissions while maintaining efficiency.",
-        type: "text",
-        explanation: "Token implementation requires careful design.",
-      },
-      {
-        question: "Review the Move resource lifecycle diagram:",
-        description:
-          "This visualization shows how Move resources are created, transferred, and destroyed safely. Understanding this lifecycle is crucial for implementing secure smart contracts.",
-        type: "image",
-        imageUrl: "/icons/move-resource-lifecycle.png",
-        explanation: "Resource lifecycle understanding is fundamental.",
+        explanation: "Formal verification provides mathematical proofs of contract correctness.",
       },
     ],
+
     level3: [
-      // Advanced Contract Patterns
+      // Educational Text Content
+      {
+        title: "Upgradeability in Aptos Smart Contracts",
+        content:
+          "Upgradeability is a crucial feature for long-term smart contract maintenance. In Aptos, the proxy pattern is commonly used to achieve upgradeability. This pattern involves separating the contract's storage and logic, allowing developers to update the logic while preserving the contract's state and address. Implementing upgradeability requires careful design to ensure security and maintain trust with users.",
+        type: "text",
+        explanation: "Upgradeability is essential for maintaining and improving smart contracts over time.",
+      },
+      {
+        title: "The Escrow Pattern in Decentralized Exchanges",
+        content:
+          "The escrow pattern enhances security in decentralized exchanges by providing temporary custody of assets during trades. This pattern involves a trusted intermediary contract that holds assets from both parties until the conditions of the trade are met. Once the conditions are satisfied, the escrow contract automatically executes the exchange. This approach reduces counterparty risk and enables more complex trading mechanisms.",
+        type: "text",
+        explanation: "The escrow pattern is fundamental for building secure decentralized exchanges.",
+      },
+      {
+        title: "State Machine Pattern in Smart Contracts",
+        content:
+          "The state machine pattern is a powerful approach for managing complex contract logic. It involves defining distinct states that a contract can be in and the valid transitions between these states. This pattern simplifies contract logic, improves readability, and enhances auditability. By clearly defining the possible states and transitions, developers can create more predictable and secure smart contracts.",
+        type: "text",
+        explanation: "The state machine pattern helps manage complex contract behaviors securely.",
+      },
+
+      // Image Content
+      {
+        title: "Commitment Scheme Pattern Diagram",
+        description:
+          "This diagram illustrates the stages of a commitment scheme: Commit, Reveal, and Verify. In the Commit phase, a user submits a hashed value. During the Reveal phase, the original value is disclosed. The Verify stage confirms the revealed value matches the initial commitment. This pattern is crucial for applications requiring hidden information, such as sealed-bid auctions or voting systems.",
+        type: "image",
+        imageUrl: "/icons/commitment-scheme-pattern.png",
+        explanation: "Commitment schemes are fundamental for many cryptographic protocols in blockchain.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which design pattern is commonly used for upgradeability in Aptos smart contracts?",
         options: ["Proxy pattern", "Singleton pattern", "Factory pattern", "Observer pattern"],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Upgradeability is crucial for long-term contract maintenance.",
+        explanation: "The proxy pattern is widely used for implementing upgradeability in smart contracts.",
       },
       {
         question: "How does the 'escrow pattern' enhance security in decentralized exchanges?",
@@ -175,7 +198,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Understanding secure trade mechanisms is essential for DeFi development.",
+        explanation: "The escrow pattern provides secure temporary custody during trades.",
       },
       {
         question: "What is the primary benefit of implementing the 'state machine pattern' in smart contracts?",
@@ -187,56 +210,51 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "State management patterns impact contract clarity and security.",
-      },
-      {
-        question: "How does the 'composability pattern' contribute to DeFi ecosystem growth?",
-        options: [
-          "By limiting contract interactions",
-          "Through enabling contract-to-contract interactions and 'money legos'",
-          "By isolating all smart contracts",
-          "Through centralized control of all DeFi protocols",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Composability is a key feature for creating complex DeFi systems.",
-      },
-      {
-        question: "Which pattern is best suited for managing complex access control in multi-user contracts?",
-        options: [
-          "Role-based access control (RBAC)",
-          "Single-user authentication",
-          "No access control",
-          "Centralized authority model",
-        ],
-        type: "multiple",
-        correctOptionIndex: 0,
-        explanation: "Proper access control is crucial for secure multi-user systems.",
-      },
-      {
-        question: "Explain how the 'circuit breaker pattern' can be implemented to enhance contract security:",
-        description:
-          "The circuit breaker pattern involves implementing a mechanism to stop contract execution in case of emergencies. It typically includes three states: Normal, Suspended, and Killed. In the Normal state, all functions operate as usual. In the Suspended state, only specific admin functions and user withdrawals are allowed. The Killed state permanently disables the contract. This pattern helps mitigate risks from unforeseen vulnerabilities or attacks by allowing quick response to threats.",
-        type: "text",
-        explanation: "Emergency response mechanisms are critical for contract safety.",
-      },
-      {
-        question: "Study the diagram illustrating the 'commitment scheme pattern':",
-        description:
-          "This diagram shows the stages of a commitment scheme: Commit, Reveal, and Verify. In the Commit phase, a user submits a hashed value. During the Reveal phase, the original value is disclosed. The Verify stage confirms the revealed value matches the initial commitment. This pattern is crucial for applications requiring hidden information, such as sealed-bid auctions or voting systems.",
-        type: "image",
-        imageUrl: "/icons/commitment-scheme-pattern.png",
-        explanation: "Commitment schemes are fundamental for many cryptographic protocols.",
+        explanation: "The state machine pattern improves contract clarity and security.",
       },
     ],
+
     level4: [
-      // System Design and Optimization
+      // Educational Text Content
+      {
+        title: "Gas Optimization Techniques in Smart Contracts",
+        content:
+          "Optimizing gas usage is crucial for creating efficient and cost-effective smart contracts. One effective technique is loop unrolling, which can significantly reduce gas costs in loops. This involves replacing a loop with a sequence of similar independent statements. Other optimization techniques include minimizing storage operations, using events instead of storage for logs, and leveraging off-chain computation where possible.",
+        type: "text",
+        explanation: "Gas optimization is essential for creating efficient and user-friendly dApps.",
+      },
+      {
+        title: "Off-Chain Computation, On-Chain Verification Pattern",
+        content:
+          "The 'off-chain computation, on-chain verification' pattern improves scalability by reducing the computational load on the blockchain. This approach involves performing complex calculations off-chain and then submitting the results to the blockchain for verification. The on-chain component only needs to verify the correctness of the result, which is typically much less computationally intensive than performing the entire calculation.",
+        type: "text",
+        explanation: "This pattern is crucial for building scalable decentralized applications.",
+      },
+      {
+        title: "Incremental Merkle Trees for Scalable Data Management",
+        content:
+          "Incremental Merkle trees are a gas-efficient solution for managing large datasets in smart contracts. This data structure allows for efficient updates and proofs for large datasets. In an incremental Merkle tree, only the changed branches are recalculated upon updates, significantly reducing gas costs for operations on large datasets. The root hash serves as a compact representation of the entire dataset, enabling efficient verification of data integrity and membership proofs.",
+        type: "text",
+        explanation: "Efficient data structures are crucial for managing large datasets on-chain.",
+      },
+
+      // Image Content
+      {
+        title: "High-Performance DeFi Protocol Architecture",
+        description:
+          "This diagram illustrates a layered architecture combining on-chain and off-chain components for a DeFi protocol. It shows how off-chain indexers and relayers interact with on-chain smart contracts to achieve high performance. The architecture includes optimized data structures, batch processing mechanisms, and a hybrid on-chain/off-chain order matching system to balance security with scalability.",
+        type: "image",
+        imageUrl: "/icons/defi-protocol-architecture.png",
+        explanation: "Understanding complex system architectures is crucial for advanced DeFi development.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which optimization technique is most effective for reducing gas costs in loops?",
         options: ["Unrolling loops", "Increasing loop iterations", "Using nested loops", "Ignoring loop optimization"],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Loop optimization is crucial for gas-efficient contracts.",
+        explanation: "Loop unrolling can significantly reduce gas costs in smart contracts.",
       },
       {
         question: "How does the 'off-chain computation, on-chain verification' pattern improve scalability?",
@@ -248,31 +266,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Balancing on-chain and off-chain operations is key to scalability.",
-      },
-      {
-        question: "What is the primary advantage of implementing a 'batch processing' pattern?",
-        options: [
-          "Increased individual transaction costs",
-          "Reduced overall gas costs and improved throughput",
-          "Simplified contract logic",
-          "Elimination of all batching requirements",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Batch processing can significantly optimize high-volume operations.",
-      },
-      {
-        question: "How does 'lazy evaluation' contribute to contract efficiency?",
-        options: [
-          "By computing all possible outcomes in advance",
-          "Through deferring calculations until absolutely necessary",
-          "By increasing immediate computation load",
-          "Through removing all calculations",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Lazy evaluation can reduce unnecessary computations and gas costs.",
+        explanation: "This pattern reduces on-chain computational load, improving scalability.",
       },
       {
         question: "Which pattern is most effective for managing large datasets in smart contracts?",
@@ -284,36 +278,54 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Efficient data structures are crucial for managing large datasets.",
-      },
-      {
-        question:
-          "Describe the implementation of a gas-efficient 'incremental Merkle tree' for scalable data management:",
-        description:
-          "An incremental Merkle tree allows efficient updates and proofs for large datasets. Implementation involves maintaining a dynamic tree structure where only the changed branches are recalculated upon updates. This significantly reduces gas costs for operations on large datasets, as only the necessary hashes are recomputed instead of rebuilding the entire tree. The root hash serves as a compact representation of the entire dataset, enabling efficient verification of data integrity and membership proofs.",
-        type: "text",
-        explanation: "Merkle trees are fundamental for scalable on-chain data management.",
-      },
-      {
-        question: "Analyze the system architecture diagram for a high-performance DeFi protocol:",
-        description:
-          "This diagram illustrates a layered architecture combining on-chain and off-chain components for a DeFi protocol. It shows how off-chain indexers and relayers interact with on-chain smart contracts to achieve high performance. The architecture includes optimized data structures, batch processing mechanisms, and a hybrid on-chain/off-chain order matching system to balance security with scalability.",
-        type: "image",
-        imageUrl: "/icons/defi-protocol-architecture.png",
-        explanation: "Understanding complex system architectures is crucial for advanced DeFi development.",
+        explanation: "Merkle trees provide an efficient way to manage large datasets on-chain.",
       },
     ],
   },
 
   module2: {
     level1: [
-      // DeFi Protocol Development
+      // Educational Text Content
+      {
+        title: "Automated Market Maker (AMM) in DeFi",
+        content:
+          "Automated Market Makers (AMMs) are a cornerstone of decentralized finance (DeFi), enabling trustless and efficient token exchanges. AMMs use mathematical formulas, typically a constant product formula (x * y = k), to determine asset prices. This approach eliminates the need for traditional order books and allows for continuous liquidity. AMMs enable users to trade directly against a liquidity pool, making markets more accessible and reducing reliance on centralized exchanges.",
+        type: "text",
+        explanation: "Understanding AMM mechanics is fundamental for DeFi development.",
+      },
+      {
+        title: "Impermanent Loss in Liquidity Pools",
+        content:
+          "Impermanent loss is a phenomenon experienced by liquidity providers in AMM pools. It occurs when the price ratio of pooled assets changes compared to when they were deposited. This can lead to a reduction in the value of the liquidity provider's position compared to simply holding the assets. While fees earned from pool activity can offset this loss, understanding and mitigating impermanent loss is crucial for designing fair and attractive liquidity pools in DeFi protocols.",
+        type: "text",
+        explanation: "Impermanent loss is a key concept for designing fair and attractive liquidity pools.",
+      },
+      {
+        title: "Flash Loans in DeFi",
+        content:
+          "Flash loans are a unique feature in DeFi that allow users to borrow large amounts of assets without collateral, provided the loan is repaid within the same transaction. This mechanism enables complex arbitrage, liquidations, and other DeFi operations without requiring significant capital upfront. Flash loans leverage the atomic nature of blockchain transactions, where if the loan isn't repaid, the entire transaction is reverted as if it never happened. This feature has opened up new possibilities for capital efficiency in DeFi.",
+        type: "text",
+        explanation: "Flash loans enable complex DeFi operations and arbitrage opportunities.",
+      },
+
+      // Image Content
+      {
+        title: "DeFi Protocol Architecture Diagram",
+        description:
+          "This diagram illustrates the components of a comprehensive DeFi protocol, including liquidity pools, AMM mechanisms, flash loan functionality, and their interactions. It shows how user interactions flow through these components, highlighting the role of smart contracts in managing asset exchanges, providing liquidity, and enabling complex financial operations. Pay attention to how the AMM interacts with liquidity pools and how flash loans are integrated into the overall system architecture.",
+        type: "image",
+        imageUrl: "/icons/defi-protocol-architecture.png",
+        explanation:
+          "Visual understanding of DeFi protocol architecture aids in comprehending complex system interactions.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which component is crucial for implementing an Automated Market Maker (AMM) in DeFi?",
         options: ["Constant product formula", "Central order book", "Human market makers", "Fixed exchange rates"],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Understanding AMM mechanics is fundamental for DeFi development.",
+        explanation: "The constant product formula is fundamental to AMM functionality in DeFi.",
       },
       {
         question: "How does the concept of 'impermanent loss' affect liquidity providers in AMM pools?",
@@ -325,7 +337,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Impermanent loss is a key concept for designing fair and attractive liquidity pools.",
+        explanation: "Impermanent loss can reduce returns for liquidity providers compared to holding assets.",
       },
       {
         question: "What is the primary purpose of 'flash loans' in DeFi protocols?",
@@ -337,52 +349,46 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Flash loans enable complex DeFi operations and arbitrage opportunities.",
-      },
-      {
-        question: "How do 'oracles' contribute to the functionality of DeFi protocols?",
-        options: [
-          "By providing off-chain data to smart contracts",
-          "By replacing smart contracts entirely",
-          "Through centralized decision making",
-          "By eliminating the need for external data",
-        ],
-        type: "multiple",
-        correctOptionIndex: 0,
-        explanation: "Oracles are crucial for connecting DeFi protocols with real-world data.",
-      },
-      {
-        question: "What is the primary benefit of implementing 'yield farming' mechanisms in a DeFi protocol?",
-        options: [
-          "Reduced protocol security",
-          "Incentivizing liquidity provision and user engagement",
-          "Simplifying smart contract logic",
-          "Eliminating the need for governance",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Yield farming can drive liquidity and user adoption in DeFi protocols.",
-      },
-      {
-        question: "Explain the concept and implementation of a 'bonding curve' in token economics:",
-        description:
-          "A bonding curve is a mathematical curve that defines the relationship between a token's price and its supply. In implementation, it's typically a smart contract that mints new tokens when purchased and burns tokens when sold, with the price determined by the current supply. This creates an automated market maker for the token. The curve's shape (e.g., linear, exponential, logarithmic) affects token economics, influencing factors like price stability and speculation incentives. Implementing a bonding curve involves careful consideration of the curve function, reserve ratios, and potential for manipulation.",
-        type: "text",
-        explanation: "Bonding curves are advanced token economic models crucial for many DeFi protocols.",
-      },
-      {
-        question: "Analyze the architecture diagram of a comprehensive lending and borrowing protocol:",
-        description:
-          "This diagram illustrates the components of a DeFi lending protocol, including liquidity pools, interest rate models, collateral management systems, and liquidation mechanisms. Key features shown are the interaction between suppliers, borrowers, and liquidators, as well as the role of price oracles in maintaining system solvency. The architecture emphasizes the importance of efficient capital utilization and risk management in DeFi lending protocols.",
-        type: "image",
-        imageUrl: "/icons/defi-lending-protocol.png",
-        explanation: "Understanding complex DeFi architectures is crucial for advanced protocol development.",
+        explanation: "Flash loans provide instant, uncollateralized loans for complex DeFi operations.",
       },
     ],
     level2: [
-      // Cross-chain Integration
+      // Educational Text Content
       {
-        question: "Which of the following best describes the purpose of 'atomic swaps' in cross-chain transactions?",
+        title: "Atomic Swaps in Cross-Chain Transactions",
+        content:
+          "Atomic swaps enable trustless exchange of assets between different blockchains. This technology ensures that either both parties receive their exchanged assets, or neither does, eliminating counterparty risk. Atomic swaps typically use hash time-locked contracts (HTLCs) to enforce the atomicity of the exchange. This mechanism is fundamental for enabling decentralized cross-chain trading and enhancing blockchain interoperability.",
+        type: "text",
+        explanation: "Atomic swaps are fundamental for trustless cross-chain interactions.",
+      },
+      {
+        title: "Bridge Contracts in Cross-Chain Integration",
+        content:
+          "Bridge contracts play a crucial role in facilitating asset transfers and data sharing between different blockchains. These smart contracts act as intermediaries, locking assets on one chain and minting equivalent representations on another. Bridge contracts implement complex logic to ensure the integrity and security of cross-chain transactions, often involving a network of validators or relayers to confirm the validity of cross-chain events.",
+        type: "text",
+        explanation: "Bridge contracts are crucial infrastructure for blockchain interoperability.",
+      },
+      {
+        title: "Interledger Protocol for Cross-Chain Operations",
+        content:
+          "The Interledger Protocol (ILP) is a key technology for enabling packetized payments across diverse ledgers. It creates a standardized way for different payment networks to communicate and route transactions. ILP uses a system of connectors to facilitate payments between various ledgers, cryptocurrencies, and traditional payment systems. This protocol is crucial for creating a seamless web of value transfer across different blockchain networks and financial systems.",
+        type: "text",
+        explanation: "Understanding interoperability protocols is key for cross-chain development.",
+      },
+
+      // Image Content
+      {
+        title: "Cross-Chain DEX Architecture Diagram",
+        description:
+          "This diagram illustrates the architecture of a cross-chain decentralized exchange (DEX). It shows the interaction between different blockchain networks, bridge contracts, and liquidity pools. Key components include order matching engines, cross-chain state verification mechanisms, and atomic swap protocols. The diagram highlights how orders are propagated and matched across chains, and how bridge contracts facilitate the final settlement of cross-chain asset transfers.",
+        type: "image",
+        imageUrl: "/icons/cross-chain-dex-architecture.png",
+        explanation: "Understanding complex cross-chain architectures is essential for advanced DeFi development.",
+      },
+
+      // Multiple Choice Questions
+      {
+        question: "What is the primary purpose of atomic swaps in cross-chain transactions?",
         options: [
           "Instant, trustless exchange of assets between different blockchains",
           "Centralized exchange of assets",
@@ -391,10 +397,10 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Atomic swaps are fundamental for trustless cross-chain interactions.",
+        explanation: "Atomic swaps enable trustless, decentralized cross-chain asset exchanges.",
       },
       {
-        question: "What role do 'bridge contracts' play in cross-chain integration?",
+        question: "What role do bridge contracts play in cross-chain integration?",
         options: [
           "They prevent any cross-chain communication",
           "They facilitate asset transfers and data sharing between different blockchains",
@@ -403,10 +409,10 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Bridge contracts are crucial infrastructure for blockchain interoperability.",
+        explanation: "Bridge contracts enable asset and data transfer between different blockchains.",
       },
       {
-        question: "How does the 'Interledger Protocol' contribute to cross-chain operations?",
+        question: "How does the Interledger Protocol contribute to cross-chain operations?",
         options: [
           "By creating a single, unified blockchain",
           "Through enabling packetized payments across diverse ledgers",
@@ -415,57 +421,52 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Understanding interoperability protocols is key for cross-chain development.",
-      },
-      {
-        question: "What is a primary challenge in implementing cross-chain smart contract calls?",
-        options: [
-          "Ensuring atomicity and consistency across different consensus mechanisms",
-          "Eliminating the need for smart contracts",
-          "Centralizing all contract logic",
-          "Removing the need for consensus",
-        ],
-        type: "multiple",
-        correctOptionIndex: 0,
-        explanation: "Cross-chain smart contract interactions present unique technical challenges.",
-      },
-      {
-        question: "How do 'relay chains' enhance cross-chain interoperability in systems like Polkadot?",
-        options: [
-          "By eliminating the need for parachains",
-          "Through providing shared security and cross-chain message passing",
-          "By centralizing all blockchain operations",
-          "Through replacing individual blockchain consensus",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Understanding relay chain architectures is important for scalable cross-chain systems.",
-      },
-      {
-        question: "Describe the implementation of a secure cross-chain token bridge:",
-        description:
-          "A secure cross-chain token bridge typically involves smart contracts on both the source and destination chains, along with a set of validators or relayers. The process begins with locking tokens in a contract on the source chain. Validators then verify this lock and trigger the minting of equivalent tokens on the destination chain. Key security considerations include: 1) Multi-signature or threshold signing for validator actions, 2) Proper handling of differing finality times between chains, 3) Implementing replay protection to prevent double-spending, 4) Ensuring proper reserves and burn mechanisms for maintaining peg, and 5) Implementing emergency pause functions and gradual migration strategies for upgrades.",
-        type: "text",
-        explanation: "Implementing secure cross-chain bridges is crucial for interoperable blockchain ecosystems.",
-      },
-      {
-        question: "Analyze the diagram illustrating a cross-chain decentralized exchange (DEX) architecture:",
-        description:
-          "This diagram shows the components of a cross-chain DEX, including order matching engines, liquidity pools on multiple chains, cross-chain state verification mechanisms, and bridge contracts. Key features illustrated are: 1) How orders are propagated and matched across different chains, 2) The role of liquidity pools in facilitating cross-chain swaps, 3) How state proofs are generated and verified to ensure consistency across chains, and 4) The interaction between bridge contracts to finalize cross-chain asset transfers.",
-        type: "image",
-        imageUrl: "/icons/cross-chain-dex-architecture.png",
-        explanation: "Understanding complex cross-chain architectures is essential for advanced DeFi development.",
+        explanation: "The Interledger Protocol enables standardized payments across diverse ledgers and systems.",
       },
     ],
+
     level3: [
-      // Security and Formal Verification
+      // Educational Text Content
+      {
+        title: "Formal Verification in Smart Contract Security",
+        content:
+          "Formal verification is a rigorous mathematical approach to proving the correctness of smart contract behavior. It involves creating a formal specification of the contract's intended behavior and then using automated theorem provers to verify that the implementation meets this specification. Techniques like model checking are particularly useful for verifying invariants - properties that should always hold true regardless of the contract's state. Formal verification can provide a high degree of assurance about a contract's correctness and security.",
+        type: "text",
+        explanation: "Formal verification techniques are crucial for ensuring smart contract correctness.",
+      },
+      {
+        title: "Principle of Least Privilege in Smart Contract Security",
+        content:
+          "The principle of least privilege is a fundamental concept in smart contract security that involves granting the minimum level of access or permissions necessary for each function or user to perform their required tasks. In smart contracts, this principle is applied by carefully designing access control mechanisms, using modifiers to restrict function access, and compartmentalizing contract functionality. By minimizing unnecessary privileges, the potential impact of vulnerabilities or malicious actions can be significantly reduced.",
+        type: "text",
+        explanation: "Proper access control is fundamental to smart contract security.",
+      },
+      {
+        title: "Invariant Testing in Smart Contract Development",
+        content:
+          "Invariant testing is a powerful technique for ensuring the correctness of smart contracts by verifying that critical properties hold true across all possible state transitions. This involves defining a set of invariants - conditions that should always be true - and then testing these conditions against a wide range of inputs and state changes. Invariant testing can uncover subtle bugs and edge cases that might be missed by traditional unit testing, providing a higher level of assurance about the contract's behavior under various conditions.",
+        type: "text",
+        explanation: "Invariant testing is a powerful technique for ensuring contract correctness.",
+      },
+
+      // Image Content
+      {
+        title: "Smart Contract Security Audit Process Diagram",
+        description:
+          "This diagram illustrates a comprehensive smart contract security audit process. It shows the flow from initial code review, through automated analysis (including static analysis and fuzzing), to manual review and formal verification. Key components highlighted include the threat modeling stage, automated vulnerability scanners, symbolic execution tools, manual code review by security experts, formal verification of critical properties, and the iterative process of fixing and re-verifying. The diagram emphasizes the importance of combining multiple approaches for comprehensive security assurance.",
+        type: "image",
+        imageUrl: "/icons/smart-contract-audit-process.png",
+        explanation: "Understanding comprehensive security processes is crucial for developing robust smart contracts.",
+      },
+
+      // Multiple Choice Questions
       {
         question:
           "Which formal verification technique is most suitable for proving the correctness of smart contract invariants?",
         options: ["Model checking", "Random testing", "Informal code review", "Stress testing"],
         type: "multiple",
         correctOptionIndex: 0,
-        explanation: "Formal verification techniques are crucial for ensuring smart contract correctness.",
+        explanation: "Model checking is particularly effective for verifying invariants in smart contracts.",
       },
       {
         question: "How does the 'principle of least privilege' enhance smart contract security?",
@@ -477,7 +478,8 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Proper access control is fundamental to smart contract security.",
+        explanation:
+          "The principle of least privilege enhances security by minimizing unnecessary access and permissions.",
       },
       {
         question: "What is the primary purpose of 'invariant testing' in smart contract development?",
@@ -489,50 +491,47 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Invariant testing is a powerful technique for ensuring contract correctness.",
-      },
-      {
-        question: "How do 'symbolic execution' tools contribute to smart contract security?",
-        options: [
-          "By introducing intentional vulnerabilities",
-          "Through exploring all possible execution paths to find vulnerabilities",
-          "By replacing the need for smart contracts",
-          "Through making contracts more complex",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Symbolic execution is an advanced technique for thorough contract analysis.",
-      },
-      {
-        question: "What role does 'formal specification' play in the development of secure smart contracts?",
-        options: [
-          "It replaces the need for coding",
-          "It provides a precise, mathematical description of expected contract behavior",
-          "It introduces more ambiguity into development",
-          "It eliminates the need for testing",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Formal specifications are crucial for developing provably correct contracts.",
-      },
-      {
-        question: "Explain the process and benefits of using the Coq proof assistant for smart contract verification:",
-        description:
-          "The Coq proof assistant is a formal proof management system that can be used to mathematically verify the correctness of smart contracts. The process involves: 1) Defining the contract's behavior and properties in Coq's specification language, 2) Writing proofs that demonstrate these properties hold, 3) Using Coq to check the validity of these proofs. Benefits include: a) Rigorous verification of critical properties, b) Ability to prove the absence of certain classes of bugs, c) Generation of machine-checkable proofs that can be independently verified. Challenges include the high expertise required and the time-intensive nature of formal proofs. However, for high-stakes contracts, this level of assurance can be invaluable.",
-        type: "text",
-        explanation: "Understanding formal verification tools is crucial for developing highly secure contracts.",
-      },
-      {
-        question: "Analyze the diagram showing a comprehensive smart contract security audit process:",
-        description:
-          "This diagram illustrates a multi-stage security audit process for smart contracts. It shows the flow from initial code review, through automated analysis (including static analysis and fuzzing), to manual review and formal verification. Key components highlighted include: 1) Threat modeling stage, 2) Automated vulnerability scanners, 3) Symbolic execution tools, 4) Manual code review by security experts, 5) Formal verification of critical properties, and 6) Iterative process of fixing and re-verifying. The diagram emphasizes the importance of combining multiple approaches for comprehensive security assurance.",
-        type: "image",
-        imageUrl: "/icons/smart-contract-audit-process.png",
-        explanation: "Understanding comprehensive security processes is crucial for developing robust smart contracts.",
+        explanation:
+          "Invariant testing verifies that critical properties hold true across all possible contract states.",
       },
     ],
+
     level4: [
-      // Performance Optimization and MEV Protection
+      // Educational Text Content
+      {
+        title: "Gas Optimization Techniques in Smart Contracts",
+        content:
+          "Gas optimization is crucial for creating efficient and cost-effective smart contracts. Key techniques include storage packing, where multiple variables are packed into a single storage slot to reduce gas costs. Another important strategy is using read-only reentrancy, which allows multiple reads in a single transaction without intermediate writes, significantly reducing gas consumption. Optimizing loop operations, using events instead of storage for logs, and leveraging off-chain computation where possible are also effective gas-saving strategies.",
+        type: "text",
+        explanation: "Efficient gas usage is crucial for creating user-friendly and cost-effective smart contracts.",
+      },
+      {
+        title: "MEV Protection and Commit-Reveal Schemes",
+        content:
+          "Miner Extractable Value (MEV) protection is a critical consideration in DeFi protocol design. Commit-reveal schemes are an effective strategy for preventing MEV by hiding transaction intentions until they're irreversibly committed. In this approach, users first submit a cryptographic commitment of their action, followed by a reveal phase where the actual action is disclosed. This two-step process prevents front-running and other MEV exploits by ensuring that transaction details are not visible until it's too late for miners or other parties to take advantage of this information.",
+        type: "text",
+        explanation: "MEV protection is crucial for fair and manipulation-resistant DeFi protocols.",
+      },
+      {
+        title: "Meta-Transactions for Improved User Experience",
+        content:
+          "Meta-transactions are an advanced pattern for improving DApp usability and gas efficiency. This architecture allows users to sign messages off-chain and have others submit the actual on-chain transactions. By separating transaction signing from submission, meta-transactions enable scenarios where users can interact with smart contracts without holding the native blockchain token for gas fees. This can significantly lower the barrier to entry for new users and provide a more seamless user experience in decentralized applications.",
+        type: "text",
+        explanation: "Meta-transactions are an advanced pattern for improving DApp usability and accessibility.",
+      },
+
+      // Image Content
+      {
+        title: "High-Throughput, MEV-Protected Blockchain Architecture",
+        description:
+          "This diagram illustrates a blockchain architecture designed for high performance and MEV protection. Key features shown include a parallel transaction execution engine, a sophisticated mempool management system with transaction encryption, a fair ordering protocol to prevent validator front-running, Layer 2 scaling solutions integrated into the base layer, advanced gossip protocols for efficient network communication, and a hybrid consensus mechanism balancing throughput and security. The architecture emphasizes how each component contributes to overall system performance and fairness.",
+        type: "image",
+        imageUrl: "/icons/high-throughput-mev-protected-blockchain.png",
+        explanation:
+          "Understanding advanced blockchain architectures is crucial for developing high-performance, fair systems.",
+      },
+
+      // Multiple Choice Questions
       {
         question: "Which optimization technique is most effective for reducing gas costs in storage operations?",
         options: [
@@ -543,73 +542,32 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Efficient storage use is crucial for gas optimization in smart contracts.",
+        explanation: "Packing multiple variables into a single storage slot significantly reduces gas costs.",
       },
       {
-        question: "How does 'read-only reentrancy' contribute to gas efficiency?",
+        question: "How do commit-reveal schemes contribute to MEV protection?",
         options: [
-          "By allowing unlimited reentrancy",
-          "Through enabling multiple reads in a single transaction without intermediate writes",
-          "By increasing the number of storage writes",
-          "Through eliminating all reentrancy",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Understanding advanced reentrancy patterns is important for optimization.",
-      },
-      {
-        question: "What is the primary purpose of 'commit-reveal' schemes in preventing MEV (Miner Extractable Value)?",
-        options: [
-          "To increase MEV opportunities",
+          "By increasing MEV opportunities",
           "Through hiding transaction intentions until they're irreversibly committed",
           "By making all transactions public immediately",
           "Through centralizing transaction ordering",
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Commit-reveal schemes are crucial for fair and manipulation-resistant protocols.",
+        explanation: "Commit-reveal schemes protect against MEV by hiding transaction details until commitment.",
       },
       {
-        question: "How do 'constant function market makers' (CFMMs) optimize gas usage in DEX contracts?",
+        question: "What is the primary benefit of using meta-transactions in DApps?",
         options: [
-          "By increasing computational complexity",
-          "Through using simple, gas-efficient formulas for price calculations",
-          "By removing all price calculations",
-          "Through implementing complex order books",
+          "Increasing transaction costs",
+          "Allowing users to interact with contracts without holding native tokens for gas",
+          "Removing the need for smart contracts",
+          "Centralizing all transactions",
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Understanding CFMM design is crucial for building efficient DEX protocols.",
+        explanation: "Meta-transactions allow users to interact with DApps without holding tokens for gas fees.",
       },
-      {
-        question:
-          "What role does 'meta-transaction' architecture play in improving user experience and gas efficiency?",
-        options: [
-          "It makes transactions more expensive",
-          "Through allowing users to sign messages off-chain and have others submit transactions",
-          "By removing the ability to make transactions",
-          "Through increasing on-chain computation",
-        ],
-        type: "multiple",
-        correctOptionIndex: 1,
-        explanation: "Meta-transactions are an advanced pattern for improving DApp usability.",
-      },
-      {
-        question:
-          "Describe the implementation of a gas-efficient, MEV-resistant orderbook for a decentralized exchange:",
-        description:
-          "A gas-efficient, MEV-resistant orderbook can be implemented using a combination of off-chain order management and on-chain settlement. Key components include: 1) Off-chain order collection and matching engine to reduce on-chain operations, 2) Periodic batch auctions instead of continuous trading to prevent front-running, 3) Use of zero-knowledge proofs to validate off-chain computations without revealing order details, 4) Implementation of a commit-reveal scheme for order submission to prevent last-minute front-running, 5) Gas-optimized on-chain contract for final settlement, using efficient data structures like Merkle trees to prove order validity. This design minimizes on-chain operations while maintaining transparency and resistance to MEV attacks.",
-        type: "text",
-        explanation: "Balancing efficiency and fairness is crucial for advanced DEX design.",
-      },
-      {
-        question: "Analyze the system architecture diagram for a high-throughput, MEV-protected blockchain:",
-        description:
-          "This diagram illustrates a blockchain architecture designed for high performance and MEV protection. Key features shown include: 1) A parallel transaction execution engine, 2) A sophisticated mempool management system with transaction encryption, 3) A fair ordering protocol to prevent validator front-running, 4) Layer 2 scaling solutions integrated into the base layer, 5) Advanced gossip protocols for efficient network communication, and 6) A hybrid consensus mechanism balancing throughput and security. The architecture emphasizes how each component contributes to overall system performance and fairness.",
-        type: "image",
-        imageUrl: "/icons/system_architecture_diagram.png",
-        explanation: "This is an image showing the system architecture of a high-throughput, MEV-protected blockchain for better understnding.",
-      }
     ],
   },
 };

@@ -65,33 +65,33 @@ export const Competitor = () => {
     {
       module: "module2",
       level: "level1",
-      title: "Introduction to Aptos Architecture",
+      title: "DeFi Protocol Fundamentals",
       description:
-        "Explore the foundational components of the Aptos blockchain, focusing on its modular architecture that enhances scalability and performance.",
+        "Understand core DeFi concepts including Automated Market Makers (AMMs), impermanent loss, and flash loans, building a foundation for decentralized finance development.",
       points: 10,
     },
     {
       module: "module2",
       level: "level2",
-      title: "Building on Move Language",
+      title: "Cross-Chain Integration",
       description:
-        "Gain insights into the Move programming language used in Aptos, including its syntax and features that promote security in smart contract development.",
+        "Explore cross-chain technologies including atomic swaps, bridge contracts, and the Interledger Protocol, enabling seamless blockchain interoperability.",
       points: 10,
     },
     {
       module: "module2",
       level: "level3",
-      title: "Aptos Wallets and User Management",
+      title: "Smart Contract Security",
       description:
-        "Discover how to set up and manage wallets on Aptos, covering essential concepts like private keys, seed phrases, and transaction management.",
+        "Master advanced security techniques including formal verification, principle of least privilege, and invariant testing to build robust and secure smart contracts.",
       points: 10,
     },
     {
       module: "module2",
       level: "level4",
-      title: "Understanding Aptos Governance",
+      title: "Advanced Protocol Design",
       description:
-        "Learn about the governance mechanisms in the Aptos ecosystem and how community decisions shape the platform's future.",
+        "Learn sophisticated protocol design techniques including gas optimization, MEV protection, and meta-transactions for building efficient and fair decentralized systems.",
       points: 10,
     },
   ];
