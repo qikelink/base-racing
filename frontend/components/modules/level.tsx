@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Share2 } from "lucide-react";
-import { Card, CardHeader, CardTitle } from "../ui/card";
+import { Share2, Star, XCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Progress } from "../ui/progress";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -72,49 +72,89 @@ const MultipleChoice: React.FC<{
   selectedOption: number | null;
   setSelectedOption: (index: number) => void;
   isAnswerChecked: boolean;
-}> = ({ question, selectedOption, setSelectedOption, isAnswerChecked }) => (
-  <div className="space-y-6">
-    <div>
-      <h3 className="text-xl font-semibold mb-2">{question.title}</h3>
-      <p className="text-lg">{question.question}</p>
-    </div>
+}> = ({ question, selectedOption, setSelectedOption, isAnswerChecked }) => {
+  const getFeedbackMessage = () => {
+    if (!isAnswerChecked || selectedOption === null) return null;
+    
+    const isCorrect = selectedOption === question.correctOptionIndex;
+    
+    const correctMessages = [
+      "🌟 You're absolutely crushing it! High five! ✋",
+      "🎯 Boom! Nailed it like a boss!",
+      "🧠 Look at you, smarty pants! Keep being awesome!",
+      "🎉 You rock harder than a geology convention!",
+      "⭐ Einstein would be proud of you right now!"
+    ];
 
-    <div className="grid grid-cols-1 gap-3">
-      {question.options.map((option, index) => {
-        const isCorrect = index === question.correctOptionIndex;
-        const isSelected = selectedOption === index;
-        const optionClass = isAnswerChecked
-          ? isCorrect
-            ? "bg-green-100 border-green-500"
-            : isSelected
-              ? "bg-red-100 border-red-500"
-              : "bg-white"
-          : isSelected
-            ? "bg-yellow-100 border-yellow-500"
-            : "bg-white";
+    const incorrectMessages = [
+      "😅 Oopsie-daisy! That's not quite it - but hey, learning is fun!",
+      "🤔 Plot twist: that wasn't the right answer - but you're getting warmer!",
+      "🎭 Close, but no Broadway musical! Give it another shot!",
+      "🌈 Almost there! Like a rainbow without the pot of gold!",
+      "🎪 Not quite the right circus act, but the show must go on!"
+    ];
 
-        return (
-          <Card
-            key={index}
-            className={`cursor-pointer border-2 transition-all ${optionClass}`}
-            onClick={() => setSelectedOption(index)}
-          >
-            <CardHeader>
-              <CardTitle>{option}</CardTitle>
-            </CardHeader>
-          </Card>
-        );
-      })}
-    </div>
+    const messageArray = isCorrect ? correctMessages : incorrectMessages;
+    return messageArray[Math.floor(Math.random() * messageArray.length)];
+  };
 
-    {isAnswerChecked && (
-      <div className="mt-4 p-4 bg-primary rounded-lg">
-        <p className="text-sm text-yellow-400 font-medium mb-2">Explanation:</p>
-        <p className="text-sm text-gray-300">{question.explanation}</p>
+  return (
+    <div className="w-full  mx-auto">
+      <div className="text-xl font-bold">
+        {question.title}
       </div>
-    )}
-  </div>
-);
+      <div>
+        <p className="mb-4">{question.question}</p>
+        
+        <div className="space-y-2">
+          {question.options.map((option, index) => {
+            const isCorrect = index === question.correctOptionIndex;
+            const isSelected = selectedOption === index;
+            const optionClass = isAnswerChecked
+              ? isCorrect
+                ? "bg-green-100 border-green-500"
+                : isSelected
+                  ? "bg-red-100 border-red-500"
+                  : "bg-white"
+              : isSelected
+                ? "bg-yellow-100 border-yellow-500"
+                : "bg-white";
+
+            return (
+              <div
+                key={index}
+                className={`p-3 text-black font-medium text-lg border-2 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-md ${optionClass}`}
+                onClick={() => setSelectedOption(index)}
+              >
+                <div className="flex items-center gap-2">
+                  {isAnswerChecked && isCorrect && (
+                    <Star className="text-green-500" size={20} />
+                  )}
+                  {isAnswerChecked && isSelected && !isCorrect && (
+                    <XCircle className="text-red-500" size={20} />
+                  )}
+                  {option}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {isAnswerChecked && (
+          <div className="mt-6 space-y-4">
+            <p className="text-lg font-medium text-center animate-bounce">
+              {getFeedbackMessage()}
+            </p>
+            <div className="p-4 bg-yellow-50 rounded-md text-black">
+              <p className="font-semibold mb-2">Let's break it down:</p>
+              <p>{question.explanation}</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const ProgressCircle: React.FC<{ progress: number }> = ({ progress }) => {
   const radius = 50;
