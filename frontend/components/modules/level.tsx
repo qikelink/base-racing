@@ -173,7 +173,7 @@ export const Level = () => {
         {currentQuestion?.type === "scale" && (
           <div className="grid grid-cols-5 gap-3">
             {currentQuestion.options?.map((option, index) => {
-              const isCorrect = index === currentQuestion.correctOptionIndex; 
+              const isCorrect = index === currentQuestion.correctOptionIndex;
               const isSelected = selectedOption === index;
               const optionClass = isAnswerChecked
                 ? isCorrect

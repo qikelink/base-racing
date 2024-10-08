@@ -16,7 +16,7 @@ export const ProfilePage = () => {
 
   const { data } = useQuery({
     queryKey: ["apt-balance", account?.address],
-    refetchInterval: 10_000,
+    // refetchInterval: 10_000,
     queryFn: async () => {
       try {
         if (!account) {

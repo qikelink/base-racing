@@ -8,7 +8,7 @@ import { toast } from "../ui/use-toast";
 import { useEffect, useState } from "react";
 
 export function Header() {
-   const { account, connected } = useWallet();
+  const { account, connected } = useWallet();
   const navigate = useNavigate();
   const [tkBalance, setTkBalance] = useState<number>(0);
 
@@ -32,15 +32,10 @@ export function Header() {
           balance,
         };
       } catch (error: any) {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: error.message || "An error occurred",
-        });
         return { balance: 0 };
       }
     },
-    enabled: !!account && connected, // Only run query if account and connected are true
+    enabled: !!account && !!connected, // Only run query if account and connected are true
   });
 
   useEffect(() => {
@@ -49,10 +44,9 @@ export function Header() {
     }
   }, [data]);
 
-
   useEffect(() => {
-    const streakKey = 'dailyStreak';
-    const lastStreakDateKey = 'lastStreakDate';
+    const streakKey = "dailyStreak";
+    const lastStreakDateKey = "lastStreakDate";
 
     const now = new Date();
     const lastStreakDate = localStorage.getItem(lastStreakDateKey);
@@ -63,13 +57,13 @@ export function Header() {
       const diffInDays = diffInTime / (1000 * 3600 * 24);
 
       if (diffInDays >= 1) {
-        const newStreak = parseInt(localStorage.getItem(streakKey) || '0', 10) + 1;
+        const newStreak = parseInt(localStorage.getItem(streakKey) || "0", 10) + 1;
         localStorage.setItem(streakKey, newStreak.toString());
         localStorage.setItem(lastStreakDateKey, now.toISOString());
       }
     } else {
       // Initialize the streak if it doesn't exist
-      localStorage.setItem(streakKey, '1');
+      localStorage.setItem(streakKey, "1");
       localStorage.setItem(lastStreakDateKey, now.toISOString());
     }
   }, []);
@@ -87,11 +81,11 @@ export function Header() {
         <div className="flex gap-3 items-center flex-wrap">
           <div className="flex space-x-1 items-center">
             <img src="/public/icons/car.svg" className="h-9 w-9" />
-            <p className="text-sm">{(tkBalance / Math.pow(10, 8))} Turbos</p>
+            <p className="text-sm">{tkBalance / Math.pow(10, 8)} Turbos</p>
           </div>
           <Button>
-            <img src="/icons/Fire.svg" className="h-4 w-4" /> 
-            {localStorage.getItem('dailyStreak') || 0}
+            <img src="/icons/Fire.svg" className="h-4 w-4" />
+            {localStorage.getItem("dailyStreak") || 0}
           </Button>
           <WalletSelector />
         </div>

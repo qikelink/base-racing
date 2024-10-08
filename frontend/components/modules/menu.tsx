@@ -24,11 +24,6 @@ export const Menu = () => {
         const balance = await getTokenBalance({ accountAddress: account.address });
         return { balance };
       } catch (error: any) {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: error.message,
-        });
         return { balance: 0 };
       }
     },

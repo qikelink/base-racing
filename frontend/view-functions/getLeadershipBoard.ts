@@ -1,4 +1,4 @@
-import { MODULE_ADDRESS } from "@/constants";
+import { VITE_MODULE_ADDRESS } from "@/constants";
 import { aptosClient } from "@/utils/aptosClient";
 
 export interface MinterData {
@@ -10,7 +10,7 @@ export const getLeadershipBoard = async (): Promise<MinterData[][]> => {
   try {
     const content = await aptosClient().view({
       payload: {
-        function: `${MODULE_ADDRESS}::testing::list_all_minters_and_tokens`,
+        function: `${VITE_MODULE_ADDRESS}::testing::list_all_minters_and_tokens`,
       },
     });
     return [content as MinterData[]];

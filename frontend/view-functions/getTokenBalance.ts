@@ -1,4 +1,4 @@
-import { MODULE_ADDRESS } from "@/constants";
+import { VITE_MODULE_ADDRESS } from "@/constants";
 import { aptosClient } from "@/utils/aptosClient";
 
 export type TokenBalanceArguments = {
@@ -9,7 +9,7 @@ export const getTokenBalance = async (args: TokenBalanceArguments): Promise<numb
   const { accountAddress } = args;
   const balance = await aptosClient().view<[number]>({
     payload: {
-      function: `${MODULE_ADDRESS}::testing::get_token_balance`,
+      function: `${VITE_MODULE_ADDRESS}::testing::get_token_balance`,
       functionArguments: [accountAddress],
     },
   });

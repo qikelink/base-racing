@@ -27,11 +27,6 @@ export const Rookie = () => {
         const balance = await getTokenBalance({ accountAddress: account.address });
         return { balance };
       } catch (error: any) {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: error.message,
-        });
         return { balance: 0 };
       }
     },
@@ -91,7 +86,8 @@ export const Rookie = () => {
         "Dive deeper into the various components of the Aptos ecosystem, including decentralized applications (dApps), services, and the unique features that set Aptos apart.",
       points: 10,
     },
-    {module: "module1",
+    {
+      module: "module1",
       level: "level4",
       title: "Participating in the Aptos Community",
       description:
