@@ -22,6 +22,7 @@ export const Level = () => {
     title: "",
     description: "",
   };
+  
   const [currentStep, setCurrentStep] = React.useState(0);
   const [selectedOption, setSelectedOption] = React.useState<number | null>(null);
   const [isAnswerChecked, setIsAnswerChecked] = React.useState(false); // New state to track if the answer is checked
@@ -72,8 +73,11 @@ export const Level = () => {
       queryClient.invalidateQueries();
       toast({
         title: "Success",
-        description: `Congratulations! Level completed. Transaction succeeded, hash: ${executedTransaction.hash}`,
+        description: `Congratulations! Race completed! Returning back to Arena, hash: ${executedTransaction.hash}`,
       });
+      navigate(
+        `${module === "module1" ? "/rookie" : module === "module2" ? "/competitor" : module === "module3" ? "/champion" : module === "module4" ? "/legend" : ""}`,
+      );
     } catch (error) {
       console.error(error);
       toast({

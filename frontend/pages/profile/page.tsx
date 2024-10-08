@@ -113,7 +113,7 @@ export const ProfilePage = () => {
           <div className="flex items-center space-x-1">
             <img src="/icons/car.svg" className="h-6 w-6" />
             <p className="my-8">
-              Riding the terrains since <span className="text-gray-400">September 18th 2024</span>{" "}
+              Riding the terrains since <span className="text-gray-400">October 2024</span>{" "}
             </p>
           </div>
         </div>
