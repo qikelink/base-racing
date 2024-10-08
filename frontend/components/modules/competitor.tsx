@@ -13,6 +13,8 @@ export const Competitor = () => {
   const { account } = useWallet();
   const navigate = useNavigate();
   const [tkBalance, setTkBalance] = useState<number>(0);
+  const MODULE_START_POINTS = 40; // Starting points for module 2
+  const POINTS_PER_LEVEL = 10;
 
   const { data } = useQuery({
     queryKey: ["apt-balance", account?.address],
@@ -39,13 +41,13 @@ export const Competitor = () => {
   }, [data]);
 
   const handleNavigate = (levelIndex: number, module: string, level: string, title: string, description: string) => {
-    if (levelIndex > userLevel) {
+    if (turboBalance < MODULE_START_POINTS + (levelIndex * POINTS_PER_LEVEL)) {
       toast({
         variant: "destructive",
         title: "Level Locked",
         description: "Please complete the previous level before moving on to this level.",
       });
-    } else if (levelIndex < userLevel) {
+    } else if (turboBalance >= MODULE_START_POINTS + ((levelIndex + 1) * POINTS_PER_LEVEL)) {
       toast({
         variant: "destructive",
         title: "Level Already Completed",
@@ -96,11 +98,15 @@ export const Competitor = () => {
     },
   ];
 
-  const userLevel = Math.floor(turboBalance / 10);
+  // Calculate user level relative to this module
+  const userLevel = Math.max(0, Math.floor((turboBalance - MODULE_START_POINTS) / POINTS_PER_LEVEL));
+  
+  // Calculate progress for the current level
+  const currentLevelProgress = ((turboBalance - MODULE_START_POINTS) % POINTS_PER_LEVEL) * 10;
 
   const progressValues = levels.map((_, index) => {
     if (index < userLevel) return 100; // Completed levels
-    if (index === userLevel) return (turboBalance % 10) * 10; // Current level progress
+    if (index === userLevel) return currentLevelProgress; // Current level progress
     return 0; // Not started levels
   });
 
@@ -117,7 +123,7 @@ export const Competitor = () => {
         <img src="/icons/back.svg" className="w-6 h-6 bg-white" />
         <p> Quick Stop</p>
       </div>
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center">
         <div className="space-y-1 w-96">
           <p className="font-semibold text-2xl">Arena de Madrid</p>
           <p className="text-base text-gray-400">
@@ -183,7 +189,11 @@ export const Competitor = () => {
                 <div className="flex space-x-2 items-center">
                   <img src="/icons/car.svg" className="h-6 w-6" />
                   <p className="text-sm font-semibold">
-                    {userLevel > index ? "10 Points" : index === userLevel ? `${turboBalance % 10} Points` : "0 Points"}
+                    {userLevel > index 
+                      ? "10 Points" 
+                      : index === userLevel 
+                        ? `${(turboBalance - MODULE_START_POINTS) % POINTS_PER_LEVEL} Points` 
+                        : "0 Points"}
                     <span className="text-xs text-gray-600"> out of 10</span>
                   </p>
                 </div>
