@@ -1,544 +1,615 @@
 export const questionsByModule = {
-    module1: {
-      level1: [
-        {
-          question: "What is the primary purpose of blockchain technology?",
-          options: [
-            "To create digital currencies",
-            "To provide a decentralized ledger for transactions",
-            "To improve internet speed",
-            "To facilitate online gaming",
-          ],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "Aptos is built to enhance scalability and security while maintaining decentralization.",
-          description: "Aptos utilizes a unique architecture that separates transaction execution from data storage. This means it can handle more transactions simultaneously, making it faster and more efficient. For example, while one part of the system processes transactions, another can store them securely, ensuring that both processes don’t slow each other down.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which of the following features does Aptos provide?",
-          options: [
-            "High transaction throughput",
-            "Zero transaction fees",
-            "Support for multiple programming languages",
-            "Inherent centralization",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What consensus mechanism does Aptos utilize?",
-          options: [
-            "Proof of Work",
-            "Proof of Stake",
-            "AptosBFT (Byzantine Fault Tolerance)",
-            "Delegated Proof of Stake",
-          ],
-          type: "multiple",
-          correctOptionIndex: 2,
-        },
-        {
-          question: "What programming language is primarily used for developing smart contracts on Aptos?",
-          options: ["Solidity", "Move", "Rust", "JavaScript"],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "Aptos allows developers to create which types of applications?",
-          options: [
-            "Decentralized applications (dApps)",
-            "Traditional web applications",
-            "Mobile applications without blockchain",
-            "Games only",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What does the Aptos architecture look like?",
-          description: "This image shows the key components and flow of the Aptos architecture. The modular design allows for independent upgrades, meaning developers can improve one part of the system without disrupting others. For example, if a new security feature is developed, it can be added without halting transactions.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/aptos-architecture-level1.png",
-        },
-      ],
-      level2: [
-        {
-          question: "What is a smart contract?",
-          options: [
-            "A digital agreement between parties",
-            "A self-executing contract with terms written in code",
-            "A traditional legal document",
-            "An informal agreement",
-          ],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "Smart contracts on Aptos can automate transactions and enforce terms without intermediaries.",
-          description: "Once deployed, a smart contract operates on its own, executing the rules coded within it. For instance, a smart contract for a loan can automatically transfer funds when certain conditions are met, like the borrower providing collateral, eliminating the need for banks or other institutions.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which of the following is a unique feature of the Move language?",
-          options: [
-            "It is only for Ethereum smart contracts.",
-            "It enables resource safety and flexibility.",
-            "It requires extensive gas fees.",
-            "It can be used for front-end development.",
-          ],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "What is the role of the Aptos token (APT)?",
-          options: ["Governance and transaction fees", "Rewarding miners", "To store data", "None of the above"],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How do you deploy a smart contract on Aptos?",
-          options: [
-            "Using a command line interface and Move CLI",
-            "Through a mobile app",
-            "By writing it in Solidity",
-            "Using Ethereum tools",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How can developers interact with the Aptos blockchain?",
-          options: [
-            "Using the Aptos SDK",
-            "By manually writing bytecode",
-            "Only through the Aptos Explorer",
-            "Using Python scripts only",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Here’s a diagram showing the smart contract lifecycle in Aptos:",
-          description: "This diagram illustrates the stages a smart contract goes through from creation to execution. It starts with writing the contract in Move, deploying it to the blockchain, and finally executing it based on user interactions or predefined conditions. Understanding this lifecycle helps developers ensure their contracts are correctly designed and tested before deployment.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/smart-contract-lifecycle.png",
-        },
-      ],
-      level3: [
-        {
-          question: "What are dApps?",
-          options: [
-            "Decentralized applications that run on a blockchain",
-            "Applications that require a server",
-            "Only games available on blockchain",
-            "Apps that can only be used offline",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Aptos's architecture is designed for high throughput and low latency, making it suitable for dApps.",
-          description: "This means that Aptos can handle many transactions quickly and efficiently. High throughput allows for many users to interact with dApps simultaneously without delays, while low latency ensures that actions, such as payments or interactions, happen almost instantly, creating a smoother user experience.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which programming concepts are essential for working with Move?",
-          options: [
-            "Basic programming and resource management",
-            "Only object-oriented programming",
-            "No programming knowledge required",
-            "Knowledge of only Python",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which of the following is NOT a benefit of using Aptos for dApp development?",
-          options: [
-            "Fast transaction speeds",
-            "Extensive community support",
-            "Complexity of programming",
-            "Security features",
-          ],
-          type: "multiple",
-          correctOptionIndex: 2,
-        },
-        {
-          question: "How can you test your smart contracts before deploying them?",
-          options: [
-            "Using a local testnet",
-            "Deploying them directly on the mainnet",
-            "Not possible to test",
-            "Only through third-party services",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is the purpose of the Aptos governance model?",
-          options: [
-            "To decentralize decision-making processes",
-            "To centralize control over the network",
-            "To monitor user activity",
-            "None of the above",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "This diagram illustrates the key components of a dApp architecture:",
-          description: "It shows how different components interact to create a decentralized application. For instance, a dApp typically includes a user interface, smart contracts, and a blockchain network. Understanding how these components work together is crucial for building effective dApps.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/dapp-architecture.png",
-        },
-      ],
-      level4: [
-        {
-          question: "What is the primary benefit of participating in the Aptos community?",
-          options: [
-            "Networking with other developers",
-            "Access to exclusive information",
-            "Learning from shared experiences",
-            "All of the above",
-          ],
-          type: "multiple",
-          correctOptionIndex: 3,
-        },
-        {
-          question: "Engaging with the Aptos community can lead to collaboration on open-source projects.",
-          description: "This collaboration encourages sharing of knowledge and resources, allowing developers to learn from each other and improve their skills. For example, working on shared codebases can introduce new techniques and practices that enhance individual projects.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What platforms are used for community discussions in Aptos?",
-          options: ["Discord and Telegram", "Facebook and Instagram", "Only GitHub", "Email only"],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How can you contribute to Aptos’s development?",
-          options: [
-            "By providing feedback and contributing code",
-            "By only using the platform",
-            "Not possible to contribute",
-            "By observing others",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What role does open-source play in the Aptos ecosystem?",
-          options: [
-            "Promotes transparency and collaboration",
-            "Limits innovation",
-            "Is not relevant to blockchain",
-            "Only for academic purposes",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which of the following resources is essential for staying updated on Aptos?",
-          options: ["Official Aptos documentation and blog", "Only social media", "Personal blogs", "Gaming forums"],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "This infographic shows how the Aptos community functions:",
-          description: "It highlights the roles of developers, users, and governance participants. Understanding these roles can help newcomers identify where they can contribute or find support in their own development efforts.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/community-function.png",
-        },
-        {
-          question: "What are the advantages of a decentralized governance model?",
-          options: [
-            "Diverse perspectives and increased accountability",
-            "Centralized decision-making",
-            "Limited user participation",
-            "Higher costs for governance participation",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-      ],
-    },
-  
-    module2: {
-      level1: [
-        {
-          question: "What are the key components of the Aptos architecture?",
-          options: [
-            "Modules, Resources, and Transactions",
-            "Nodes, Miners, and Validators",
-            "Servers, Clients, and Databases",
-            "Clients, APIs, and Libraries",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Aptos utilizes a modular architecture that separates execution from storage. This design enhances scalability and flexibility, enabling the network to efficiently manage increasing transaction volumes and adapt to future requirements. Can you explain how this architecture benefits developers and users?",
-          description: "This modular design means that different parts of the system can be upgraded independently. For developers, this allows them to work on new features or fixes without affecting the entire network. For users, it translates to a smoother experience as improvements are rolled out without downtime.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is the primary purpose of Aptos's modular design?",
-          options: [
-            "To limit scalability",
-            "To enhance transaction speed and flexibility",
-            "To centralize control",
-            "To simplify user experience",
-          ],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "Which component is responsible for managing state and transactions in Aptos?",
-          options: ["Execution layer", "Storage layer", "Network layer", "User interface"],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How does Aptos ensure high throughput in transactions?",
-          options: [
-            "By batching transactions",
-            "Using Proof of Work",
-            "Limiting user access",
-            "Deploying multiple blockchains",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "The diagram below illustrates the key components of the Aptos architecture. It highlights how these components interact to deliver a scalable and efficient blockchain solution. What insights can you gain from this architecture regarding its modular design and functionality?",
-          description: "The diagram showcases how the execution and storage layers communicate. This separation allows for efficient resource use, meaning that as more users join, the system can scale without performance drops, making it ideal for large applications.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/aptos-architecture-level2.png",
-        },
-        {
-          question: "What advantages does Aptos's architecture provide for developers?",
-          options: [
-            "Improved security and flexibility",
-            "Higher fees for transactions",
-            "Limited access to resources",
-            "No need for coding knowledge",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-      ],
-      level2: [
-        {
-          question: "What is the syntax of the Move programming language primarily designed for?",
-          options: ["Smart contracts", "Game development", "Web development", "Data analysis"],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Move's resource-oriented programming model is designed to prevent accidental data duplication, which significantly enhances the safety and integrity of smart contracts. How does this model contribute to more secure and efficient programming practices in blockchain development?",
-          description: "By treating resources as unique entities, Move ensures that once a resource is used, it cannot be copied unintentionally. This prevents bugs and vulnerabilities that could arise from duplicated resources, which is crucial for financial applications where integrity is paramount.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Which of the following features does Move provide?",
-          options: [
-            "Resource management and access control",
-            "Only basic scripting capabilities",
-            "No error handling",
-            "Limited support for data structures",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is the primary data structure in Move?",
-          options: ["Vectors", "Resources", "Objects", "Arrays"],
-          type: "multiple",
-          correctOptionIndex: 1,
-        },
-        {
-          question: "How can you test your Move smart contracts?",
-          options: [
-            "Using the Move Unit Testing framework",
-            "Only on the mainnet",
-            "By deploying them without tests",
-            "Not possible to test",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "The image below showcases the syntax and structure of Move programs. It highlights key elements and conventions used in Move, helping developers understand how to write effective smart contracts. What key takeaways do you see from this illustration that could enhance your understanding of Move programming?",
-          description: "This image illustrates the core syntax of Move, emphasizing its resource-oriented design. Observing the structure can help developers recognize patterns and practices that lead to safer contract development, such as proper resource handling and error management.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/move-syntax.png",
-        },
-        {
-          question: "What aspect of Move promotes security in contract development?",
-          options: [
-            "Static typing and resource safety",
-            "Dynamic typing",
-            "No need for testing",
-            "Simplicity of language",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-      ],
-      level3: [
-        {
-          question: "What is a wallet in the context of blockchain?",
-          options: [
-            "A software application for managing digital assets",
-            "A physical storage device for cryptocurrencies",
-            "A service for buying and selling stocks",
-            "None of the above",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Aptos wallets play a crucial role in managing private keys and enabling users to interact securely with the blockchain. They ensure that users can safely store their assets and perform transactions without compromising their security. How do these wallets enhance user experience and trust within the Aptos ecosystem?",
-          description: "By securely storing private keys and allowing easy access to funds, wallets make interacting with the blockchain user-friendly. For example, users can perform transactions without worrying about their keys being exposed to hackers, thus building trust in the platform.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is a seed phrase?",
-          options: [
-            "A backup for wallet recovery",
-            "A type of password",
-            "A transaction verification method",
-            "An encryption key",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How can users secure their Aptos wallets?",
-          options: [
-            "By using complex passwords and enabling 2FA",
-            "Storing passwords in plain text",
-            "Sharing seed phrases publicly",
-            "None of the above",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What does a transaction on Aptos require?",
-          options: [
-            "A valid signature and sufficient balance",
-            "Just an email address",
-            "No signature needed",
-            "Only the wallet address",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "This diagram illustrates the wallet architecture and transaction flow in Aptos:",
-          description: "It shows how transactions move from the user’s wallet to the Aptos blockchain, including the role of private keys in signing transactions. Understanding this flow is critical for users to ensure their transactions are secure and efficient.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/wallet-architecture.png",
-        },
-        {
-          question: "What happens if a user loses their seed phrase?",
-          options: [
-            "They cannot recover their wallet",
-            "They can reset it through email",
-            "They can recover it with support",
-            "Nothing happens",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-      ],
-      level4: [
-        {
-          question: "What is Aptos governance?",
-          options: [
-            "The process by which community members influence the development of the platform",
-            "Only for the developers",
-            "A way to centralize power",
-            "A marketing strategy",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "Aptos governance allows token holders to vote on proposals that affect the ecosystem.",
-          description: "This system ensures that all stakeholders have a voice in decision-making. For instance, if a new feature is proposed, token holders can vote to approve or reject it, fostering a sense of community ownership and responsibility.",
-          type: "text",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is the role of APT tokens in governance?",
-          options: [
-            "They grant voting rights on proposals",
-            "They have no influence",
-            "They are only for trading",
-            "They are not necessary for governance",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "How can community members propose changes to the Aptos ecosystem?",
-          options: [
-            "By submitting proposals to the governance forum",
-            "Only by talking in chat rooms",
-            "Not allowed to propose",
-            "Through social media posts",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "What is the primary benefit of decentralized governance in Aptos?",
-          options: [
-            "Empowers users and increases transparency",
-            "Reduces user participation",
-            "Centralizes control over decisions",
-            "Limits innovation",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-        {
-          question: "The infographic below depicts the Aptos governance process:",
-          description: "It outlines the steps from proposal submission to voting outcomes. This visualization can help community members understand how their input can shape the platform’s future and encourages active participation.",
-          type: "image",
-          correctOptionIndex: 0,
-          imageUrl: "/icons/governance-process.png",
-        },
-        {
-          question: "What can community voting impact in the Aptos ecosystem?",
-          options: [
-            "Feature development and resource allocation",
-            "Only user interface changes",
-            "No impact at all",
-            "Only governance fees",
-          ],
-          type: "multiple",
-          correctOptionIndex: 0,
-        },
-      ],
-    },
-  };
-  
+  module1: {
+    level1: [
+      // Introduction to Aptos and Blockchain Basics
+      {
+        question: "Which architectural innovation differentiates Aptos from traditional Layer 1 blockchains?",
+        options: [
+          "The use of Proof of Work consensus",
+          "Parallel transaction execution with Block-STM",
+          "Sequential transaction processing",
+          "Single-threaded smart contracts",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding Aptos's core innovation is fundamental for developers.",
+      },
+      {
+        question: "What unique feature of Move's type system enhances blockchain asset safety?",
+        options: [
+          "Dynamic typing",
+          "Optional type checking",
+          "Resource-oriented programming with linear types",
+          "Implicit type conversion",
+        ],
+        type: "multiple",
+        correctOptionIndex: 2,
+        explanation: "Move's type system is crucial for secure development.",
+      },
+      {
+        question: "How does AptosBFT consensus mechanism achieve high throughput?",
+        options: [
+          "By sacrificing safety for speed",
+          "Through optimized leader selection and parallel voting",
+          "Using Proof of Work",
+          "By centralizing validation",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding consensus is essential for blockchain developers.",
+      },
+      {
+        question: "Which feature best enables scalable DeFi applications on Aptos?",
+        options: [
+          "Sequential execution",
+          "Parallel execution with automatic conflict resolution",
+          "Limited smart contract functionality",
+          "Centralized order matching",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Scalability features impact DeFi application design.",
+      },
+      {
+        question: "What role does the Move Virtual Machine play in Aptos?",
+        options: [
+          "Only for token transfers",
+          "Executing smart contracts with safety guarantees",
+          "Managing network consensus",
+          "Handling user interfaces",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding the MoveVM is fundamental.",
+      },
+      {
+        question: "Explain how Aptos achieves high transaction throughput while maintaining safety:",
+        description:
+          "Block-STM enables parallel execution of transactions by detecting and resolving conflicts automatically. This system optimistically executes transactions in parallel, tracks memory usage, and validates correctness before commitment, ensuring both high throughput and safety.",
+        type: "text",
+        explanation: "Core architectural understanding is crucial.",
+      },
+      {
+        question: "Study the Aptos execution architecture diagram:",
+        description:
+          "This diagram shows how Block-STM, parallel execution, and the Move VM interact to enable high-throughput processing while maintaining safety guarantees. Pay attention to the data flow and validation checkpoints.",
+        type: "image",
+        imageUrl: "/icons/aptos-architecture-level1.png",
+        explanation: "Visual understanding of architecture aids development.",
+      },
+    ],
+    level2: [
+      // Smart Contract Development Fundamentals
+      {
+        question: "Which Move language feature prevents reentrancy attacks by default?",
+        options: [
+          "Resource types with linear logic",
+          "Optional bounds checking",
+          "Dynamic dispatch",
+          "Implicit conversions",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Security features are crucial for smart contracts.",
+      },
+      {
+        question: "How does Move's ability-based access control system enhance security?",
+        options: [
+          "By allowing unrestricted access",
+          "Through capability-based permission management",
+          "By removing access controls",
+          "Using centralized permissions",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Access control patterns impact security.",
+      },
+      {
+        question: "What is the primary benefit of Move's formal verification capabilities?",
+        options: [
+          "Automated bug creation",
+          "Mathematical proof of contract properties",
+          "Removal of testing requirements",
+          "Simplified deployment",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Formal verification provides strong guarantees.",
+      },
+      {
+        question: "Which pattern best handles state management in Move smart contracts?",
+        options: [
+          "Global state variables",
+          "Resource-based state with controlled access",
+          "Unrestricted state modification",
+          "No state management",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "State management patterns affect contract safety.",
+      },
+      {
+        question: "How should Move resources be structured for optimal gas efficiency?",
+        options: [
+          "Using nested resources with minimal storage",
+          "Ignoring resource organization",
+          "Maximizing storage usage",
+          "Avoiding resources entirely",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Resource structure impacts performance.",
+      },
+      {
+        question: "Describe the key considerations when implementing fungible tokens in Move:",
+        description:
+          "Move's resource safety ensures tokens can't be duplicated or destroyed accidentally. Implementations should consider supply management, transfer restrictions, and proper event emissions while maintaining efficiency.",
+        type: "text",
+        explanation: "Token implementation requires careful design.",
+      },
+      {
+        question: "Review the Move resource lifecycle diagram:",
+        description:
+          "This visualization shows how Move resources are created, transferred, and destroyed safely. Understanding this lifecycle is crucial for implementing secure smart contracts.",
+        type: "image",
+        imageUrl: "/icons/move-resource-lifecycle.png",
+        explanation: "Resource lifecycle understanding is fundamental.",
+      },
+    ],
+    level3: [
+      // Advanced Contract Patterns
+      {
+        question: "Which design pattern is commonly used for upgradeability in Aptos smart contracts?",
+        options: ["Proxy pattern", "Singleton pattern", "Factory pattern", "Observer pattern"],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Upgradeability is crucial for long-term contract maintenance.",
+      },
+      {
+        question: "How does the 'escrow pattern' enhance security in decentralized exchanges?",
+        options: [
+          "By centralizing all funds",
+          "Through temporary custody of assets during trades",
+          "By eliminating the need for smart contracts",
+          "Through permanent locking of assets",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding secure trade mechanisms is essential for DeFi development.",
+      },
+      {
+        question: "What is the primary benefit of implementing the 'state machine pattern' in smart contracts?",
+        options: [
+          "Reduced gas costs",
+          "Simplified logic and improved auditability",
+          "Increased contract size",
+          "Removal of all state transitions",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "State management patterns impact contract clarity and security.",
+      },
+      {
+        question: "How does the 'composability pattern' contribute to DeFi ecosystem growth?",
+        options: [
+          "By limiting contract interactions",
+          "Through enabling contract-to-contract interactions and 'money legos'",
+          "By isolating all smart contracts",
+          "Through centralized control of all DeFi protocols",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Composability is a key feature for creating complex DeFi systems.",
+      },
+      {
+        question: "Which pattern is best suited for managing complex access control in multi-user contracts?",
+        options: [
+          "Role-based access control (RBAC)",
+          "Single-user authentication",
+          "No access control",
+          "Centralized authority model",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Proper access control is crucial for secure multi-user systems.",
+      },
+      {
+        question: "Explain how the 'circuit breaker pattern' can be implemented to enhance contract security:",
+        description:
+          "The circuit breaker pattern involves implementing a mechanism to stop contract execution in case of emergencies. It typically includes three states: Normal, Suspended, and Killed. In the Normal state, all functions operate as usual. In the Suspended state, only specific admin functions and user withdrawals are allowed. The Killed state permanently disables the contract. This pattern helps mitigate risks from unforeseen vulnerabilities or attacks by allowing quick response to threats.",
+        type: "text",
+        explanation: "Emergency response mechanisms are critical for contract safety.",
+      },
+      {
+        question: "Study the diagram illustrating the 'commitment scheme pattern':",
+        description:
+          "This diagram shows the stages of a commitment scheme: Commit, Reveal, and Verify. In the Commit phase, a user submits a hashed value. During the Reveal phase, the original value is disclosed. The Verify stage confirms the revealed value matches the initial commitment. This pattern is crucial for applications requiring hidden information, such as sealed-bid auctions or voting systems.",
+        type: "image",
+        imageUrl: "/icons/commitment-scheme-pattern.png",
+        explanation: "Commitment schemes are fundamental for many cryptographic protocols.",
+      },
+    ],
+    level4: [
+      // System Design and Optimization
+      {
+        question: "Which optimization technique is most effective for reducing gas costs in loops?",
+        options: ["Unrolling loops", "Increasing loop iterations", "Using nested loops", "Ignoring loop optimization"],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Loop optimization is crucial for gas-efficient contracts.",
+      },
+      {
+        question: "How does the 'off-chain computation, on-chain verification' pattern improve scalability?",
+        options: [
+          "By moving all computations on-chain",
+          "Through reducing the need for blockchain interactions",
+          "By increasing on-chain storage usage",
+          "Through eliminating off-chain systems",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Balancing on-chain and off-chain operations is key to scalability.",
+      },
+      {
+        question: "What is the primary advantage of implementing a 'batch processing' pattern?",
+        options: [
+          "Increased individual transaction costs",
+          "Reduced overall gas costs and improved throughput",
+          "Simplified contract logic",
+          "Elimination of all batching requirements",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Batch processing can significantly optimize high-volume operations.",
+      },
+      {
+        question: "How does 'lazy evaluation' contribute to contract efficiency?",
+        options: [
+          "By computing all possible outcomes in advance",
+          "Through deferring calculations until absolutely necessary",
+          "By increasing immediate computation load",
+          "Through removing all calculations",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Lazy evaluation can reduce unnecessary computations and gas costs.",
+      },
+      {
+        question: "Which pattern is most effective for managing large datasets in smart contracts?",
+        options: [
+          "On-chain Merkle trees",
+          "Storing all data directly in contract storage",
+          "Ignoring data management",
+          "Using only off-chain storage",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Efficient data structures are crucial for managing large datasets.",
+      },
+      {
+        question:
+          "Describe the implementation of a gas-efficient 'incremental Merkle tree' for scalable data management:",
+        description:
+          "An incremental Merkle tree allows efficient updates and proofs for large datasets. Implementation involves maintaining a dynamic tree structure where only the changed branches are recalculated upon updates. This significantly reduces gas costs for operations on large datasets, as only the necessary hashes are recomputed instead of rebuilding the entire tree. The root hash serves as a compact representation of the entire dataset, enabling efficient verification of data integrity and membership proofs.",
+        type: "text",
+        explanation: "Merkle trees are fundamental for scalable on-chain data management.",
+      },
+      {
+        question: "Analyze the system architecture diagram for a high-performance DeFi protocol:",
+        description:
+          "This diagram illustrates a layered architecture combining on-chain and off-chain components for a DeFi protocol. It shows how off-chain indexers and relayers interact with on-chain smart contracts to achieve high performance. The architecture includes optimized data structures, batch processing mechanisms, and a hybrid on-chain/off-chain order matching system to balance security with scalability.",
+        type: "image",
+        imageUrl: "/icons/defi-protocol-architecture.png",
+        explanation: "Understanding complex system architectures is crucial for advanced DeFi development.",
+      },
+    ],
+  },
+
+  module2: {
+    level1: [
+      // DeFi Protocol Development
+      {
+        question: "Which component is crucial for implementing an Automated Market Maker (AMM) in DeFi?",
+        options: ["Constant product formula", "Central order book", "Human market makers", "Fixed exchange rates"],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Understanding AMM mechanics is fundamental for DeFi development.",
+      },
+      {
+        question: "How does the concept of 'impermanent loss' affect liquidity providers in AMM pools?",
+        options: [
+          "It guarantees profits",
+          "It can lead to reduced returns compared to simply holding assets",
+          "It has no effect on liquidity providers",
+          "It only affects borrowers",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Impermanent loss is a key concept for designing fair and attractive liquidity pools.",
+      },
+      {
+        question: "What is the primary purpose of 'flash loans' in DeFi protocols?",
+        options: [
+          "Long-term borrowing",
+          "Instant, uncollateralized loans for arbitrage or liquidations",
+          "Permanent asset storage",
+          "Slow, high-interest lending",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Flash loans enable complex DeFi operations and arbitrage opportunities.",
+      },
+      {
+        question: "How do 'oracles' contribute to the functionality of DeFi protocols?",
+        options: [
+          "By providing off-chain data to smart contracts",
+          "By replacing smart contracts entirely",
+          "Through centralized decision making",
+          "By eliminating the need for external data",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Oracles are crucial for connecting DeFi protocols with real-world data.",
+      },
+      {
+        question: "What is the primary benefit of implementing 'yield farming' mechanisms in a DeFi protocol?",
+        options: [
+          "Reduced protocol security",
+          "Incentivizing liquidity provision and user engagement",
+          "Simplifying smart contract logic",
+          "Eliminating the need for governance",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Yield farming can drive liquidity and user adoption in DeFi protocols.",
+      },
+      {
+        question: "Explain the concept and implementation of a 'bonding curve' in token economics:",
+        description:
+          "A bonding curve is a mathematical curve that defines the relationship between a token's price and its supply. In implementation, it's typically a smart contract that mints new tokens when purchased and burns tokens when sold, with the price determined by the current supply. This creates an automated market maker for the token. The curve's shape (e.g., linear, exponential, logarithmic) affects token economics, influencing factors like price stability and speculation incentives. Implementing a bonding curve involves careful consideration of the curve function, reserve ratios, and potential for manipulation.",
+        type: "text",
+        explanation: "Bonding curves are advanced token economic models crucial for many DeFi protocols.",
+      },
+      {
+        question: "Analyze the architecture diagram of a comprehensive lending and borrowing protocol:",
+        description:
+          "This diagram illustrates the components of a DeFi lending protocol, including liquidity pools, interest rate models, collateral management systems, and liquidation mechanisms. Key features shown are the interaction between suppliers, borrowers, and liquidators, as well as the role of price oracles in maintaining system solvency. The architecture emphasizes the importance of efficient capital utilization and risk management in DeFi lending protocols.",
+        type: "image",
+        imageUrl: "/icons/defi-lending-protocol.png",
+        explanation: "Understanding complex DeFi architectures is crucial for advanced protocol development.",
+      },
+    ],
+    level2: [
+      // Cross-chain Integration
+      {
+        question: "Which of the following best describes the purpose of 'atomic swaps' in cross-chain transactions?",
+        options: [
+          "Instant, trustless exchange of assets between different blockchains",
+          "Centralized exchange of assets",
+          "Permanent locking of assets across chains",
+          "Slow, high-fee transfers between chains",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Atomic swaps are fundamental for trustless cross-chain interactions.",
+      },
+      {
+        question: "What role do 'bridge contracts' play in cross-chain integration?",
+        options: [
+          "They prevent any cross-chain communication",
+          "They facilitate asset transfers and data sharing between different blockchains",
+          "They only work within a single blockchain",
+          "They replace the need for individual blockchains",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Bridge contracts are crucial infrastructure for blockchain interoperability.",
+      },
+      {
+        question: "How does the 'Interledger Protocol' contribute to cross-chain operations?",
+        options: [
+          "By creating a single, unified blockchain",
+          "Through enabling packetized payments across diverse ledgers",
+          "By eliminating the need for multiple cryptocurrencies",
+          "Through centralizing all cross-chain transactions",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding interoperability protocols is key for cross-chain development.",
+      },
+      {
+        question: "What is a primary challenge in implementing cross-chain smart contract calls?",
+        options: [
+          "Ensuring atomicity and consistency across different consensus mechanisms",
+          "Eliminating the need for smart contracts",
+          "Centralizing all contract logic",
+          "Removing the need for consensus",
+        ],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Cross-chain smart contract interactions present unique technical challenges.",
+      },
+      {
+        question: "How do 'relay chains' enhance cross-chain interoperability in systems like Polkadot?",
+        options: [
+          "By eliminating the need for parachains",
+          "Through providing shared security and cross-chain message passing",
+          "By centralizing all blockchain operations",
+          "Through replacing individual blockchain consensus",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding relay chain architectures is important for scalable cross-chain systems.",
+      },
+      {
+        question: "Describe the implementation of a secure cross-chain token bridge:",
+        description:
+          "A secure cross-chain token bridge typically involves smart contracts on both the source and destination chains, along with a set of validators or relayers. The process begins with locking tokens in a contract on the source chain. Validators then verify this lock and trigger the minting of equivalent tokens on the destination chain. Key security considerations include: 1) Multi-signature or threshold signing for validator actions, 2) Proper handling of differing finality times between chains, 3) Implementing replay protection to prevent double-spending, 4) Ensuring proper reserves and burn mechanisms for maintaining peg, and 5) Implementing emergency pause functions and gradual migration strategies for upgrades.",
+        type: "text",
+        explanation: "Implementing secure cross-chain bridges is crucial for interoperable blockchain ecosystems.",
+      },
+      {
+        question: "Analyze the diagram illustrating a cross-chain decentralized exchange (DEX) architecture:",
+        description:
+          "This diagram shows the components of a cross-chain DEX, including order matching engines, liquidity pools on multiple chains, cross-chain state verification mechanisms, and bridge contracts. Key features illustrated are: 1) How orders are propagated and matched across different chains, 2) The role of liquidity pools in facilitating cross-chain swaps, 3) How state proofs are generated and verified to ensure consistency across chains, and 4) The interaction between bridge contracts to finalize cross-chain asset transfers.",
+        type: "image",
+        imageUrl: "/icons/cross-chain-dex-architecture.png",
+        explanation: "Understanding complex cross-chain architectures is essential for advanced DeFi development.",
+      },
+    ],
+    level3: [
+      // Security and Formal Verification
+      {
+        question:
+          "Which formal verification technique is most suitable for proving the correctness of smart contract invariants?",
+        options: ["Model checking", "Random testing", "Informal code review", "Stress testing"],
+        type: "multiple",
+        correctOptionIndex: 0,
+        explanation: "Formal verification techniques are crucial for ensuring smart contract correctness.",
+      },
+      {
+        question: "How does the 'principle of least privilege' enhance smart contract security?",
+        options: [
+          "By granting all users full access",
+          "Through minimizing the permissions and access of each contract and user",
+          "By removing all access controls",
+          "Through maximizing contract complexity",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Proper access control is fundamental to smart contract security.",
+      },
+      {
+        question: "What is the primary purpose of 'invariant testing' in smart contract development?",
+        options: [
+          "To make contracts slower",
+          "To verify that critical properties hold true across all possible state transitions",
+          "To introduce more bugs",
+          "To eliminate the need for testing",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Invariant testing is a powerful technique for ensuring contract correctness.",
+      },
+      {
+        question: "How do 'symbolic execution' tools contribute to smart contract security?",
+        options: [
+          "By introducing intentional vulnerabilities",
+          "Through exploring all possible execution paths to find vulnerabilities",
+          "By replacing the need for smart contracts",
+          "Through making contracts more complex",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Symbolic execution is an advanced technique for thorough contract analysis.",
+      },
+      {
+        question: "What role does 'formal specification' play in the development of secure smart contracts?",
+        options: [
+          "It replaces the need for coding",
+          "It provides a precise, mathematical description of expected contract behavior",
+          "It introduces more ambiguity into development",
+          "It eliminates the need for testing",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Formal specifications are crucial for developing provably correct contracts.",
+      },
+      {
+        question: "Explain the process and benefits of using the Coq proof assistant for smart contract verification:",
+        description:
+          "The Coq proof assistant is a formal proof management system that can be used to mathematically verify the correctness of smart contracts. The process involves: 1) Defining the contract's behavior and properties in Coq's specification language, 2) Writing proofs that demonstrate these properties hold, 3) Using Coq to check the validity of these proofs. Benefits include: a) Rigorous verification of critical properties, b) Ability to prove the absence of certain classes of bugs, c) Generation of machine-checkable proofs that can be independently verified. Challenges include the high expertise required and the time-intensive nature of formal proofs. However, for high-stakes contracts, this level of assurance can be invaluable.",
+        type: "text",
+        explanation: "Understanding formal verification tools is crucial for developing highly secure contracts.",
+      },
+      {
+        question: "Analyze the diagram showing a comprehensive smart contract security audit process:",
+        description:
+          "This diagram illustrates a multi-stage security audit process for smart contracts. It shows the flow from initial code review, through automated analysis (including static analysis and fuzzing), to manual review and formal verification. Key components highlighted include: 1) Threat modeling stage, 2) Automated vulnerability scanners, 3) Symbolic execution tools, 4) Manual code review by security experts, 5) Formal verification of critical properties, and 6) Iterative process of fixing and re-verifying. The diagram emphasizes the importance of combining multiple approaches for comprehensive security assurance.",
+        type: "image",
+        imageUrl: "/icons/smart-contract-audit-process.png",
+        explanation: "Understanding comprehensive security processes is crucial for developing robust smart contracts.",
+      },
+    ],
+    level4: [
+      // Performance Optimization and MEV Protection
+      {
+        question: "Which optimization technique is most effective for reducing gas costs in storage operations?",
+        options: [
+          "Using more storage slots",
+          "Packing multiple variables into a single storage slot",
+          "Always using separate storage for each variable",
+          "Ignoring storage optimization",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Efficient storage use is crucial for gas optimization in smart contracts.",
+      },
+      {
+        question: "How does 'read-only reentrancy' contribute to gas efficiency?",
+        options: [
+          "By allowing unlimited reentrancy",
+          "Through enabling multiple reads in a single transaction without intermediate writes",
+          "By increasing the number of storage writes",
+          "Through eliminating all reentrancy",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding advanced reentrancy patterns is important for optimization.",
+      },
+      {
+        question: "What is the primary purpose of 'commit-reveal' schemes in preventing MEV (Miner Extractable Value)?",
+        options: [
+          "To increase MEV opportunities",
+          "Through hiding transaction intentions until they're irreversibly committed",
+          "By making all transactions public immediately",
+          "Through centralizing transaction ordering",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Commit-reveal schemes are crucial for fair and manipulation-resistant protocols.",
+      },
+      {
+        question: "How do 'constant function market makers' (CFMMs) optimize gas usage in DEX contracts?",
+        options: [
+          "By increasing computational complexity",
+          "Through using simple, gas-efficient formulas for price calculations",
+          "By removing all price calculations",
+          "Through implementing complex order books",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Understanding CFMM design is crucial for building efficient DEX protocols.",
+      },
+      {
+        question:
+          "What role does 'meta-transaction' architecture play in improving user experience and gas efficiency?",
+        options: [
+          "It makes transactions more expensive",
+          "Through allowing users to sign messages off-chain and have others submit transactions",
+          "By removing the ability to make transactions",
+          "Through increasing on-chain computation",
+        ],
+        type: "multiple",
+        correctOptionIndex: 1,
+        explanation: "Meta-transactions are an advanced pattern for improving DApp usability.",
+      },
+      {
+        question:
+          "Describe the implementation of a gas-efficient, MEV-resistant orderbook for a decentralized exchange:",
+        description:
+          "A gas-efficient, MEV-resistant orderbook can be implemented using a combination of off-chain order management and on-chain settlement. Key components include: 1) Off-chain order collection and matching engine to reduce on-chain operations, 2) Periodic batch auctions instead of continuous trading to prevent front-running, 3) Use of zero-knowledge proofs to validate off-chain computations without revealing order details, 4) Implementation of a commit-reveal scheme for order submission to prevent last-minute front-running, 5) Gas-optimized on-chain contract for final settlement, using efficient data structures like Merkle trees to prove order validity. This design minimizes on-chain operations while maintaining transparency and resistance to MEV attacks.",
+        type: "text",
+        explanation: "Balancing efficiency and fairness is crucial for advanced DEX design.",
+      },
+      {
+        question: "Analyze the system architecture diagram for a high-throughput, MEV-protected blockchain:",
+        description:
+          "This diagram illustrates a blockchain architecture designed for high performance and MEV protection. Key features shown include: 1) A parallel transaction execution engine, 2) A sophisticated mempool management system with transaction encryption, 3) A fair ordering protocol to prevent validator front-running, 4) Layer 2 scaling solutions integrated into the base layer, 5) Advanced gossip protocols for efficient network communication, and 6) A hybrid consensus mechanism balancing throughput and security. The architecture emphasizes how each component contributes to overall system performance and fairness.",
+        type: "image",
+        imageUrl: "/icons/system_architecture_diagram.png",
+        explanation: "This is an image showing the system architecture of a high-throughput, MEV-protected blockchain for better understnding.",
+      }
+    ],
+  },
+};

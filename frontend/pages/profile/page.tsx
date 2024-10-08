@@ -37,6 +37,8 @@ export const ProfilePage = () => {
     },
   });
 
+  const turboBalance = tkBalance / Math.pow(10, 8);
+
   useEffect(() => {
     if (data) {
       setTkBalance(data.balance);
@@ -67,8 +69,6 @@ export const ProfilePage = () => {
     }
   }, []);
 
-  const turboBalance = tkBalance / Math.pow(10, 8);
-
   const handleModule = () => {
     navigate("/modules");
   };
@@ -87,7 +87,10 @@ export const ProfilePage = () => {
       <div className="flex flex-col gap-4 mt-2">
         <div className="relative inline-block">
           <Avatar>
-            <AvatarImage className="w-16 h-16 rounded-full" src="https://github.com/shadcn.png" />
+            <AvatarImage
+              className="w-16 h-16 rounded-full"
+              src="https://utfs.io/f/PKy8oE1GN2J3FwsordxlikYrWEQ0qAVTfL34d9GtgN2aBOje"
+            />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="absolute left-0 bottom-0 w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center text-xs">
@@ -96,7 +99,7 @@ export const ProfilePage = () => {
         </div>
 
         <div>
-          <p className="text-lg">User</p>
+          <p className="text-lg">User.TG</p>
           <div className="flex space-x-2 items-center">
             <p className="text-sm">{account?.address || "0x34dT...7857"}</p>
             <CopyIcon size={14} />
