@@ -57,11 +57,7 @@ const ImageContent: React.FC<{ question: ImageQuestion }> = ({ question }) => (
   <div className="flex flex-col space-y-4">
     <h3 className="text-xl font-semibold">{question.title}</h3>
     <div className="relative">
-      <img 
-        src={question.imageUrl} 
-        alt={question.title} 
-        className="w-full h-96 rounded-lg object-cover" 
-      />
+      <img src={question.imageUrl} alt={question.title} className="w-full h-96 rounded-lg object-cover" />
     </div>
     <p className="text-base text-gray-300">{question.description}</p>
     <div className="mt-4 p-4 bg-primary rounded-lg">
@@ -71,7 +67,7 @@ const ImageContent: React.FC<{ question: ImageQuestion }> = ({ question }) => (
   </div>
 );
 
-const MultipleChoice: React.FC<{ 
+const MultipleChoice: React.FC<{
   question: MultipleChoiceQuestion;
   selectedOption: number | null;
   setSelectedOption: (index: number) => void;
@@ -82,7 +78,7 @@ const MultipleChoice: React.FC<{
       <h3 className="text-xl font-semibold mb-2">{question.title}</h3>
       <p className="text-lg">{question.question}</p>
     </div>
-    
+
     <div className="grid grid-cols-1 gap-3">
       {question.options.map((option, index) => {
         const isCorrect = index === question.correctOptionIndex;
@@ -162,7 +158,7 @@ export const Level = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const { account, signAndSubmitTransaction } = useWallet();
-  
+
   const { module, level, title, description } = location.state || {
     module: "module1" as Module,
     level: "level1" as Level,
@@ -189,7 +185,7 @@ export const Level = () => {
 
   const handleNext = async () => {
     const canProceed = currentQuestion.type !== "multiple" || selectedOption !== null;
-    
+
     if (canProceed) {
       if (currentStep === questions.length - 1) {
         await handleFinish();
@@ -218,22 +214,24 @@ export const Level = () => {
       const executedTransaction = await aptosClient().waitForTransaction({
         transactionHash: committedTransaction.hash,
       });
-      
+
       queryClient.invalidateQueries();
-      
+
       toast({
         title: "Success",
-        description: `Congratulations! Race completed! Returning back to Arena, hash: ${executedTransaction.hash}`,
+        description: `Congratulations! Race completed! hash: ${executedTransaction.hash}. Returning back to Arena..`,
       });
-      
+
       const paths = {
         module1: "/rookie",
         module2: "/competitor",
         module3: "/champion",
         module4: "/legend",
       };
-      
-      navigate(paths[module as keyof typeof paths]);
+
+      setTimeout(() => {
+        navigate(paths[module as keyof typeof paths]);
+      }, 2000);
     } catch (error) {
       console.error(error);
       toast({
@@ -252,7 +250,7 @@ export const Level = () => {
         return <ImageContent question={currentQuestion} />;
       case "multiple":
         return (
-          <MultipleChoice 
+          <MultipleChoice
             question={currentQuestion}
             selectedOption={selectedOption}
             setSelectedOption={handleOptionSelect}
@@ -292,9 +290,7 @@ export const Level = () => {
       </div>
 
       <div className="flex flex-col gap-5 mt-6">
-        <div className="bg-primary p-6 rounded-lg">
-          {renderQuestion()}
-        </div>
+        <div className="bg-primary p-6 rounded-lg">{renderQuestion()}</div>
 
         <Progress value={progress} className="h-3 w-full text-yellow-400" />
 
