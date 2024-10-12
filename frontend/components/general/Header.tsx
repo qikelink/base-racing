@@ -70,7 +70,7 @@ export function Header() {
   return (
     <>
       <div className="w-full bg-yellow-200 p-1">
-        <p className="text-sm text-center text-black">Thanks for trying out our beta</p>
+        <p className="text-sm text-center text-black">Thanks for trying out our beta, leave us some feedback</p>
       </div>
       <div className="flex items-center justify-between px-4 py-2 max-w-screen-2xl mx-auto w-full flex-wrap lg:px-20">
         <h3 onClick={handleHome} className="text-xl font-bold cursor-pointer">
