@@ -73,9 +73,7 @@ export const ProfilePage = () => {
     navigate("/modules");
   };
 
-  const handleBack = () => {
-    navigate(-1);
-  };
+  
 
   return (
     <>

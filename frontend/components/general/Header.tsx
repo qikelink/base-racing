@@ -4,7 +4,6 @@ import { WalletSelector } from "./WalletSelector";
 import { useQuery } from "@tanstack/react-query";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { getTokenBalance } from "@/view-functions/getTokenBalance";
-import { toast } from "../ui/use-toast";
 import { useEffect, useState } from "react";
 
 export function Header() {
