@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect x="0" y="0" width="800" height="600" fill="#f0f0f0"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" text-anchor="middle" font-weight="bold">Smart Contract Security Audit Process</text>
+  
+  <!-- Initial Code Review -->
+  <rect x="50" y="70" width="150" height="80" fill="#a8e6cf" stroke="black"/>
+  <text x="125" y="110" font-size="14" text-anchor="middle">Initial Code Review</text>
+  
+  <!-- Threat Modeling -->
+  <rect x="250" y="70" width="150" height="80" fill="#dcedc1" stroke="black"/>
+  <text x="325" y="110" font-size="14" text-anchor="middle">Threat Modeling</text>
+  
+  <!-- Automated Analysis -->
+  <rect x="450" y="70" width="300" height="80" fill="#ffd3b6" stroke="black"/>
+  <text x="600" y="100" font-size="14" text-anchor="middle">Automated Analysis</text>
+  <text x="540" y="130" font-size="12" text-anchor="middle">Static Analysis</text>
+  <text x="660" y="130" font-size="12" text-anchor="middle">Fuzzing</text>
+  
+  <!-- Manual Review -->
+  <rect x="50" y="200" width="200" height="80" fill="#ffaaa5" stroke="black"/>
+  <text x="150" y="240" font-size="14" text-anchor="middle">Manual Code Review
+by Security Experts</text>
+  
+  <!-- Symbolic Execution -->
+  <rect x="300" y="200" width="200" height="80" fill="#ff8b94" stroke="black"/>
+  <text x="400" y="240" font-size="14" text-anchor="middle">Symbolic Execution</text>
+  
+  <!-- Formal Verification -->
+  <rect x="550" y="200" width="200" height="80" fill="#e2b0ff" stroke="black"/>
+  <text x="650" y="240" font-size="14" text-anchor="middle">Formal Verification
+of Critical Properties</text>
+  
+  <!-- Vulnerability Assessment -->
+  <rect x="200" y="330" width="400" height="80" fill="#a2d2ff" stroke="black"/>
+  <text x="400" y="370" font-size="14" text-anchor="middle">Vulnerability Assessment and Reporting</text>
+  
+  <!-- Fix and Re-verify -->
+  <rect x="300" y="460" width="200" height="80" fill="#bde0fe" stroke="black"/>
+  <text x="400" y="500" font-size="14" text-anchor="middle">Fix and Re-verify</text>
+  
+  <!-- Arrows -->
+  <line x1="200" y1="110" x2="250" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="110" x2="450" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="150" y1="150" x2="150" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="325" y1="150" x2="325" y2="330" stroke="black" stroke-width="2"/>
+  <line x1="600" y1="150" x2="600" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="150" y1="280" x2="150" y2="330" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="280" x2="400" y2="330" stroke="black" stroke-width="2"/>
+  <line x1="650" y1="280" x2="650" y2="330" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="410" x2="400" y2="460" stroke="black" stroke-width="2"/>
+  
+  <!-- Iterative Process Arrow -->
+  <path d="M 500 500 C 550 500, 550 350, 500 350" fill="none" stroke="black" stroke-width="2"/>
+  <polygon points="495,350 505,350 500,340" fill="black"/>
+  
+  <!-- Legend -->
+  <text x="50" y="560" font-size="14" font-weight="bold">Legend:</text>
+  <rect x="50" y="570" width="20" height="20" fill="#a8e6cf"/>
+  <text x="80" y="585" font-size="12">Initial Review</text>
+  <rect x="200" y="570" width="20" height="20" fill="#ffd3b6"/>
+  <text x="230" y="585" font-size="12">Automated Analysis</text>
+  <rect x="380" y="570" width="20" height="20" fill="#ffaaa5"/>
+  <text x="410" y="585" font-size="12">Manual Review</text>
+  <rect x="520" y="570" width="20" height="20" fill="#e2b0ff"/>
+  <text x="550" y="585" font-size="12">Formal Verification</text>
+  <rect x="680" y="570" width="20" height="20" fill="#bde0fe"/>
+  <text x="710" y="585" font-size="12">Iterative Process</text>
+</svg>

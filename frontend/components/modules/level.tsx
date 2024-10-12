@@ -56,7 +56,7 @@ const ImageContent: React.FC<{ question: ImageQuestion }> = ({ question }) => (
   <div className="flex flex-col space-y-4">
     <h3 className="text-xl font-semibold">{question.title}</h3>
     <div className="relative">
-      <img src={question.imageUrl} alt={question.title} className="w-full h-96 rounded-lg object-cover" />
+      <img src={question.imageUrl} alt={question.title} className="w-full h-96 rounded-lg object" />
     </div>
     <p className="text-base text-gray-300">{question.description}</p>
     <div className="mt-4 p-4 bg-primary rounded-lg">

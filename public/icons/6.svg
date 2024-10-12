@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0f0f0"/>
+  
+  <!-- Blockchain Networks -->
+  <rect x="50" y="50" width="200" height="100" rx="10" fill="#8dd3c7" stroke="#333" stroke-width="2"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">Blockchain A</text>
+  
+  <rect x="550" y="50" width="200" height="100" rx="10" fill="#ffffb3" stroke="#333" stroke-width="2"/>
+  <text x="650" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">Blockchain B</text>
+  
+  <!-- Bridge Contracts -->
+  <rect x="300" y="200" width="200" height="80" rx="10" fill="#bebada" stroke="#333" stroke-width="2"/>
+  <text x="400" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">Bridge Contracts</text>
+  
+  <!-- Liquidity Pools -->
+  <rect x="50" y="350" width="150" height="80" rx="10" fill="#fb8072" stroke="#333" stroke-width="2"/>
+  <text x="125" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Liquidity Pool A</text>
+  
+  <rect x="600" y="350" width="150" height="80" rx="10" fill="#80b1d3" stroke="#333" stroke-width="2"/>
+  <text x="675" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Liquidity Pool B</text>
+  
+  <!-- Order Matching Engine -->
+  <rect x="325" y="350" width="150" height="80" rx="10" fill="#fdb462" stroke="#333" stroke-width="2"/>
+  <text x="400" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Order Matching Engine</text>
+  
+  <!-- Cross-Chain State Verification -->
+  <rect x="300" y="500" width="200" height="60" rx="10" fill="#b3de69" stroke="#333" stroke-width="2"/>
+  <text x="400" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Cross-Chain State Verification</text>
+  
+  <!-- Connections -->
+  <line x1="150" y1="150" x2="325" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="150" x2="475" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="300" y1="280" x2="175" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="280" x2="625" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="200" y1="390" x2="325" y2="390" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="390" x2="600" y2="390" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="400" y1="430" x2="400" y2="500" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Cross-Chain DEX Architecture</text>
+</svg>

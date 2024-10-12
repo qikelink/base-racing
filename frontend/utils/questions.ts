@@ -30,7 +30,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates how Block-STM, parallel execution, and the Move VM interact to enable high-throughput processing while maintaining safety guarantees. Pay close attention to the data flow and validation checkpoints depicted in the image.",
         type: "image",
-        imageUrl: "/icons/aptos-architecture-level1.png",
+        imageUrl: "/icons/1.svg",
         explanation: "Visual understanding of architecture aids development.",
       },
 
@@ -103,7 +103,7 @@ export const questionsByModule = {
         description:
           "This diagram visualizes how Move resources are created, transferred, and destroyed safely. It illustrates the key stages in a resource's lifecycle and the safety checks that occur at each stage. Understanding this lifecycle is crucial for implementing secure smart contracts in Move.",
         type: "image",
-        imageUrl: "/icons/move-resource-lifecycle.png",
+        imageUrl: "/icons/2.svg",
         explanation: "Resource lifecycle understanding is fundamental for Move developers.",
       },
 
@@ -176,7 +176,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates the stages of a commitment scheme: Commit, Reveal, and Verify. In the Commit phase, a user submits a hashed value. During the Reveal phase, the original value is disclosed. The Verify stage confirms the revealed value matches the initial commitment. This pattern is crucial for applications requiring hidden information, such as sealed-bid auctions or voting systems.",
         type: "image",
-        imageUrl: "/icons/commitment-scheme-pattern.png",
+        imageUrl: "/icons/3.svg",
         explanation: "Commitment schemes are fundamental for many cryptographic protocols in blockchain.",
       },
 
@@ -244,7 +244,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates a layered architecture combining on-chain and off-chain components for a DeFi protocol. It shows how off-chain indexers and relayers interact with on-chain smart contracts to achieve high performance. The architecture includes optimized data structures, batch processing mechanisms, and a hybrid on-chain/off-chain order matching system to balance security with scalability.",
         type: "image",
-        imageUrl: "/icons/defi-protocol-architecture.png",
+        imageUrl: "/icons/4.svg",
         explanation: "Understanding complex system architectures is crucial for advanced DeFi development.",
       },
 
@@ -314,7 +314,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates the components of a comprehensive DeFi protocol, including liquidity pools, AMM mechanisms, flash loan functionality, and their interactions. It shows how user interactions flow through these components, highlighting the role of smart contracts in managing asset exchanges, providing liquidity, and enabling complex financial operations. Pay attention to how the AMM interacts with liquidity pools and how flash loans are integrated into the overall system architecture.",
         type: "image",
-        imageUrl: "/icons/defi-protocol-architecture.png",
+        imageUrl: "/icons/5.svg",
         explanation:
           "Visual understanding of DeFi protocol architecture aids in comprehending complex system interactions.",
       },
@@ -382,7 +382,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates the architecture of a cross-chain decentralized exchange (DEX). It shows the interaction between different blockchain networks, bridge contracts, and liquidity pools. Key components include order matching engines, cross-chain state verification mechanisms, and atomic swap protocols. The diagram highlights how orders are propagated and matched across chains, and how bridge contracts facilitate the final settlement of cross-chain asset transfers.",
         type: "image",
-        imageUrl: "/icons/cross-chain-dex-architecture.png",
+        imageUrl: "/icons/6.svg",
         explanation: "Understanding complex cross-chain architectures is essential for advanced DeFi development.",
       },
 
@@ -455,7 +455,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates a comprehensive smart contract security audit process. It shows the flow from initial code review, through automated analysis (including static analysis and fuzzing), to manual review and formal verification. Key components highlighted include the threat modeling stage, automated vulnerability scanners, symbolic execution tools, manual code review by security experts, formal verification of critical properties, and the iterative process of fixing and re-verifying. The diagram emphasizes the importance of combining multiple approaches for comprehensive security assurance.",
         type: "image",
-        imageUrl: "/icons/smart-contract-audit-process.png",
+        imageUrl: "/icons/7.svg",
         explanation: "Understanding comprehensive security processes is crucial for developing robust smart contracts.",
       },
 
@@ -526,7 +526,7 @@ export const questionsByModule = {
         description:
           "This diagram illustrates a blockchain architecture designed for high performance and MEV protection. Key features shown include a parallel transaction execution engine, a sophisticated mempool management system with transaction encryption, a fair ordering protocol to prevent validator front-running, Layer 2 scaling solutions integrated into the base layer, advanced gossip protocols for efficient network communication, and a hybrid consensus mechanism balancing throughput and security. The architecture emphasizes how each component contributes to overall system performance and fairness.",
         type: "image",
-        imageUrl: "/icons/high-throughput-mev-protected-blockchain.png",
+        imageUrl: "/icons/8.svg",
         explanation:
           "Understanding advanced blockchain architectures is crucial for developing high-performance, fair systems.",
       },

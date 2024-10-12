@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f0f0f0" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Move Resource Lifecycle</text>
+  
+  <!-- Creation Stage -->
+  <circle cx="150" cy="150" r="80" fill="#d1e7dd" stroke="#333" stroke-width="2" />
+  <text x="150" y="155" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Creation</text>
+  <text x="150" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Resource is</text>
+  <text x="150" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">instantiated</text>
+  
+  <!-- Transfer Stage -->
+  <circle cx="400" cy="250" r="80" fill="#cfe2ff" stroke="#333" stroke-width="2" />
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Transfer</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Resource is moved</text>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">between accounts</text>
+  
+  <!-- Destruction Stage -->
+  <circle cx="650" cy="350" r="80" fill="#f8d7da" stroke="#333" stroke-width="2" />
+  <text x="650" y="355" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Destruction</text>
+  <text x="650" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Resource is</text>
+  <text x="650" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">safely destroyed</text>
+  
+  <!-- Arrows -->
+  <line x1="220" y1="180" x2="330" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="470" y1="280" x2="580" y2="330" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Safety Checks -->
+  <rect x="250" y="120" width="120" height="60" fill="#fff3cd" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Safety Check</text>
+  <text x="310" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Ownership verified</text>
+  
+  <rect x="500" y="200" width="120" height="60" fill="#fff3cd" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="560" y="225" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Safety Check</text>
+  <text x="560" y="245" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">No duplication</text>
+  
+  <rect x="700" y="180" width="120" height="60" fill="#fff3cd" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="760" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Safety Check</text>
+  <text x="760" y="225" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Complete destruction</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="450" width="20" height="20" fill="#d1e7dd" stroke="#333" stroke-width="1" />
+  <text x="80" y="465" font-family="Arial, sans-serif" font-size="12">Creation Stage</text>
+  
+  <rect x="200" y="450" width="20" height="20" fill="#cfe2ff" stroke="#333" stroke-width="1" />
+  <text x="230" y="465" font-family="Arial, sans-serif" font-size="12">Transfer Stage</text>
+  
+  <rect x="350" y="450" width="20" height="20" fill="#f8d7da" stroke="#333" stroke-width="1" />
+  <text x="380" y="465" font-family="Arial, sans-serif" font-size="12">Destruction Stage</text>
+  
+  <rect x="500" y="450" width="20" height="20" fill="#fff3cd" stroke="#333" stroke-width="1" />
+  <text x="530" y="465" font-family="Arial, sans-serif" font-size="12">Safety Checks</text>
+</svg>

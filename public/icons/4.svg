@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f0f0f0" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">High-Performance DeFi Protocol Architecture</text>
+  
+  <!-- On-Chain Layer -->
+  <rect x="50" y="400" width="700" height="150" fill="#d1e7dd" stroke="#333" stroke-width="2" />
+  <text x="400" y="425" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">On-Chain Layer</text>
+  
+  <!-- Smart Contracts -->
+  <rect x="100" y="450" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="175" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Smart Contracts</text>
+  
+  <!-- Optimized Data Structures -->
+  <rect x="325" y="450" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Optimized Data</text>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Structures</text>
+  
+  <!-- Batch Processing -->
+  <rect x="550" y="450" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="625" y="485" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Batch Processing</text>
+  <text x="625" y="505" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Mechanisms</text>
+  
+  <!-- Off-Chain Layer -->
+  <rect x="50" y="100" width="700" height="250" fill="#cfe2ff" stroke="#333" stroke-width="2" />
+  <text x="400" y="125" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Off-Chain Layer</text>
+  
+  <!-- Indexers -->
+  <rect x="100" y="150" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="175" y="195" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Indexers</text>
+  
+  <!-- Relayers -->
+  <rect x="325" y="150" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="195" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Relayers</text>
+  
+  <!-- Order Matching System -->
+  <rect x="550" y="150" width="150" height="80" fill="#ffffff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="625" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Hybrid Order</text>
+  <text x="625" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Matching System</text>
+  
+  <!-- Arrows -->
+  <line x1="175" y1="230" x2="175" y2="450" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="230" x2="400" y2="450" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="625" y1="230" x2="625" y2="450" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Legend -->
+  <rect x="50" y="570" width="20" height="20" fill="#d1e7dd" stroke="#333" stroke-width="1" />
+  <text x="80" y="585" font-family="Arial, sans-serif" font-size="12">On-Chain Components</text>
+  <rect x="250" y="570" width="20" height="20" fill="#cfe2ff" stroke="#333" stroke-width="1" />
+  <text x="280" y="585" font-family="Arial, sans-serif" font-size="12">Off-Chain Components</text>
+</svg>

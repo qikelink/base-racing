@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect x="0" y="0" width="800" height="600" fill="#f0f0f0"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" text-anchor="middle" font-weight="bold">High-Throughput, MEV-Protected Blockchain Architecture</text>
+  
+  <!-- Parallel Transaction Execution Engine -->
+  <rect x="50" y="70" width="200" height="100" fill="#a0d6b4" stroke="black"/>
+  <text x="150" y="120" font-size="14" text-anchor="middle">Parallel Transaction
+Execution Engine</text>
+  
+  <!-- Mempool Management System -->
+  <rect x="300" y="70" width="200" height="100" fill="#f6d55c" stroke="black"/>
+  <text x="400" y="120" font-size="14" text-anchor="middle">Mempool Management
+System with
+Transaction Encryption</text>
+  
+  <!-- Fair Ordering Protocol -->
+  <rect x="550" y="70" width="200" height="100" fill="#ed553b" stroke="black"/>
+  <text x="650" y="120" font-size="14" text-anchor="middle">Fair Ordering Protocol</text>
+  
+  <!-- Layer 2 Scaling Solutions -->
+  <rect x="50" y="220" width="200" height="100" fill="#3caea3" stroke="black"/>
+  <text x="150" y="270" font-size="14" text-anchor="middle">Layer 2 Scaling
+Solutions</text>
+  
+  <!-- Advanced Gossip Protocols -->
+  <rect x="300" y="220" width="200" height="100" fill="#20639b" stroke="black"/>
+  <text x="400" y="270" font-size="14" text-anchor="middle" fill="white">Advanced Gossip
+Protocols</text>
+  
+  <!-- Hybrid Consensus Mechanism -->
+  <rect x="550" y="220" width="200" height="100" fill="#173f5f" stroke="black"/>
+  <text x="650" y="270" font-size="14" text-anchor="middle" fill="white">Hybrid Consensus
+Mechanism</text>
+  
+  <!-- Arrows connecting components -->
+  <line x1="150" y1="170" x2="150" y2="220" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="170" x2="400" y2="220" stroke="black" stroke-width="2"/>
+  <line x1="650" y1="170" x2="650" y2="220" stroke="black" stroke-width="2"/>
+  
+  <!-- System Performance and Fairness -->
+  <rect x="200" y="370" width="400" height="80" fill="#6d597a" stroke="black"/>
+  <text x="400" y="415" font-size="16" text-anchor="middle" fill="white">System Performance and Fairness</text>
+  
+  <!-- Arrows pointing to System Performance and Fairness -->
+  <line x1="150" y1="320" x2="300" y2="370" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="320" x2="400" y2="370" stroke="black" stroke-width="2"/>
+  <line x1="650" y1="320" x2="500" y2="370" stroke="black" stroke-width="2"/>
+  
+  <!-- Legend -->
+  <text x="50" y="500" font-size="14" font-weight="bold">Legend:</text>
+  <rect x="50" y="520" width="20" height="20" fill="#a0d6b4"/>
+  <text x="80" y="535" font-size="12">Execution</text>
+  <rect x="150" y="520" width="20" height="20" fill="#f6d55c"/>
+  <text x="180" y="535" font-size="12">Management</text>
+  <rect x="280" y="520" width="20" height="20" fill="#ed553b"/>
+  <text x="310" y="535" font-size="12">Ordering</text>
+  <rect x="380" y="520" width="20" height="20" fill="#3caea3"/>
+  <text x="410" y="535" font-size="12">Scaling</text>
+  <rect x="480" y="520" width="20" height="20" fill="#20639b"/>
+  <text x="510" y="535" font-size="12">Communication</text>
+  <rect x="620" y="520" width="20" height="20" fill="#173f5f"/>
+  <text x="650" y="535" font-size="12">Consensus</text>
+</svg>

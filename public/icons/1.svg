@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f0f0f0" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Aptos Execution Architecture</text>
+  
+  <!-- Block-STM -->
+  <rect x="50" y="80" width="700" height="120" fill="#d1e7dd" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold">Block-STM</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Transaction Scheduling and Conflict Resolution</text>
+  <text x="400" y="170" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Optimistic Concurrency Control</text>
+  
+  <!-- Parallel Execution -->
+  <rect x="50" y="240" width="700" height="120" fill="#cfe2ff" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold">Parallel Execution</text>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Concurrent Transaction Processing</text>
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Load Balancing and Resource Allocation</text>
+  
+  <!-- Move VM -->
+  <rect x="50" y="400" width="700" height="120" fill="#fff3cd" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="430" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold">Move VM</text>
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Smart Contract Execution</text>
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Resource and Module Management</text>
+  
+  <!-- Data Flow Arrows -->
+  <line x1="400" y1="200" x2="400" y2="240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="360" x2="400" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Validation Checkpoints -->
+  <rect x="720" y="220" width="30" height="30" fill="#f8d7da" stroke="#333" stroke-width="2" />
+  <text x="735" y="240" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold">V</text>
+  
+  <rect x="720" y="380" width="30" height="30" fill="#f8d7da" stroke="#333" stroke-width="2" />
+  <text x="735" y="400" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold">V</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="550" width="20" height="20" fill="#d1e7dd" stroke="#333" stroke-width="1" />
+  <text x="80" y="565" font-family="Arial, sans-serif" font-size="12">Block-STM</text>
+  
+  <rect x="200" y="550" width="20" height="20" fill="#cfe2ff" stroke="#333" stroke-width="1" />
+  <text x="230" y="565" font-family="Arial, sans-serif" font-size="12">Parallel Execution</text>
+  
+  <rect x="400" y="550" width="20" height="20" fill="#fff3cd" stroke="#333" stroke-width="1" />
+  <text x="430" y="565" font-family="Arial, sans-serif" font-size="12">Move VM</text>
+  
+  <rect x="550" y="550" width="20" height="20" fill="#f8d7da" stroke="#333" stroke-width="1" />
+  <text x="580" y="565" font-family="Arial, sans-serif" font-size="12">Validation Checkpoint</text>
+</svg>

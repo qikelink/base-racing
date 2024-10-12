@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0f0f0"/>
+  
+  <!-- User Interaction -->
+  <rect x="350" y="20" width="100" height="60" rx="10" fill="#fdb462" stroke="#333" stroke-width="2"/>
+  <text x="400" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">User Interface</text>
+  
+  <!-- Smart Contracts -->
+  <rect x="200" y="120" width="400" height="60" rx="10" fill="#b3de69" stroke="#333" stroke-width="2"/>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">Smart Contracts</text>
+  
+  <!-- Liquidity Pools -->
+  <rect x="50" y="250" width="150" height="80" rx="10" fill="#8dd3c7" stroke="#333" stroke-width="2"/>
+  <text x="125" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Liquidity Pool A</text>
+  
+  <rect x="600" y="250" width="150" height="80" rx="10" fill="#8dd3c7" stroke="#333" stroke-width="2"/>
+  <text x="675" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Liquidity Pool B</text>
+  
+  <!-- AMM Mechanism -->
+  <rect x="300" y="240" width="200" height="100" rx="10" fill="#ffffb3" stroke="#333" stroke-width="2"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">AMM Mechanism</text>
+  <text x="400" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Price Discovery</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Token Swaps</text>
+  
+  <!-- Flash Loan Functionality -->
+  <rect x="300" y="400" width="200" height="80" rx="10" fill="#bebada" stroke="#333" stroke-width="2"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">Flash Loan Module</text>
+  
+  <!-- Asset Exchange -->
+  <rect x="50" y="400" width="150" height="80" rx="10" fill="#fb8072" stroke="#333" stroke-width="2"/>
+  <text x="125" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Asset Exchange</text>
+  
+  <!-- Yield Farming -->
+  <rect x="600" y="400" width="150" height="80" rx="10" fill="#80b1d3" stroke="#333" stroke-width="2"/>
+  <text x="675" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Yield Farming</text>
+  
+  <!-- Connections -->
+  <line x1="400" y1="80" x2="400" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="300" y1="180" x2="125" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="180" x2="675" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="200" y1="290" x2="300" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="290" x2="600" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="400" y1="340" x2="400" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="300" y1="440" x2="200" y2="440" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="440" x2="600" y2="440" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Title -->
+  <text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold">DeFi Protocol Architecture</text>
+</svg>
