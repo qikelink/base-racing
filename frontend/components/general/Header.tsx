@@ -79,7 +79,10 @@ export function Header() {
 
         <div className="flex gap-3 items-center flex-wrap">
           <div className="flex space-x-1 items-center">
-            <img src="/public/icons/car.svg" className="h-9 w-9" />
+            <img
+              src="https://res.cloudinary.com/dgbreoalg/image/upload/v1728734246/car_dxdbfv.svg"
+              className="h-9 w-9"
+            />
             <p className="text-sm">{tkBalance / Math.pow(10, 8)} Turbos</p>
           </div>
           <Button>
