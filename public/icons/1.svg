@@ -9,7 +9,7 @@
   <rect x="0" y="0" width="800" height="600" fill="#f0f0f0" />
   
   <!-- Title -->
-  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Aptos Execution Architecture</text>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Base Execution Architecture</text>
   
   <!-- Block-STM -->
   <rect x="50" y="80" width="700" height="120" fill="#d1e7dd" stroke="#333" stroke-width="2" rx="10" ry="10" />

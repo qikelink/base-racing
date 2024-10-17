@@ -9,7 +9,7 @@ export const Legend = () => {
         <div className="space-y-1 w-96">
           <p className="font-semibold text-2xl">Thailand Beaches</p>
           <p className="text-base text-gray-400">
-          Discover the intricacies of Aptos's governance and community engagement modules.
+          Discover the intricacies of Base's governance and community engagement modules.
           </p>
           <Button>
             {" "}

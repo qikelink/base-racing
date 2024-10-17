@@ -7,7 +7,7 @@ export function LFooter () {
         <div>
           <p className="text-yellow-400 font-semibold text-xl">TurboGo</p>
           <p className="text-sm w-48 lg:w-96">
-            Your easy guide to all things onchain. Learn, earn and race through terrains on Aptos, one adventure at a
+            Your easy guide to all things onchain. Learn, earn and race through terrains on Base, one adventure at a
             time.
           </p>
         </div>

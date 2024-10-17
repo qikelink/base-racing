@@ -31,7 +31,7 @@ export const Features = () => {
           </CardHeader>
           <CardContent>
             Earn $TURBO, our virtual platform token and collect NFT badges as you progress. Use them for exclusive perks
-            and opportunities later in the Aptos ecosystem.
+            and opportunities later in the Base ecosystem.
           </CardContent>
         </Card>
         <Card>
@@ -39,7 +39,7 @@ export const Features = () => {
             <CardTitle>Navigate With Ease</CardTitle>
           </CardHeader>
           <CardContent>
-            Explore an interactive map of the Aptos ecosystem. Discover new projects, protocols and opportunities as you{" "}
+            Explore an interactive map of the Base ecosystem. Discover new projects, protocols and opportunities as you{" "}
             <span className="text-yellow-400 font-medium">Ride</span> through your learning adventure. You're always
             early when you're with TurboGo.
           </CardContent>
@@ -76,7 +76,7 @@ export const Features = () => {
           <p className="text-5xl font-bold">
             It's time to <span className="">Revv</span> onchain{" "}
           </p>
-          <p className="font-semibold">Unlock the possibilities of Aptos</p>
+          <p className="font-semibold">Unlock the possibilities of Base</p>
           <Button onClick={handleGetStarted} size={"lg"} className=" rounded-full">
             Launch App
           </Button>

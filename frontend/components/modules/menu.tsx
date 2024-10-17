@@ -44,8 +44,8 @@ export const Menu = () => {
     if (turboBalance < 40) {
       toast({
         variant: "destructive",
-        title: "Complete Aptos Colombia",
-        description: "Please complete Aptos Colombia arena to unlock Arena de Madrid.",
+        title: "Complete Base Colombia",
+        description: "Please complete Base Colombia arena to unlock Arena de Madrid.",
       });
     } else {
       navigate("/competitor");
@@ -78,11 +78,11 @@ export const Menu = () => {
       <div className="flex justify-between items-center mx-auto px-4 mt-6">
         <div className="">
           <p className="text-6xl font-medium md:w-[90%]">
-            Race through modules and terrains to level up your Aptos character
+            Race through modules and terrains to level up your Base character
           </p>
 
           <div className="flex justify-start items-end space-x-2">
-            <p className="text-base text-gray-400">Join the coolest crypto hangout on Aptos</p>
+            <p className="text-base text-gray-400">Join the coolest crypto hangout on Base</p>
             <img src="/icons/driver2.png" className="h-16 w-16 cursor-pointer" />
           </div>
         </div>
@@ -101,9 +101,9 @@ export const Menu = () => {
           <Card onClick={handleRookie} className="bg-transparent text-white cursor-pointer">
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">ROOKIE</p>
-              <p>Aptos Colombia</p>
+              <p>Base Colombia</p>
               <p>
-                Start your journey in the Aptos ecosystem by setting up your wallet and navigating the Apt-terrains.
+                Start your journey in the Base ecosystem by setting up your wallet and navigating the Apt-terrains.
               </p>
             </CardHeader>
             <CardContent>
@@ -130,7 +130,7 @@ export const Menu = () => {
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">CHAMPION</p>
               <p>Times Square, Manhattan</p>
-              <p>Dive into advanced lessons on smart contracts and token standards in the Aptos ecosystem.</p>
+              <p>Dive into advanced lessons on smart contracts and token standards in the Base ecosystem.</p>
             </CardHeader>
             <CardContent>
               <img src="/icons/3.jpeg" className="h-[400px] w-full rounded-md" />
@@ -141,7 +141,7 @@ export const Menu = () => {
             <CardHeader className="flex flex-col gap-2">
               <p className="px-2 py-1 bg-yellow-200 font-semibold rounded-lg w-fit text-black">LEGEND</p>
               <p>Thailand Beaches</p>
-              <p>Discover the intricacies of Aptos's governance and community engagement modules.</p>
+              <p>Discover the intricacies of Base's governance and community engagement modules.</p>
             </CardHeader>
             <CardContent>
               <img src="/icons/5.jpeg" className="h-[400px] w-full rounded-md" />

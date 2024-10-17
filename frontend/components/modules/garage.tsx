@@ -31,7 +31,7 @@ export const Garage = () => {
       </div>
       <CardContent className="flex items-center">
         <Input
-          placeholder="How can i get started on Aptos?"
+          placeholder="How can i get started on Base?"
           className="bg-transparent flex-grow"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}

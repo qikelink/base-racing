@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <div className="flex flex-col gap-3 items-center mt-12">
       <p className="md:text-6xl text-3xl text-center font-semibold">
-        Learn, Earn and Turbo through possiblities on <span className="text-yellow-400">Aptos</span>{" "}
+        Learn, Earn and Turbo through possiblities on <span className="text-yellow-400">Base</span>{" "}
       </p>
       <p className="text-gray-400 font-medium">Your easy guide to all things onchain, one wave at a time</p>
       <Button

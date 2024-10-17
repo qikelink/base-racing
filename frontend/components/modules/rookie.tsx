@@ -65,9 +65,9 @@ export const Rookie = () => {
     {
       module: "module1",
       level: "level1",
-      title: "Aptos Core Architecture",
+      title: "Base Core Architecture",
       description:
-        "Explore Aptos's high-throughput architecture, Move Virtual Machine, and consensus mechanism, understanding the fundamental components that make Aptos unique.",
+        "Explore Base's high-throughput architecture, Move Virtual Machine, and consensus mechanism, understanding the fundamental components that make Base unique.",
       points: 10,
     },
     {
@@ -119,9 +119,9 @@ export const Rookie = () => {
       </div>
       <div className="flex justify-between items-center">
         <div className="space-y-1 w-96">
-          <p className="font-semibold text-2xl">Aptos Colombia</p>
+          <p className="font-semibold text-2xl">Base Colombia</p>
           <p className="text-base text-gray-400">
-            Start your journey in the Aptos ecosystem by setting up your wallet and navigating the Apt-terrains.
+            Start your journey in the Base ecosystem by setting up your wallet and navigating the Apt-terrains.
           </p>
           <Button className="ring-1">
             <Share2 className="mr-2" /> Share

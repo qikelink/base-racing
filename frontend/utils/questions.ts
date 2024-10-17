@@ -3,30 +3,30 @@ export const questionsByModule = {
     level1: [
       // Educational Text Content
       {
-        title: "Aptos High-Throughput Architecture",
+        title: "Base High-Throughput Architecture",
         content:
-          "Aptos achieves high transaction throughput while maintaining safety through its innovative Block-STM system. This system enables parallel execution of transactions by detecting and resolving conflicts automatically. Block-STM optimistically executes transactions in parallel, tracks memory usage, and validates correctness before commitment. This approach ensures both high throughput and safety, making Aptos a powerful platform for scalable decentralized applications.",
+          "Base achieves high transaction throughput while maintaining safety through its innovative Block-STM system. This system enables parallel execution of transactions by detecting and resolving conflicts automatically. Block-STM optimistically executes transactions in parallel, tracks memory usage, and validates correctness before commitment. This approach ensures both high throughput and safety, making Base a powerful platform for scalable decentralized applications.",
         type: "text",
-        explanation: "Core architectural understanding is crucial for developers working with Aptos.",
+        explanation: "Core architectural understanding is crucial for developers working with Base.",
       },
       {
-        title: "Move Virtual Machine in Aptos",
+        title: "Move Virtual Machine in Base",
         content:
-          "The Move Virtual Machine plays a crucial role in Aptos by executing smart contracts with strong safety guarantees. It interprets and runs Move bytecode, ensuring that resources are handled securely and that key invariants are maintained throughout contract execution. The MoveVM's design prioritizes safety, expressiveness, and performance, making it an ideal foundation for building complex decentralized applications.",
+          "The Move Virtual Machine plays a crucial role in Base by executing smart contracts with strong safety guarantees. It interprets and runs Move bytecode, ensuring that resources are handled securely and that key invariants are maintained throughout contract execution. The MoveVM's design prioritizes safety, expressiveness, and performance, making it an ideal foundation for building complex decentralized applications.",
         type: "text",
-        explanation: "Understanding the MoveVM is fundamental for Aptos developers.",
+        explanation: "Understanding the MoveVM is fundamental for Base developers.",
       },
       {
         title: "AptosBFT Consensus Mechanism",
         content:
-          "AptosBFT, the consensus mechanism used by Aptos, achieves high throughput through optimized leader selection and parallel voting. This mechanism allows for quick agreement on the state of the blockchain across all validators, enabling fast finality of transactions. AptosBFT balances speed and security, ensuring that the network can process a high volume of transactions without compromising on safety or decentralization.",
+          "AptosBFT, the consensus mechanism used by Base, achieves high throughput through optimized leader selection and parallel voting. This mechanism allows for quick agreement on the state of the blockchain across all validators, enabling fast finality of transactions. AptosBFT balances speed and security, ensuring that the network can process a high volume of transactions without compromising on safety or decentralization.",
         type: "text",
         explanation: "Consensus mechanisms are a core component of blockchain technology.",
       },
 
       // Image Content
       {
-        title: "Aptos Execution Architecture Diagram",
+        title: "Base Execution Architecture Diagram",
         description:
           "This diagram illustrates how Block-STM, parallel execution, and the Move VM interact to enable high-throughput processing while maintaining safety guarantees. Pay close attention to the data flow and validation checkpoints depicted in the image.",
         type: "image",
@@ -36,7 +36,7 @@ export const questionsByModule = {
 
       // Multiple Choice Questions
       {
-        question: "Which architectural innovation differentiates Aptos from traditional Layer 1 blockchains?",
+        question: "Which architectural innovation differentiates Base from traditional Layer 1 blockchains?",
         options: [
           "The use of Proof of Work consensus",
           "Parallel transaction execution with Block-STM",
@@ -45,10 +45,10 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "Understanding Aptos's core innovation is fundamental for developers.",
+        explanation: "Understanding Base's core innovation is fundamental for developers.",
       },
       {
-        question: "What role does the Move Virtual Machine play in Aptos?",
+        question: "What role does the Move Virtual Machine play in Base?",
         options: [
           "Only for token transfers",
           "Executing smart contracts with safety guarantees",
@@ -57,7 +57,7 @@ export const questionsByModule = {
         ],
         type: "multiple",
         correctOptionIndex: 1,
-        explanation: "The MoveVM is central to Aptos's smart contract functionality.",
+        explanation: "The MoveVM is central to Base's smart contract functionality.",
       },
       {
         question: "How does AptosBFT consensus mechanism achieve high throughput?",
@@ -149,9 +149,9 @@ export const questionsByModule = {
     level3: [
       // Educational Text Content
       {
-        title: "Upgradeability in Aptos Smart Contracts",
+        title: "Upgradeability in Base Smart Contracts",
         content:
-          "Upgradeability is a crucial feature for long-term smart contract maintenance. In Aptos, the proxy pattern is commonly used to achieve upgradeability. This pattern involves separating the contract's storage and logic, allowing developers to update the logic while preserving the contract's state and address. Implementing upgradeability requires careful design to ensure security and maintain trust with users.",
+          "Upgradeability is a crucial feature for long-term smart contract maintenance. In Base, the proxy pattern is commonly used to achieve upgradeability. This pattern involves separating the contract's storage and logic, allowing developers to update the logic while preserving the contract's state and address. Implementing upgradeability requires careful design to ensure security and maintain trust with users.",
         type: "text",
         explanation: "Upgradeability is essential for maintaining and improving smart contracts over time.",
       },
@@ -182,7 +182,7 @@ export const questionsByModule = {
 
       // Multiple Choice Questions
       {
-        question: "Which design pattern is commonly used for upgradeability in Aptos smart contracts?",
+        question: "Which design pattern is commonly used for upgradeability in Base smart contracts?",
         options: ["Proxy pattern", "Singleton pattern", "Factory pattern", "Observer pattern"],
         type: "multiple",
         correctOptionIndex: 0,

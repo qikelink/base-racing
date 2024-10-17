@@ -9,7 +9,7 @@ export const Champion = () => {
         <div className="space-y-1 w-96">
           <p className="font-semibold text-2xl">Times Square, Manhattan</p>
           <p className="text-base text-gray-400">
-          Dive into advanced lessons on smart contracts and token standards in the Aptos ecosystem.
+          Dive into advanced lessons on smart contracts and token standards in the Base ecosystem.
           </p>
           <Button>
             {" "}
